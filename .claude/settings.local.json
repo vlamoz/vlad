@@ -27,7 +27,8 @@
       "Bash(cp:*)",
       "Bash(sips:*)",
       "Bash(cwebp:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(npx eslint:*)"
     ],
     "deny": []
   }

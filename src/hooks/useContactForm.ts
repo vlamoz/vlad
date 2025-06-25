@@ -80,8 +80,22 @@ export const useContactForm = () => {
     setState(prev => ({ ...prev, isSubmitting: true, errors: {} }));
 
     try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send email using Formspree
+      const response = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: state.data.name,
+          email: state.data.email,
+          message: state.data.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       
       setState(prev => ({ 
         ...prev, 
@@ -95,7 +109,8 @@ export const useContactForm = () => {
         setState(prev => ({ ...prev, isSubmitted: false }));
       }, 5000);
 
-    } catch {
+    } catch (error) {
+      console.error('Formspree error:', error);
       setState(prev => ({ 
         ...prev, 
         isSubmitting: false,
