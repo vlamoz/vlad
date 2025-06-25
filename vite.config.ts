@@ -8,9 +8,14 @@ export default defineConfig({
     global: 'globalThis'
   },
   optimizeDeps: {
-    include: ['react', 'react-dom']
+    include: ['react', 'react-dom', 'framer-motion']
   },
   server: {
     port: 3000,
+  },
+  build: {
+    commonjsOptions: {
+      include: [/framer-motion/, /node_modules/]
+    }
   }
 })
