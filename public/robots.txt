@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vlamoz.me/sitemap.xml
+
+# Allow all search engines to crawl the site
+# This is a portfolio website that should be fully indexable
+
+# Block access to development files (if any)
+Disallow: /src/
+Disallow: /_app/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Allow assets and static files
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Crawl delay (optional, can help with server load)
+Crawl-delay: 1

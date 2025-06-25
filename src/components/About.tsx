@@ -2,7 +2,11 @@ import { Code, Globe, Target, Users } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import profileImage from '../assets/IMG_1228.jpg';
+// Optimized profile images
+import profileImage320 from '../assets/profile-320.jpg';
+import profileImage640 from '../assets/profile-640.jpg';
+import profileImageWebP320 from '../assets/profile-320.webp';
+import profileImageWebP640 from '../assets/profile-640.webp';
 
 const About = () => {
   const { t } = useTranslation('about');
@@ -48,11 +52,29 @@ const About = () => {
           <AnimatedSection className="text-center mb-16">
             <div className="flex justify-center mb-8">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={profileImage}
-                  alt={t('imageAlt')}
-                  className="w-full h-full object-cover"
-                />
+                <picture>
+                  {/* WebP format for modern browsers */}
+                  <source 
+                    srcSet={`${profileImageWebP320} 320w, ${profileImageWebP640} 640w`}
+                    sizes="(max-width: 640px) 256px, 320px"
+                    type="image/webp" 
+                  />
+                  {/* JPEG fallback for older browsers */}
+                  <source 
+                    srcSet={`${profileImage320} 320w, ${profileImage640} 640w`}
+                    sizes="(max-width: 640px) 256px, 320px"
+                    type="image/jpeg" 
+                  />
+                  {/* Fallback img tag */}
+                  <img
+                    src={profileImage320}
+                    alt={t('imageAlt')}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="240"
+                    height="320"
+                  />
+                </picture>
               </div>
             </div>
           </AnimatedSection>

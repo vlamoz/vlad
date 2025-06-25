@@ -24,7 +24,9 @@
       "Bash(git checkout:*)",
       "Bash(npm update:*)",
       "Bash(timeout 10s npm run dev)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(sips:*)",
+      "Bash(cwebp:*)"
     ],
     "deny": []
   }
