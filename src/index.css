@@ -231,7 +231,7 @@ body {
     margin-bottom: 0.2rem !important;
   }
 
-  /* Skills section - single column, compact spacing */
+  /* Skills section - stable single column */
   #skills .grid {
     display: block !important;
   }
@@ -262,7 +262,7 @@ body {
     padding: 0.2rem !important;
   }
 
-  #skills .hover\\:bg-gray-50 {
+  #skills div[class*="hover:bg-gray"] {
     padding: 0.2rem !important;
     margin-bottom: 0.1rem !important;
   }
