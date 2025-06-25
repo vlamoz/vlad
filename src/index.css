@@ -231,9 +231,22 @@ body {
     margin-bottom: 0.2rem !important;
   }
 
-  /* Skills section - stable single column */
+  /* Skills section - fixed float approach */
   #skills .grid {
     display: block !important;
+  }
+
+  #skills .grid > div {
+    float: left !important;
+    width: 48% !important;
+  }
+
+  #skills .grid > div:nth-child(odd) {
+    margin-right: 4% !important;
+  }
+
+  #skills .grid > div:nth-child(even) {
+    margin-right: 0 !important;
   }
 
   #skills > div > div {
@@ -241,6 +254,13 @@ body {
     border: 1px solid #ddd !important;
     margin-bottom: 0.3rem !important;
     padding: 0.4rem !important;
+  }
+
+  /* Clear floats after skills section */
+  #skills::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
   }
 
   /* Reduce spacing inside skill blocks */
