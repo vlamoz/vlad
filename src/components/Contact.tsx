@@ -12,7 +12,7 @@ const Contact = () => {
   } = useContactForm();
   const contactInfo = {
     email: 'vlamoz@pm.me',
-    location: 'Spain/ Estonia',
+    location: 'Spain / Estonia',
     linkedin: 'https://www.linkedin.com/in/vlad-mozgovoi-b8452838/'
   };
 
