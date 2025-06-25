@@ -1,0 +1,44 @@
+{
+  "projects": {
+    "interprefy": {
+      "description": "Juhin globaalse keeleplatvormi tehnilist transformatsiooni, integreerides tipptasemel AI tehnoloogiaid reaalajas tõlkimiseks, transkriptsiooniks ja tekst-kõne võimalusteks. Haldan üleminekut traditsiooniliselt tõlkimiselt AI/hübriidlahendustele.",
+      "highlights": [
+        "Viisin platvormi horisontaalsele skaleerimisele, käsitledes tuhandeid samaaegseid kasutajaid nullkatkestusajaga",
+        "Juhtsin meeskonna üleminekut tõlgi-keskuselt AI-juhitud platvormile",
+        "Integreerisin mitmeid AI teenuseid reaalajas keeletöötluseks",
+        "Rakendatasin proprietaarseid algoritme reaalajas AI tõlkimiseks ja helitöötluseks"
+      ]
+    },
+    "audatex": {
+      "description": "Juhtsin AudaNeti arhitektuurilist transformatsiooni monoliitilist mikroteenuste arhitektuurile, teenindades kindlustusettevõtteid üle 15 riigi. Juhtsin B2B integratsioone ja React frontend üleminekut.",
+      "highlights": [
+        "Juhtsin migratsiooni monoliidist mikroteenuste arhitektuurile",
+        "Haldasin B2B integratsioone üle 50 kindlustuse tagakontorisüsteemiga",
+        "Modernizeerisin kasutaja frontend kogemust Reactiga"
+      ]
+    },
+    "nasdaq": {
+      "description": "MHUB-i juhtarendaja, keskne sõnumivahetuse infrastruktuur fondi- ja deposiitkommunikatsiooniks Balti finantskeskkonnas. Kavandatasin turvalisi, kõrge jõudlusega sõnumivoogusid, mis käsitlevad miljoneid päevaseid tehinguid.",
+      "highlights": [
+        "Kavandatasin sõnumimarsruutimissüsteemi, mis töötleb üle 1M tehingu päevas",
+        "Integreerisin üle 20 panga ja deposiitkeskussüsteemiga 3 riigis",
+        "Rakendatasin nullkatkestusajaga paigaldusstrateegiaid"
+      ]
+    },
+    "elisa": {
+      "description": "Peamine panustaja YouRoam-i, keeruka telekommunikatsiooniplatvormi, mis haldab rändluspartnerlust Balti telekommunikatsioonioperaatorite jaoks. Rakendatasin keerukat andmete import/eksport funktsionaalsust, mis toetab mitut rahvusvahelist vormingut ja modernizeerides UI-d parema kasutajakogemuse jaoks.",
+      "highlights": [
+        "Kavandatasin vastupidava import/eksport süsteemi, mis käsitleb üle 10 erineva telekom andmevormingu",
+        "Optimeeerisin andmebaasi käsitlust suurema skaleeritavuse jaoks",
+        "Rakendatasin keerukaid hinnastamisalgoritme erinevate rändlusstsenaariumite jaoks"
+      ]
+    },
+    "government": {
+      "description": "Arendasin kriitilise valitsuse infrastruktuuri, mis haldab heaoluteenuseid ja sotsiaalkindlustust Eesti kodanikele.",
+      "highlights": [
+        "Töötlesin heaolutaotlusi üle 500K Eesti kodaniku jaoks",
+        "Integreerisin valitsusasutuste ja pärandsüsteemidega"
+      ]
+    }
+  }
+}

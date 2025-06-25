@@ -1,0 +1,33 @@
+{
+  "title": "Ühendagem",
+  "subtitle": "Olenemata sellest, kas sul on projekt peas või soovid lihtsalt tehnoloogiast rääkida, olen alati avatud uutele võimalustele ja vestlustele.",
+  "getInTouch": {
+    "title": "Võta ühendust",
+    "description": "Olen tõeliselt põnevil ühenduse loomisest kaasehitajate, probleemilahendajate ja meeskonnajuhtidega. Olenemata sellest, kas tegelete keerulise tehnilise väljakutsega, ehitate rahvusvahelisi hajutatud meeskondi või soovite lihtsalt vestelda keskkkondade loomisest, kus arendajad õitsevad, tahaksin sinust kuulda. Parimad vestlused juhtuvad siis, kui uudishimulikud meeled kohtuvad — alustame üht!"
+  },
+  "details": {
+    "email": "E-mail",
+    "location": "Asukoht",
+    "connectWith": "Ühenda minuga",
+    "linkedInProfile": "LinkedIni profiil"
+  },
+  "form": {
+    "title": "Saada sõnum",
+    "labels": {
+      "name": "Nimi",
+      "email": "E-mail",
+      "message": "Sõnum"
+    },
+    "placeholders": {
+      "name": "Sinu nimi",
+      "email": "sinu.email@näide.ee",
+      "message": "Sinu sõnum..."
+    },
+    "button": {
+      "send": "Saada sõnum",
+      "sending": "Saadan..."
+    },
+    "successMessage": "Aitäh! Sinu sõnum on edukalt saadetud.",
+    "directEmail": "Või saada e-mail otse aadressile"
+  }
+}

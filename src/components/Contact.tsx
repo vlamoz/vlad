@@ -1,7 +1,9 @@
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useContactForm } from '../hooks/useContactForm';
 
 const Contact = () => {
+  const { t } = useTranslation('contact');
   const { 
     data, 
     errors, 
@@ -23,11 +25,10 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Let's Connect
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Whether you have a project in mind or just want to discuss technology,
-              I'm always open to new opportunities and conversations.
+              {t('subtitle')}
             </p>
           </div>
 
@@ -36,10 +37,10 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                  Get in Touch
+                  {t('getInTouch.title')}
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                  I'm genuinely excited about connecting with fellow builders, problem-solvers, and team leaders. Whether you're tackling a head-scratcher of a technical challenge, building international distributed teams, or just want to chat about creating environments where developers thrive, I'd love to hear from you. The best conversations happen when curious minds come together — so let's start one!
+                  {t('getInTouch.description')}
                 </p>
               </div>
 
@@ -53,7 +54,7 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-primary-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Email</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('details.email')}</p>
                     <p className="text-gray-900 dark:text-white font-medium">{contactInfo.email}</p>
                   </div>
                 </a>
@@ -63,7 +64,7 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-primary-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Location</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('details.location')}</p>
                     <p className="text-gray-900 dark:text-white font-medium">{contactInfo.location}</p>
                   </div>
                 </div>
@@ -71,14 +72,14 @@ const Contact = () => {
 
               {/* Social Links */}
               <div className="pt-6">
-                <p className="text-gray-600 dark:text-gray-400 mb-4">Connect with me</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{t('details.connectWith')}</p>
                 <div className="flex gap-4">
                   <a
                     href={contactInfo.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white dark:bg-gray-700 rounded-full hover:bg-primary-100 dark:hover:bg-primary-900 hover:shadow-md transition-all duration-200"
-                    aria-label="LinkedIn Profile"
+                    aria-label={t('details.linkedInProfile')}
                   >
                     <svg className="h-6 w-6 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -91,13 +92,13 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-                Send a Message
+                {t('form.title')}
               </h3>
               {isSubmitted && (
                 <div className="mb-6 p-4 bg-green-100 dark:bg-green-900 border border-green-200 dark:border-green-700 rounded-lg flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
                   <p className="text-green-800 dark:text-green-200">
-                    Thank you! Your message has been sent successfully.
+                    {t('form.successMessage')}
                   </p>
                 </div>
               )}
@@ -105,7 +106,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Name
+                    {t('form.labels.name')}
                   </label>
                   <input
                     type="text"
@@ -118,7 +119,7 @@ const Contact = () => {
                         ? 'border-red-300 dark:border-red-600 focus:ring-red-500' 
                         : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
                     } dark:bg-gray-700 dark:text-white`}
-                    placeholder="Your name"
+                    placeholder={t('form.placeholders.name')}
                   />
                   {errors.name && (
                     <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
@@ -130,7 +131,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email
+                    {t('form.labels.email')}
                   </label>
                   <input
                     type="email"
@@ -143,7 +144,7 @@ const Contact = () => {
                         ? 'border-red-300 dark:border-red-600 focus:ring-red-500'
                         : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
                     } dark:bg-gray-700 dark:text-white`}
-                    placeholder="your.email@example.com"
+                    placeholder={t('form.placeholders.email')}
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
@@ -155,7 +156,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message
+                    {t('form.labels.message')}
                   </label>
                   <textarea
                     id="message"
@@ -168,7 +169,7 @@ const Contact = () => {
                         ? 'border-red-300 dark:border-red-600 focus:ring-red-500'
                         : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
                     } dark:bg-gray-700 dark:text-white`}
-                    placeholder="Your message..."
+                    placeholder={t('form.placeholders.message')}
                   />
                   {errors.message && (
                     <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
@@ -190,18 +191,18 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full" />
-                      Sending...
+                      {t('form.button.sending')}
                     </>
                   ) : (
                     <>
                       <Send className="h-5 w-5" />
-                      Send Message
+                      {t('form.button.send')}
                     </>
                   )}
                 </button>
               </form>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
-                Or email directly at <a href={`mailto:${contactInfo.email}`} className="text-primary-600 hover:underline">{contactInfo.email}</a>
+                {t('form.directEmail')} <a href={`mailto:${contactInfo.email}`} className="text-primary-600 hover:underline">{contactInfo.email}</a>
               </p>
             </div>
           </div>

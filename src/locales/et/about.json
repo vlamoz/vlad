@@ -1,0 +1,33 @@
+{
+  "title": "Minust",
+  "subtitle": "Kirglik tugevate, skaleeritavate lahenduste loomise vastu",
+  "imageAlt": "Vladislavs Mozgovojs - Vanem Java arendaja",
+  "content": {
+    "paragraph1": "Minu programmeerimise teekond algas Tallinna Tehnikaülikoolis, kuid tõeline haridus algas siis, kui avastasin, et suurepärase tarkvara loomine on sama palju inimestest kui algoritmidest. Üle 18 aasta jooksul olen saanud privileegi töötada mitmes riigis ja tööstusharus — Eestist rahvusvahelistele turgudele.",
+    "paragraph2": "Mis mind motiveerib? Usun, et parimad lahendused tekivad siis, kui kõik meeskonnas tunnevad end mugavalt oma hullumeelsemaid ideid jagades, kui juunior arendajad ei karda vanemaid otsuseid küsitada ja kui me säilitame tervislikud piirid, mis võimaldavad kõigil tuua tööle oma parimat osa. Minu tehniline fookus on ettevõtte Java rakendustel, B2B integratsioonidel ja skaleeritavatel arhitektuuridel, kuid minu tõeline kirg on luua keskkonda, kus säravad inimesed saavad teha oma parimat tööd.",
+    "paragraph3": "Iga päev saan kombineerida tipptasemel tehnilisi väljakutseid vapustavate arendajate juhendamisega. Olen õppinud, et õigeaegselt kohaletoimetamine ja kõrge koodikvaliteedi säilitamine ei ole ainult protsessist — see on usalduse ülesehitamisest, uudishimu julgustamisest ja sellest, et kõik tunneksid end kuulduna. Viimasel ajal on mind põnevil see, kuidas AI tööriistad saavad võimendada seda, milles me juba head oleme, andes meie meeskonnale superväed selle asemel, et asendada inimlikku loovust ja koostööd, mis teeb tarkvaraarenduse tõeliselt rahuldavaks."
+  },
+  "highlights": {
+    "experience": {
+      "title": "18+ aastat kogemust",
+      "description": "Sügav ekspertiis Java ökosüsteemis ja ettevõtte arenduses"
+    },
+    "international": {
+      "title": "Rahvusvahelised projektid",
+      "description": "Piiriüleste süsteemide juurutamine ja B2B integratsioonid"
+    },
+    "goalFocused": {
+      "title": "Eesmärgile suunatud",
+      "description": "Tõestatud edukus tähtaegade ja projekti eesmärkide täitmisel"
+    },
+    "multilingual": {
+      "title": "Mitmekeelne",
+      "description": "Inglise/vene emakeel, professionaalne eesti keel, keskmine hispaania keel"
+    }
+  },
+  "education": {
+    "title": "Haridus",
+    "university": "Tallinna Tehnikaülikool",
+    "years": "2004 - 2007"
+  }
+}

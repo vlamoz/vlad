@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Avaleht",
+    "about": "Minust",
+    "skills": "Oskused",
+    "projects": "Projektid",
+    "experience": "Kogemus",
+    "contact": "Kontakt",
+    "toggleMenu": "Lülita menüü",
+    "logo": "Vlad Mozgovojs"
+  },
+  "accessibility": {
+    "toggleTheme": "Lülita teema",
+    "toggleMenu": "Lülita menüü",
+    "scrollToAbout": "Keri minust sektsiooni",
+    "linkedInProfile": "LinkedIni profiil"
+  },
+  "footer": {
+    "copyright": "© {{year}} Vlad Mozgovojs. Ehitatud",
+    "builtWith": "kasutades React ja TypeScript",
+    "tagline": "Tehniline meeskonnajuht • Tarkvaraarenduse ekspert"
+  },
+  "errors": {
+    "errorBoundary": {
+      "title": "Ups! Midagi läks valesti",
+      "description": "Ilmnes ootamatu viga. Palun proovi lehte värskendada või võta ühendust toega, kui probleem püsib.",
+      "tryAgain": "Proovi uuesti",
+      "refreshPage": "Värskenda lehte",
+      "errorDetails": "Vea üksikasjad (Arendus)"
+    },
+    "validation": {
+      "nameRequired": "Nimi on kohustuslik",
+      "nameMinLength": "Nimi peab olema vähemalt 2 tähemärki",
+      "emailRequired": "E-mail on kohustuslik",
+      "emailInvalid": "Palun sisesta kehtiv e-maili aadress",
+      "messageRequired": "Sõnum on kohustuslik",
+      "messageMinLength": "Sõnum peab olema vähemalt 10 tähemärki",
+      "sendFailed": "Sõnumi saatmine ebaõnnestus. Palun proovi uuesti."
+    }
+  },
+  "languages": {
+    "en": "Inglise",
+    "es": "Hispaania",
+    "et": "Eesti",
+    "ru": "Vene"
+  },
+  "seo": {
+    "title": "Vlad Mozgovojs - Tehniline meeskonnajuht, Java arendaja",
+    "description": "Tehniline meeskonnajuht üle 18 aasta kogemusega ettevõtte arenduses, B2B integratsioonides ja rahvusvahelistes projektides. Ekspert Java, mikroteenuste ja meeskonna juhtimise alal."
+  },
+  "common": {
+    "present": "Praegu",
+    "fullyRemote": "Täielikult kaugtöö",
+    "remote": "Kaugtöö",
+    "estonia": "Eesti",
+    "positions": {
+      "technicalTeamLead": "Tehniline meeskonnajuht",
+      "leadDeveloper": "Peaarendaja",
+      "leadDeveloperB2B": "Peaarendaja - B2B osakond",
+      "leadDeveloperMHUB": "Peaarendaja - MHUB platvorm",
+      "seniorDeveloper": "Vanem arendaja",
+      "seniorDeveloperYouRoam": "Vanem arendaja - YouRoam",
+      "seniorDeveloperSTAR": "Vanem arendaja - STAR süsteem"
+    }
+  }
+}

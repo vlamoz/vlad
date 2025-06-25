@@ -1,0 +1,33 @@
+{
+  "title": "About Me",
+  "subtitle": "Passionate about building robust, scalable solutions",
+  "imageAlt": "Vladislavs Mozgovojs - Technical Team Lead",
+  "content": {
+    "paragraph1": "My coding journey started at Tallinn University of Technology, but the real education began when I discovered that building great software is as much about people as it is about algorithms. Over 18+ years, I've had the privilege of working across multiple countries and industries — from Estonia to international markets.",
+    "paragraph2": "What drives me? I believe the best solutions emerge when everyone on the team feels comfortable sharing their wildest ideas, when junior developers aren't afraid to question senior decisions, and when we maintain healthy boundaries that let everyone bring their best selves to work. My technical focus is on enterprise Java applications, B2B integrations, and scalable architectures, but my real passion is creating environments where brilliant people can do their best work.",
+    "paragraph3": "Every day I get to combine cutting-edge technical challenges with mentoring amazing developers. I've learned that delivering on time and maintaining high code quality isn't just about process — it's about building trust, encouraging curiosity, and making sure everyone feels heard. Lately, I'm excited about how AI tools can amplify what we're already great at, giving our team superpowers rather than replacing the human creativity and collaboration that makes software development truly rewarding."
+  },
+  "highlights": {
+    "experience": {
+      "title": "18+ Years Experience",
+      "description": "Deep expertise in Java ecosystem and enterprise development"
+    },
+    "international": {
+      "title": "International Projects",
+      "description": "Cross-border system implementations and B2B integrations"
+    },
+    "goalFocused": {
+      "title": "Goal-Focused",
+      "description": "Proven track record of meeting deadlines and project objectives"
+    },
+    "multilingual": {
+      "title": "Multilingual",
+      "description": "Native English/Russian, Professional Estonian, Intermediate Spanish"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "university": "Tallinn University of Technology",
+    "years": "2004 - 2007"
+  }
+}

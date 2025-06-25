@@ -1,7 +1,9 @@
 import { ArrowDown, Mail, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation('hero');
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -18,7 +20,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-28 lg:pt-24">
         <div className="text-center">
           {/* Main Heading - Enhanced Typography */}
           <motion.div
@@ -28,19 +30,19 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-              <span className="block">Vlad</span>
-              <span className="block text-primary-600 dark:text-primary-400">Mozgovojs</span>
+              <span className="block">{t('firstName')}</span>
+              <span className="block text-primary-600 dark:text-primary-400">{t('lastName')}</span>
             </h1>
           </motion.div>
 
           {/* Subtitle */}
           <motion.h2
-            className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4"
+            className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4 min-h-[2.5rem] sm:min-h-[3rem] lg:min-h-[3.5rem] flex items-center justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Senior Java Engineer
+            {t('title')}
           </motion.h2>
 
           {/* Location & Experience */}
@@ -50,7 +52,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            International Development Expert • Fully Remote • 18+ Years Experience
+            {t('subtitle')}
           </motion.p>
 
           {/* Tagline */}
@@ -60,7 +62,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            I've spent 18+ years turning complex technical puzzles into elegant solutions. Here's what I've learned: the best code comes from teams that genuinely enjoy working together — where brilliant ideas can come from anyone, failures become learning moments, and we celebrate wins as a group.
+            {t('tagline')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -77,7 +79,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Mail className="h-5 w-5" />
-              Get In Touch
+              {t('cta.getInTouch')}
             </motion.button>
 
 
@@ -90,7 +92,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <ExternalLink className="h-5 w-5" />
-              LinkedIn
+              {t('cta.linkedIn')}
             </motion.a>
           </motion.div>
 
@@ -98,7 +100,7 @@ const Hero = () => {
           <motion.button
             onClick={scrollToAbout}
             className="animate-bounce text-gray-400 hover:text-primary-600 transition-colors duration-200"
-            aria-label="Scroll to about section"
+            aria-label={t('scrollToAbout')}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}

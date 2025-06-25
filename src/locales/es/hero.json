@@ -1,0 +1,12 @@
+{
+  "firstName": "Vlad",
+  "lastName": "Mozgovojs",
+  "title": "Líder Técnico de Equipo",
+  "subtitle": "Experto en Ingeniería de Software • Completamente Remoto • 18+ Años de Experiencia",
+  "tagline": "He dedicado más de 18 años a convertir problemas técnicos complejos en soluciones elegantes. Esto es lo que he aprendido: el mejor código viene de equipos que realmente disfrutan trabajar juntos — donde las ideas brillantes pueden venir de cualquiera, los fallos se convierten en momentos de aprendizaje, y celebramos las victorias como grupo.",
+  "cta": {
+    "getInTouch": "Ponte en contacto",
+    "linkedIn": "LinkedIn"
+  },
+  "scrollToAbout": "Desplazarse a la sección acerca de"
+}

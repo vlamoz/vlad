@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu",
+    "logo": "Vlad Mozgovojs"
+  },
+  "accessibility": {
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu",
+    "scrollToAbout": "Scroll to about section",
+    "linkedInProfile": "LinkedIn Profile"
+  },
+  "footer": {
+    "copyright": "© {{year}} Vlad Mozgovojs. Built with",
+    "builtWith": "using React & TypeScript",
+    "tagline": "Technical Team Lead • Software Engineering Expert"
+  },
+  "errors": {
+    "errorBoundary": {
+      "title": "Oops! Something went wrong",
+      "description": "We encountered an unexpected error. Please try refreshing the page or contact support if the problem persists.",
+      "tryAgain": "Try Again",
+      "refreshPage": "Refresh Page",
+      "errorDetails": "Error Details (Development)"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters",
+      "sendFailed": "Failed to send message. Please try again."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "et": "Estonian",
+    "ru": "Russian"
+  },
+  "seo": {
+    "title": "Vlad Mozgovojs - Technical Team Lead, Java Engineer",
+    "description": "Technical Team Lead with 18+ years of experience in enterprise development, B2B integrations, and international projects. Expert in Java, microservices, and team leadership."
+  },
+  "common": {
+    "present": "Present",
+    "fullyRemote": "Fully Remote",
+    "remote": "Remote",
+    "estonia": "Estonia",
+    "positions": {
+      "technicalTeamLead": "Technical Team Lead",
+      "leadDeveloper": "Lead Developer",
+      "leadDeveloperB2B": "Lead Developer - B2B Department",
+      "leadDeveloperMHUB": "Lead Developer - MHUB Platform",
+      "seniorDeveloper": "Senior Developer",
+      "seniorDeveloperYouRoam": "Senior Developer - YouRoam",
+      "seniorDeveloperSTAR": "Senior Developer - STAR System"
+    }
+  }
+}

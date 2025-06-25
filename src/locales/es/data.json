@@ -1,0 +1,44 @@
+{
+  "projects": {
+    "interprefy": {
+      "description": "Liderando la transformación técnica de una plataforma global de idiomas, integrando tecnologías de IA de vanguardia para traducción en tiempo real, transcripción y capacidades de texto a voz. Gestionando la transición de interpretación tradicional a soluciones de IA/híbridas.",
+      "highlights": [
+        "Transicioné la plataforma a escalado horizontal, manejando miles de usuarios concurrentes con cero tiempo de inactividad",
+        "Lideré la transición del equipo de enfoque en intérpretes a plataforma impulsada por IA",
+        "Integré múltiples servicios de IA para procesamiento de idiomas en tiempo real",
+        "Implementé algoritmos propietarios para traducción de IA en tiempo real y procesamiento de audio"
+      ]
+    },
+    "audatex": {
+      "description": "Encabecé la transformación arquitectónica de AudaNet de arquitectura monolítica a microservicios, sirviendo a compañías de seguros en más de 15 países. Lideré integraciones B2B y transición del frontend a React.",
+      "highlights": [
+        "Lideré la migración de monolito a arquitectura de microservicios",
+        "Gestioné integraciones B2B con más de 50 sistemas de back-office de seguros",
+        "Modernizé la experiencia del frontend de usuario con React"
+      ]
+    },
+    "nasdaq": {
+      "description": "Desarrollador líder de MHUB, la infraestructura central de mensajería para comunicaciones de fondos y depósitos en el ecosistema financiero báltico. Diseñé flujos de mensajes seguros y de alto rendimiento manejando millones en transacciones diarias.",
+      "highlights": [
+        "Diseñé sistema de enrutamiento de mensajes procesando más de 1M de transacciones diarias",
+        "Integré con más de 20 bancos y sistemas de depósito en 3 países",
+        "Implementé estrategias de despliegue con cero tiempo de inactividad"
+      ]
+    },
+    "elisa": {
+      "description": "Contribuidor clave a YouRoam, una plataforma sofisticada de telecomunicaciones que gestiona asociaciones de roaming para operadores de telecomunicaciones bálticos. Implementé funcionalidad compleja de importación/exportación de datos compatible con múltiples formatos internacionales y modernizé la UI para una experiencia de usuario mejorada.",
+      "highlights": [
+        "Diseñé sistema robusto de importación/exportación manejando más de 10 formatos diferentes de datos de telecomunicaciones",
+        "Optimicé el manejo de bases de datos para mayor escalabilidad",
+        "Implementé algoritmos complejos de precios para varios escenarios de roaming"
+      ]
+    },
+    "government": {
+      "description": "Desarrollé infraestructura gubernamental crítica gestionando beneficios de bienestar y seguridad social para ciudadanos estonios.",
+      "highlights": [
+        "Procesé solicitudes de bienestar para más de 500K ciudadanos estonios",
+        "Integré con departamentos gubernamentales y sistemas legacy"
+      ]
+    }
+  }
+}

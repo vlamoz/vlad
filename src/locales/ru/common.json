@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "about": "О себе",
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "experience": "Опыт",
+    "contact": "Контакты",
+    "toggleMenu": "Переключить меню",
+    "logo": "Vlad Mozgovojs"
+  },
+  "accessibility": {
+    "toggleTheme": "Переключить тему",
+    "toggleMenu": "Переключить меню",
+    "scrollToAbout": "Прокрутить к разделу о себе",
+    "linkedInProfile": "Профиль LinkedIn"
+  },
+  "footer": {
+    "copyright": "© {{year}} Vlad Mozgovojs. Создано с",
+    "builtWith": "используя React и TypeScript",
+    "tagline": "Технический лидер команды • Эксперт по разработке ПО"
+  },
+  "errors": {
+    "errorBoundary": {
+      "title": "Упс! Что-то пошло не так",
+      "description": "Произошла непредвиденная ошибка. Пожалуйста, попробуйте обновить страницу или свяжитесь с поддержкой, если проблема не исчезнет.",
+      "tryAgain": "Попробовать снова",
+      "refreshPage": "Обновить страницу",
+      "errorDetails": "Детали ошибки (Разработка)"
+    },
+    "validation": {
+      "nameRequired": "Имя обязательно",
+      "nameMinLength": "Имя должно содержать минимум 2 символа",
+      "emailRequired": "Email обязателен",
+      "emailInvalid": "Пожалуйста, введите действительный email адрес",
+      "messageRequired": "Сообщение обязательно",
+      "messageMinLength": "Сообщение должно содержать минимум 10 символов",
+      "sendFailed": "Не удалось отправить сообщение. Пожалуйста, попробуйте снова."
+    }
+  },
+  "languages": {
+    "en": "Английский",
+    "es": "Испанский",
+    "et": "Эстонский",
+    "ru": "Русский"
+  },
+  "seo": {
+    "title": "Влад Мозговой - Технический лидер команды, Java разработчик",
+    "description": "Технический лидер команды с более чем 18-летним опытом в корпоративной разработке, B2B интеграциях и международных проектах. Эксперт в Java, микросервисах и руководстве командами."
+  },
+  "common": {
+    "present": "Настоящее время",
+    "fullyRemote": "Полностью удаленно",
+    "remote": "Удаленно",
+    "estonia": "Эстония",
+    "positions": {
+      "technicalTeamLead": "Технический лидер команды",
+      "leadDeveloper": "Ведущий разработчик",
+      "leadDeveloperB2B": "Ведущий разработчик - B2B отдел",
+      "leadDeveloperMHUB": "Ведущий разработчик - Платформа MHUB",
+      "seniorDeveloper": "Старший разработчик",
+      "seniorDeveloperYouRoam": "Старший разработчик - YouRoam",
+      "seniorDeveloperSTAR": "Старший разработчик - Система STAR"
+    }
+  }
+}

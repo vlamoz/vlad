@@ -1,0 +1,33 @@
+{
+  "title": "Let's Connect",
+  "subtitle": "Whether you have a project in mind or just want to discuss technology, I'm always open to new opportunities and conversations.",
+  "getInTouch": {
+    "title": "Get in Touch",
+    "description": "I'm genuinely excited about connecting with fellow builders, problem-solvers, and team leaders. Whether you're tackling a head-scratcher of a technical challenge, building international distributed teams, or just want to chat about creating environments where developers thrive, I'd love to hear from you. The best conversations happen when curious minds come together — so let's start one!"
+  },
+  "details": {
+    "email": "Email",
+    "location": "Location",
+    "connectWith": "Connect with me",
+    "linkedInProfile": "LinkedIn Profile"
+  },
+  "form": {
+    "title": "Send a Message",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "your.email@example.com",
+      "message": "Your message..."
+    },
+    "button": {
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "directEmail": "Or email directly at"
+  }
+}

@@ -1,7 +1,9 @@
 import { memo } from 'react';
 import { Heart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = memo(() => {
+  const { t } = useTranslation('common');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -9,12 +11,12 @@ const Footer = memo(() => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="flex items-center justify-center gap-2 text-sm">
-            © {currentYear} Vlad Mozgovojs. Built with
-            <Heart className="h-4 w-4 text-primary-500 fill-primary-500" />
-            using React & TypeScript
+            {t('footer.copyright', { year: currentYear })}
+            <Heart className="h-4 w-4 text-red-500 fill-red-500" />
+            {t('footer.builtWith')}
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-600 mt-2">
-            Senior Java Engineer • Technical Team Lead
+            {t('footer.tagline')}
           </p>
         </div>
       </div>

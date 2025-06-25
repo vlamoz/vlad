@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Vite. Features a clean design with dark/light theme support and smooth animations.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React 19+ with TypeScript
+- **Build Tool**: Vite with Hot Module Replacement (HMR)
+- **Styling**: Tailwind CSS with custom color palette
+- **Theme**: Dark/Light mode with system preference detection
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Internationalization**: React i18next
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🌙 Dark/Light theme toggle with localStorage persistence
+- 📱 Fully responsive design (mobile-first approach)
+- ⚡ Fast development with Vite HMR
+- 🎨 Custom Tailwind CSS configuration
+- 🔄 Smooth animations and transitions
+- 🌍 Multi-language support ready
+- 🎯 Type-safe with TypeScript
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/     # React components (Header, Hero, About, Skills, etc.)
+├── contexts/       # React Context providers (ThemeContext)
+├── data/          # Static data (technologies.ts)
+└── types/         # TypeScript type definitions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
+
+### Available Scripts
+
+```bash
+npm run dev        # Start development server on port 3000
+npm run build      # Build for production (TypeScript check + Vite build)
+npm run preview    # Preview production build
+npm run lint       # Run ESLint
+```
+
+## Development Patterns
+
+- **Components**: Functional React with hooks
+- **Styling**: Tailwind utilities with dark: prefix for theme support
+- **Type Safety**: TypeScript interfaces from `src/types/`
+- **Icons**: Lucide React library for consistent iconography
+- **Theme**: Context-based theme management with automatic system detection

@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface FormData {
   name: string;
@@ -20,6 +21,8 @@ interface FormState {
 }
 
 export const useContactForm = () => {
+  const { t } = useTranslation('common');
+  
   const [state, setState] = useState<FormState>({
     data: { name: '', email: '', message: '' },
     errors: {},
@@ -36,21 +39,21 @@ export const useContactForm = () => {
     const errors: FormErrors = {};
 
     if (!data.name.trim()) {
-      errors.name = 'Name is required';
+      errors.name = t('errors.validation.nameRequired');
     } else if (data.name.trim().length < 2) {
-      errors.name = 'Name must be at least 2 characters';
+      errors.name = t('errors.validation.nameMinLength');
     }
 
     if (!data.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = t('errors.validation.emailRequired');
     } else if (!validateEmail(data.email)) {
-      errors.email = 'Please enter a valid email address';
+      errors.email = t('errors.validation.emailInvalid');
     }
 
     if (!data.message.trim()) {
-      errors.message = 'Message is required';
+      errors.message = t('errors.validation.messageRequired');
     } else if (data.message.trim().length < 10) {
-      errors.message = 'Message must be at least 10 characters';
+      errors.message = t('errors.validation.messageMinLength');
     }
 
     return errors;
@@ -96,7 +99,7 @@ export const useContactForm = () => {
       setState(prev => ({ 
         ...prev, 
         isSubmitting: false,
-        errors: { message: 'Failed to send message. Please try again.' }
+        errors: { message: t('errors.validation.sendFailed') }
       }));
     }
   };

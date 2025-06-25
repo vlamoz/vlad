@@ -1,0 +1,19 @@
+{
+  "title": "Tehnilised oskused",
+  "subtitle": "Põhjalik ekspertiis Java ökosüsteemis ja kaugemal",
+  "categories": {
+    "coreJava": "Java põhitehnoloogiad",
+    "enterprise": "Ettevõte ja arhitektuur",
+    "databases": "Andmebaasid",
+    "devops": "DevOps ja tööriistad",
+    "webTech": "Veebitehnoloogiad",
+    "domain": "Domeeni ekspertiis"
+  },
+  "alwaysLearning": {
+    "title": "Alati õppimas",
+    "content": {
+      "paragraph1": "Siin on midagi, mida ma armastan selles tööstuses: alati on midagi uut õppida! Ma püsin kursis Java versioonide ja raamistiku uuendustega, kuid olen sama palju põnevil, kui kaasarendaja näitab mulle nutikat lähenemist, mida ma polnud kaalunud.",
+      "paragraph2": "Nendel päevadel uurin, kuidas AI tööriistad saavad meie meeskonna jõu kordseks suurendajaks — mitte asendades meie ekspertiisi, vaid vabastades meid tegelemast tõeliselt huvitavate väljakutsetega, mis nõuavad inimlikku mõistmist ja loovust."
+    }
+  }
+}

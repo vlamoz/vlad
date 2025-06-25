@@ -1,0 +1,44 @@
+{
+  "projects": {
+    "interprefy": {
+      "description": "Leading the technical transformation of a global language platform, integrating cutting-edge AI technologies for real-time translation, transcription, and text-to-speech capabilities. Managing the transition from traditional interpretation to AI/hybrid solutions.",
+      "highlights": [
+        "Transitioned the platform to horizontal scaling, handling thousands of concurrent users with zero downtime",
+        "Led team transition from interpreter-focused to AI-powered platform",
+        "Integrated multiple AI services for real-time language processing",
+        "Implemented proprietary algorithms for real-time AI translation and audio processing"
+      ]
+    },
+    "audatex": {
+      "description": "Spearheaded the architectural transformation of AudaNet from monolithic to microservices architecture, serving insurance companies across 15+ countries. Led B2B integrations and React frontend transition.",
+      "highlights": [
+        "Led migration from monolith to microservices architecture",
+        "Managed B2B integrations with 50+ insurance backoffice systems",
+        "Modernized the user frontend experience with React"
+      ]
+    },
+    "nasdaq": {
+      "description": "Lead Developer of MHUB, the central messaging infrastructure for fund and depository communications across the Baltic financial ecosystem. Designed secure, high-performance message flows handling millions in daily transactions.",
+      "highlights": [
+        "Designed message routing system processing 1M+ transactions daily",
+        "Integrated with 20+ banks and depository systems across 3 countries",
+        "Implemented zero-downtime deployment strategies"
+      ]
+    },
+    "elisa": {
+      "description": "Key contributor to YouRoam, a sophisticated telecommunications platform managing roaming partnerships for Baltic telecom operators. Implemented complex data import/export functionality supporting multiple international formats and modernized the UI for enhanced user experience.",
+      "highlights": [
+        "Designed robust import/export system handling 10+ different telecom data formats",
+        "Optimized database handling for increased scalability",
+        "Implemented complex pricing algorithms for various roaming scenarios"
+      ]
+    },
+    "government": {
+      "description": "Developed critical government infrastructure managing welfare benefits and social security for Estonian citizens.",
+      "highlights": [
+        "Processed welfare applications for 500K+ Estonian citizens",
+        "Integrated with government departments and legacy systems"
+      ]
+    }
+  }
+}

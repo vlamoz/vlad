@@ -22,7 +22,9 @@
       "Bash(npm run lint)",
       "Bash(rm:*)",
       "Bash(git checkout:*)",
-      "Bash(npm update:*)"
+      "Bash(npm update:*)",
+      "Bash(timeout 10s npm run dev)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

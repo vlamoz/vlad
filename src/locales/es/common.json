@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "toggleMenu": "Alternar menú",
+    "logo": "Vlad Mozgovojs"
+  },
+  "accessibility": {
+    "toggleTheme": "Cambiar tema",
+    "toggleMenu": "Alternar menú",
+    "scrollToAbout": "Desplazarse a la sección acerca de",
+    "linkedInProfile": "Perfil de LinkedIn"
+  },
+  "footer": {
+    "copyright": "© {{year}} Vlad Mozgovojs. Construido con",
+    "builtWith": "usando React y TypeScript",
+    "tagline": "Líder Técnico de Equipo • Experto en Ingeniería de Software"
+  },
+  "errors": {
+    "errorBoundary": {
+      "title": "¡Ups! Algo salió mal",
+      "description": "Encontramos un error inesperado. Por favor, intenta actualizar la página o contacta al soporte si el problema persiste.",
+      "tryAgain": "Intentar de nuevo",
+      "refreshPage": "Actualizar página",
+      "errorDetails": "Detalles del error (Desarrollo)"
+    },
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "Por favor, introduce una dirección de correo válida",
+      "messageRequired": "El mensaje es obligatorio",
+      "messageMinLength": "El mensaje debe tener al menos 10 caracteres",
+      "sendFailed": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo."
+    }
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "et": "Estonio",
+    "ru": "Ruso"
+  },
+  "seo": {
+    "title": "Vlad Mozgovojs - Líder Técnico de Equipo, Ingeniero Java",
+    "description": "Líder Técnico de Equipo con más de 18 años de experiencia en desarrollo empresarial, integraciones B2B y proyectos internacionales. Experto en Java, microservicios y liderazgo de equipos."
+  },
+  "common": {
+    "present": "Presente",
+    "fullyRemote": "Completamente Remoto",
+    "remote": "Remoto",
+    "estonia": "Estonia",
+    "positions": {
+      "technicalTeamLead": "Líder Técnico de Equipo",
+      "leadDeveloper": "Desarrollador Principal",
+      "leadDeveloperB2B": "Desarrollador Principal - Departamento B2B",
+      "leadDeveloperMHUB": "Desarrollador Principal - Plataforma MHUB",
+      "seniorDeveloper": "Desarrollador Senior",
+      "seniorDeveloperYouRoam": "Desarrollador Senior - YouRoam",
+      "seniorDeveloperSTAR": "Desarrollador Senior - Sistema STAR"
+    }
+  }
+}

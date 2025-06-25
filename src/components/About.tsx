@@ -1,29 +1,32 @@
 import { Code, Globe, Target, Users } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import profileImage from '../assets/IMG_1228.jpg';
 
 const About = () => {
+  const { t } = useTranslation('about');
+  
   const highlights = [
     {
       icon: <Code className="h-8 w-8 text-primary-600" />,
-      title: "18+ Years Experience",
-      description: "Deep expertise in Java ecosystem and enterprise development"
+      title: t('highlights.experience.title'),
+      description: t('highlights.experience.description')
     },
     {
       icon: <Globe className="h-8 w-8 text-primary-600" />,
-      title: "International Projects",
-      description: "Cross-border system implementations and B2B integrations"
+      title: t('highlights.international.title'),
+      description: t('highlights.international.description')
     },
     {
       icon: <Target className="h-8 w-8 text-primary-600" />,
-      title: "Goal-Focused",
-      description: "Proven track record of meeting deadlines and project objectives"
+      title: t('highlights.goalFocused.title'),
+      description: t('highlights.goalFocused.description')
     },
     {
       icon: <Users className="h-8 w-8 text-primary-600" />,
-      title: "Multilingual",
-      description: "Native English/Russian, Professional Estonian, Intermediate Spanish"
+      title: t('highlights.multilingual.title'),
+      description: t('highlights.multilingual.description')
     }
   ];
 
@@ -34,10 +37,10 @@ const About = () => {
           {/* Section Header */}
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              About Me
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Passionate about building robust, scalable solutions
+              {t('subtitle')}
             </p>
           </AnimatedSection>
 
@@ -47,7 +50,7 @@ const About = () => {
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={profileImage}
-                  alt="Vladislavs Mozgovojs - Senior Java Engineer"
+                  alt={t('imageAlt')}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -59,15 +62,15 @@ const About = () => {
             <AnimatedSection delay={0.1}>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  My coding journey started at Tallinn University of Technology, but the real education began when I discovered that building great software is as much about people as it is about algorithms. Over 18+ years, I've had the privilege of working across multiple countries and industries — from Estonia to international markets.
+                  {t('content.paragraph1')}
                 </p>
 
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  What drives me? I believe the best solutions emerge when everyone on the team feels comfortable sharing their wildest ideas, when junior developers aren't afraid to question senior decisions, and when we maintain healthy boundaries that let everyone bring their best selves to work. My technical focus is on enterprise Java applications, B2B integrations, and scalable architectures, but my real passion is creating environments where brilliant people can do their best work.
+                  {t('content.paragraph2')}
                 </p>
 
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Every day I get to combine cutting-edge technical challenges with mentoring amazing developers. I've learned that delivering on time and maintaining high code quality isn't just about process — it's about building trust, encouraging curiosity, and making sure everyone feels heard. Lately, I'm excited about how AI tools can amplify what we're already great at, giving our team superpowers rather than replacing the human creativity and collaboration that makes software development truly rewarding.
+                  {t('content.paragraph3')}
                 </p>
               </div>
             </AnimatedSection>
@@ -101,9 +104,9 @@ const About = () => {
           {/* Education */}
           <div className="mt-16 text-center">
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Education</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium">Tallinn University of Technology</p>
-              <p className="text-gray-600 dark:text-gray-400">2004 - 2007</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('education.title')}</h3>
+              <p className="text-gray-700 dark:text-gray-300 font-medium">{t('education.university')}</p>
+              <p className="text-gray-600 dark:text-gray-400">{t('education.years')}</p>
             </div>
           </div>
         </div>

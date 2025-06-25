@@ -1,9 +1,14 @@
 import { Calendar, MapPin, Building2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import type { Experience as ExperienceType } from '../types';
 import TechTag from './TechTag';
 import { getExperiences } from '../data/workExperience';
+import { translateWorkExperience } from '../utils/translationHelpers';
 
 const Experience = () => {
+  const { t } = useTranslation('experience');
+  const { t: tData } = useTranslation('data');
+  const { t: tCommon } = useTranslation('common');
   const experiences: ExperienceType[] = getExperiences();
 
   return (
@@ -13,10 +18,10 @@ const Experience = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Professional Experience
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Over 18 years of building enterprise solutions across industries
+              {t('subtitle')}
             </p>
           </div>
 
@@ -42,7 +47,7 @@ const Experience = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                          {exp.position}
+                          {translateWorkExperience(tCommon, 'position', exp.position)}
                         </h3>
                         <div className="flex items-center gap-2 text-primary-600 font-medium mt-1">
                           <Building2 className="h-4 w-4" />
@@ -52,18 +57,18 @@ const Experience = () => {
                       <div className="flex flex-col sm:items-end mt-2 sm:mt-0">
                         <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400 text-sm">
                           <Calendar className="h-4 w-4" />
-                          <span>{exp.period}</span>
+                          <span>{translateWorkExperience(tCommon, 'period', exp.period)}</span>
                         </div>
                         <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400 text-sm mt-1">
                           <MapPin className="h-4 w-4" />
-                          <span>{exp.location}</span>
+                          <span>{translateWorkExperience(tCommon, 'location', exp.location)}</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Description */}
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                      {exp.description}
+                      {tData(`projects.${exp.id}.description`, { defaultValue: exp.description })}
                     </p>
 
                     {/* Technologies */}
@@ -82,14 +87,14 @@ const Experience = () => {
           <div className="mt-16 text-center">
             <div className="bg-gradient-to-r from-primary-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-lg p-8">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Continuous Growth & Innovation
+                {t('continuousGrowth.title')}
               </h3>
               <div className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed space-y-4">
                 <p>
-                  Every project has taught me something new — not just about technology, but about building teams that can tackle anything together. From financial systems handling millions of transactions to AI platforms serving global conferences, I've learned that the most innovative solutions come from diverse perspectives and psychological safety.
+                  {t('continuousGrowth.content.paragraph1')}
                 </p>
                 <p>
-                  My goal isn't just to deliver scalable, reliable systems, but to leave behind teams that are stronger, more confident, and genuinely excited about what they're building.
+                  {t('continuousGrowth.content.paragraph2')}
                 </p>
               </div>
             </div>

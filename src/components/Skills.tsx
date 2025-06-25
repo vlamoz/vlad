@@ -1,8 +1,21 @@
 import type { Skill } from '../types';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { SKILL_CATEGORIES } from '../data/skills';
 
 const Skills = () => {
+  const { t } = useTranslation('skills');
+  
+  // Map category names to translation keys
+  const categoryKeyMap: { [key: string]: string } = {
+    "Core Java Technologies": "coreJava",
+    "Enterprise & Architecture": "enterprise",
+    "Databases": "databases",
+    "DevOps & Tools": "devops",
+    "Web Technologies": "webTech",
+    "Domain Expertise": "domain"
+  };
+  
   const skillCategories: Skill[] = SKILL_CATEGORIES;
 
   return (
@@ -12,10 +25,10 @@ const Skills = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Technical Skills
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Comprehensive expertise across the Java ecosystem and beyond
+              {t('subtitle')}
             </p>
           </div>
 
@@ -32,7 +45,7 @@ const Skills = () => {
                 whileHover={{ scale: 1.02, y: -5 }}
               >
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-600 pb-2">
-                  {category.category}
+                  {t(`categories.${categoryKeyMap[category.category]}`)}
                 </h3>
                 <div className="space-y-2">
                   {category.items.map((skill, skillIndex) => (
@@ -53,14 +66,14 @@ const Skills = () => {
           <div className="mt-16 bg-white dark:bg-gray-700 rounded-lg shadow-md p-8">
             <div className="text-center">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Always Learning
+                {t('alwaysLearning.title')}
               </h3>
               <div className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed space-y-4">
                 <p>
-                  Here's something I love about this industry: there's always something new to learn! I stay current with Java releases and framework updates, but I'm equally excited when a fellow developer shows me a clever approach I hadn't considered.
+                  {t('alwaysLearning.content.paragraph1')}
                 </p>
                 <p>
-                  These days, I'm exploring how AI tools can become force multipliers for our team — not replacing our expertise, but freeing us up to tackle the really interesting challenges that require human insight and creativity.
+                  {t('alwaysLearning.content.paragraph2')}
                 </p>
               </div>
             </div>

@@ -1,0 +1,19 @@
+{
+  "title": "Technical Skills",
+  "subtitle": "Comprehensive expertise across the Java ecosystem and beyond",
+  "categories": {
+    "coreJava": "Core Java Technologies",
+    "enterprise": "Enterprise & Architecture",
+    "databases": "Databases",
+    "devops": "DevOps & Tools",
+    "webTech": "Web Technologies",
+    "domain": "Domain Expertise"
+  },
+  "alwaysLearning": {
+    "title": "Always Learning",
+    "content": {
+      "paragraph1": "Here's something I love about this industry: there's always something new to learn! I stay current with Java releases and framework updates, but I'm equally excited when a fellow developer shows me a clever approach I hadn't considered.",
+      "paragraph2": "These days, I'm exploring how AI tools can become force multipliers for our team — not replacing our expertise, but freeing us up to tackle the really interesting challenges that require human insight and creativity."
+    }
+  }
+}
