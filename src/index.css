@@ -231,7 +231,7 @@ body {
     margin-bottom: 0.2rem !important;
   }
 
-  /* Skills section */
+  /* Skills section - single column, compact spacing */
   #skills .grid {
     display: block !important;
   }
@@ -239,8 +239,32 @@ body {
   #skills > div > div {
     background: #fff !important;
     border: 1px solid #ddd !important;
-    margin-bottom: 0.4rem !important;
-    padding: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
+    padding: 0.4rem !important;
+  }
+
+  /* Reduce spacing inside skill blocks */
+  #skills .space-y-2,
+  #skills .space-y-4,
+  #skills div[class*="space-y"] {
+    gap: 0.1rem !important;
+  }
+
+  #skills .space-y-2 > *,
+  #skills .space-y-4 > *,
+  #skills div[class*="space-y"] > * {
+    margin-top: 0 !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  /* Make skill items more compact */
+  #skills .p-2 {
+    padding: 0.2rem !important;
+  }
+
+  #skills .hover\\:bg-gray-50 {
+    padding: 0.2rem !important;
+    margin-bottom: 0.1rem !important;
   }
 
   /* Technology tags */
