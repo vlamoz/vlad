@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
-  const { t } = useTranslation('hero');
+  const { t, ready } = useTranslation('hero');
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -30,8 +30,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-              <span className="block">{t('firstName')}</span>
-              <span className="block text-primary-600 dark:text-primary-400">{t('lastName')}</span>
+              <span className="block">{ready ? t('firstName') : 'Vlad'}</span>
+              <span className="block text-primary-600 dark:text-primary-400">{ready ? t('lastName') : 'Mozgovojs'}</span>
             </h1>
           </motion.div>
 
@@ -42,7 +42,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            {t('title')}
+            {ready ? t('title') : 'Technical Team Lead'}
           </motion.h2>
 
           {/* Location & Experience */}
@@ -52,17 +52,17 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {t('subtitle')}
+            {ready ? t('subtitle') : 'Software Engineering Expert • Fully Remote • 18+ Years Experience'}
           </motion.p>
 
-          {/* Tagline */}
+          {/* Tagline - LCP Element (no animation delay for performance) */}
           <motion.p
             className="text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0 }}
           >
-            {t('tagline')}
+            {ready ? t('tagline') : "I've spent 18+ years turning complex technical puzzles into elegant solutions. Here's what I've learned: the best code comes from teams that genuinely enjoy working together — where brilliant ideas can come from anyone, failures become learning moments, and we celebrate wins as a group."}
           </motion.p>
 
           {/* CTA Buttons */}

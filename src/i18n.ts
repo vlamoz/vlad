@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Import translation files
+// Import only English translations for initial load (critical path optimization)
 import enCommon from './locales/en/common.json';
 import enHero from './locales/en/hero.json';
 import enAbout from './locales/en/about.json';
@@ -12,33 +12,40 @@ import enExperience from './locales/en/experience.json';
 import enContact from './locales/en/contact.json';
 import enData from './locales/en/data.json';
 
-import esCommon from './locales/es/common.json';
-import esHero from './locales/es/hero.json';
-import esAbout from './locales/es/about.json';
-import esSkills from './locales/es/skills.json';
-import esProjects from './locales/es/projects.json';
-import esExperience from './locales/es/experience.json';
-import esContact from './locales/es/contact.json';
-import esData from './locales/es/data.json';
+// Lazy loading function for other languages
+const loadLanguageResources = async (lng: string) => {
+  const resources: any = {};
+  
+  try {
+    const [common, hero, about, skills, projects, experience, contact, data] = await Promise.all([
+      import(`./locales/${lng}/common.json`),
+      import(`./locales/${lng}/hero.json`),
+      import(`./locales/${lng}/about.json`),
+      import(`./locales/${lng}/skills.json`),
+      import(`./locales/${lng}/projects.json`),
+      import(`./locales/${lng}/experience.json`),
+      import(`./locales/${lng}/contact.json`),
+      import(`./locales/${lng}/data.json`),
+    ]);
 
-import etCommon from './locales/et/common.json';
-import etHero from './locales/et/hero.json';
-import etAbout from './locales/et/about.json';
-import etSkills from './locales/et/skills.json';
-import etProjects from './locales/et/projects.json';
-import etExperience from './locales/et/experience.json';
-import etContact from './locales/et/contact.json';
-import etData from './locales/et/data.json';
+    resources[lng] = {
+      common: common.default,
+      hero: hero.default,
+      about: about.default,
+      skills: skills.default,
+      projects: projects.default,
+      experience: experience.default,
+      contact: contact.default,
+      data: data.default,
+    };
+  } catch (error) {
+    console.warn(`Failed to load language resources for ${lng}:`, error);
+  }
 
-import ruCommon from './locales/ru/common.json';
-import ruHero from './locales/ru/hero.json';
-import ruAbout from './locales/ru/about.json';
-import ruSkills from './locales/ru/skills.json';
-import ruProjects from './locales/ru/projects.json';
-import ruExperience from './locales/ru/experience.json';
-import ruContact from './locales/ru/contact.json';
-import ruData from './locales/ru/data.json';
+  return resources;
+};
 
+// Initial resources (English only for fast startup)
 const resources = {
   en: {
     common: enCommon,
@@ -49,36 +56,6 @@ const resources = {
     experience: enExperience,
     contact: enContact,
     data: enData,
-  },
-  es: {
-    common: esCommon,
-    hero: esHero,
-    about: esAbout,
-    skills: esSkills,
-    projects: esProjects,
-    experience: esExperience,
-    contact: esContact,
-    data: esData,
-  },
-  et: {
-    common: etCommon,
-    hero: etHero,
-    about: etAbout,
-    skills: etSkills,
-    projects: etProjects,
-    experience: etExperience,
-    contact: etContact,
-    data: etData,
-  },
-  ru: {
-    common: ruCommon,
-    hero: ruHero,
-    about: ruAbout,
-    skills: ruSkills,
-    projects: ruProjects,
-    experience: ruExperience,
-    contact: ruContact,
-    data: ruData,
   },
 };
 
@@ -104,4 +81,18 @@ i18n
     defaultNS: 'common',
   });
 
+// Function to lazy load and switch language
+export const changeLanguage = async (lng: string) => {
+  if (lng !== 'en' && !i18n.hasResourceBundle(lng, 'common')) {
+    const newResources = await loadLanguageResources(lng);
+    if (newResources[lng]) {
+      Object.entries(newResources[lng]).forEach(([namespace, resource]) => {
+        i18n.addResourceBundle(lng, namespace, resource);
+      });
+    }
+  }
+  await i18n.changeLanguage(lng);
+};
+
+export { loadLanguageResources };
 export default i18n;

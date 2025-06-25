@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { changeLanguage as changeLanguageAsync } from '../i18n';
 
 export type Language = 'en' | 'es' | 'et' | 'ru';
 
@@ -36,7 +37,7 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
     
     setIsLoading(true);
     try {
-      await i18n.changeLanguage(language);
+      await changeLanguageAsync(language);
       setCurrentLanguage(language);
       localStorage.setItem('preferredLanguage', language);
       
