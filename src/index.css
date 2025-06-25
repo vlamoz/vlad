@@ -385,13 +385,14 @@ body {
     visibility: visible !important;
   }
 
-  /* Hide profile images/pictures */
-  img,
-  picture,
-  [class*="profile"],
-  [class*="avatar"],
-  [src*="profile"],
-  [srcset*="profile"] {
+  /* Hide profile images/pictures - be specific to avoid breaking layout */
+  img[src*="profile"],
+  picture {
+    display: none !important;
+  }
+
+  /* Hide the specific About section photo container - lines 52-80 in About.tsx */
+  #about .text-center.mb-16:nth-child(2) {
     display: none !important;
   }
 
