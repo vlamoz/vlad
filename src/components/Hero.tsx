@@ -1,4 +1,4 @@
-import { ArrowDown, Mail, ExternalLink } from 'lucide-react';
+import { ArrowDown, Mail, ExternalLink, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -16,6 +16,10 @@ const Hero = () => {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handlePrint = () => {
+    window.print();
   };
 
   return (
@@ -82,6 +86,15 @@ const Hero = () => {
               {t('cta.getInTouch')}
             </motion.button>
 
+            <motion.button
+              onClick={handlePrint}
+              className="flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download className="h-5 w-5" />
+              Download CV
+            </motion.button>
 
             <motion.a
               href="https://www.linkedin.com/in/vlad-mozgovoi-b8452838/"

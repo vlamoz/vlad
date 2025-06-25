@@ -28,3 +28,390 @@ body {
   color: #f9fafb;
   background-color: #111827;
 }
+
+/* Print Styles */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* Hide non-essential elements */
+  header,
+  nav,
+  button,
+  footer,
+  .animate-bounce,
+  [class*="scroll"],
+  [class*="theme"],
+  [class*="language"] {
+    display: none !important;
+  }
+
+  /* Hide contact form and send message sections */
+  #contact form,
+  #contact .bg-white:has(form),
+  #contact .dark\:bg-gray-800:has(form),
+  #contact > div > div > div:last-child {
+    display: none !important;
+  }
+
+  /* Hide project code snippets and decorative elements */
+  pre,
+  code,
+  .hljs,
+  [class*="code"],
+  [class*="syntax"],
+  [class*="ProjectPlaceholder"],
+  [class*="aspect-video"] {
+    display: none !important;
+  }
+
+  /* Hide the entire project placeholder container */
+  #projects .space-y-12 > div > div:first-child {
+    display: none !important;
+  }
+
+  /* Remove all backgrounds and shadows */
+  * {
+    background: #fff !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Page layout */
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  /* NUCLEAR OPTION: Maximum specificity override */
+  html body section.py-20,
+  html body .py-20,
+  html body div.py-20,
+  html body section[class*="py-20"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  html body .mt-16,
+  html body div.mt-16,
+  html body section .mt-16,
+  html body [class*="mt-16"] {
+    margin-top: 0 !important;
+  }
+
+  html body .mb-16,
+  html body div.mb-16,
+  html body section .mb-16,
+  html body [class*="mb-16"] {
+    margin-bottom: 0 !important;
+  }
+
+  html body .mb-12,
+  html body div.mb-12,
+  html body section .mb-12,
+  html body [class*="mb-12"] {
+    margin-bottom: 0 !important;
+  }
+
+  html body .mt-12,
+  html body div.mt-12,
+  html body section .mt-12,
+  html body [class*="mt-12"] {
+    margin-top: 0 !important;
+  }
+
+  /* Force all sections to zero spacing */
+  html body section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Catch-all for any element with spacing classes */
+  html body [class*="py-"],
+  html body [class*="pt-"],
+  html body [class*="pb-"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  html body [class*="my-"],
+  html body [class*="mt-"],
+  html body [class*="mb-"] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Hero section - target the specific container causing gap */
+  #home {
+    min-height: auto !important;
+    padding: 0.2rem 0 !important;
+  }
+
+  /* Target the specific Hero CTA button container that has mb-16 */
+  #home .mb-16 {
+    margin-bottom: 0 !important;
+  }
+
+  /* CRITICAL: Target the specific Skills "Always Learning" container - line 66 in Skills.tsx */
+  #skills .mt-16 {
+    margin-top: 0 !important;
+  }
+
+  /* CRITICAL: Target About section py-20 - line 38 in About.tsx */
+  #about.py-20 {
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+
+  /* Target ALL sections with py-20 class specifically */
+  section.py-20 {
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+
+  /* Target Skills section with py-20 if it exists */
+  #skills.py-20 {
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+
+  /* Target section headers that might have large margins */
+  .text-center.mb-16 {
+    margin-bottom: 0.3rem !important;
+  }
+
+  /* Target any other common spacing classes */
+  .space-y-12 > * + * {
+    margin-top: 0.3rem !important;
+  }
+
+  .space-y-8 > * + * {
+    margin-top: 0.2rem !important;
+  }
+
+  #home h1 {
+    font-size: 2rem !important;
+    margin-bottom: 0.2rem !important;
+    color: #000 !important;
+  }
+
+  #home h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.2rem !important;
+    color: #333 !important;
+  }
+
+  #home p {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.2rem !important;
+    color: #333 !important;
+  }
+
+  /* Section headers */
+  h2 {
+    font-size: 1.4rem !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.2rem;
+    margin: 0.5rem 0 0.3rem 0 !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+    color: #000 !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  /* Skills section */
+  #skills .grid {
+    display: block !important;
+  }
+
+  #skills > div > div {
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    margin-bottom: 0.4rem !important;
+    padding: 0.5rem !important;
+  }
+
+  /* Technology tags */
+  span[class*="bg-"],
+  .tech-tag {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+    padding: 0.1rem 0.3rem !important;
+    margin: 0.1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Experience section */
+  #experience > div > div > div {
+    border-left: 2px solid #000;
+    padding-left: 0.8rem;
+    margin-bottom: 0.6rem !important;
+    background: #fff !important;
+  }
+
+  /* Projects section */
+  #projects .space-y-12 > div {
+    margin-bottom: 0.4rem !important;
+  }
+
+  #projects .flex {
+    display: block !important;
+  }
+
+  #projects .space-y-12 > div > div:last-child {
+    width: 100% !important;
+  }
+
+  /* Add bullet points to key achievements */
+  #projects ul,
+  #experience ul {
+    list-style-type: disc !important;
+    margin-left: 1.2rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  #projects li,
+  #experience li {
+    margin-bottom: 0.1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  #projects .flex.items-start,
+  #experience .flex.items-start {
+    display: list-item !important;
+  }
+
+  #projects .w-2.h-2,
+  #experience .w-2.h-2 {
+    display: none !important;
+  }
+
+  /* Fix project meta info layout - icons and text alignment */
+  #projects .flex.flex-wrap.gap-4,
+  #experience .flex.flex-wrap.gap-4 {
+    display: block !important;
+  }
+
+  #projects .flex.items-center.gap-1,
+  #experience .flex.items-center.gap-1 {
+    display: inline-block !important;
+    margin-right: 1rem !important;
+  }
+
+  #projects .flex.items-center.gap-1 svg,
+  #experience .flex.items-center.gap-1 svg {
+    display: inline !important;
+    vertical-align: middle !important;
+    margin-right: 0.3rem !important;
+  }
+
+  #projects .flex.items-center.gap-1 span,
+  #experience .flex.items-center.gap-1 span {
+    display: inline !important;
+    vertical-align: middle !important;
+  }
+
+  /* Contact section - minimal */
+  #contact .grid {
+    display: block !important;
+  }
+
+  #contact > div > div > div:first-child {
+    display: block !important;
+  }
+
+  #contact a {
+    color: #000 !important;
+    text-decoration: none !important;
+    display: block !important;
+    padding: 0.1rem 0 !important;
+  }
+
+  /* Text colors */
+  * {
+    color: #000 !important;
+  }
+
+  .text-gray-600,
+  .text-gray-500,
+  .text-gray-400,
+  span:not(h1 span):not(h2 span):not(h3 span) {
+    color: #666 !important;
+  }
+
+  /* Icons minimal */
+  svg {
+    width: 12px !important;
+    height: 12px !important;
+    fill: #000 !important;
+  }
+
+  /* Links */
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Container spacing */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  p {
+    margin-bottom: 0.2rem !important;
+  }
+
+  /* CRITICAL: Disable ALL animations and transforms in print */
+  *,
+  *::before,
+  *::after {
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Hide profile images/pictures */
+  img,
+  picture,
+  [class*="profile"],
+  [class*="avatar"],
+  [src*="profile"],
+  [srcset*="profile"] {
+    display: none !important;
+  }
+
+  /* Force all elements to be static positioned */
+  * {
+    position: static !important;
+  }
+
+  /* Target Framer Motion components specifically */
+  div[style*="transform"],
+  div[style*="opacity"],
+  div[style*="translate"] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Override inline styles that might be set by JavaScript */
+  [style] {
+    transform: none !important;
+    opacity: 1 !important;
+    position: static !important;
+  }
+}
