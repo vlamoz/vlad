@@ -1,12 +1,12 @@
 {
   "firstName": "Vlad",
   "lastName": "Mozgovojs",
-  "title": "Tehniline meeskonnajuht",
+  "title": "Tehnilise meeskonna juht",
   "subtitle": "Tarkvaraarenduse ekspert • Täielikult kaugtöö • 18+ aastat kogemust",
-  "tagline": "Olen veetnud 18+ aastat keeruliste tehniliste mõistatuste muutmisel elegantseks lahendusteks. Siin on see, mida olen õppinud: parim kood tuleb meeskondadest, kes tõesti naudivad koos töötamist — kus säravad ideed võivad tulla kellelt tahes, ebaõnnestumised muutuvad õppimishetkedeks ja me tähistame võite grupina.",
+  "tagline": "Olen veetnud 18+ aastat keerukate tehniliste mõistatuste muutmisel elegantseks lahendusteks. Siin on see, mida olen õppinud: parim kood tuleb meeskondadest, kes tõesti naudivad koos töötamist — kus säravad ideed võivad tulla kellelt tahes, ebaõnnestumised muutuvad õppimishetkedeks ja me tähistame võite grupina.",
   "cta": {
     "getInTouch": "Võta ühendust",
     "linkedIn": "LinkedIn"
   },
-  "scrollToAbout": "Keri minust sektsiooni"
+  "scrollToAbout": "Mine lõiku \"Minust\""
 }

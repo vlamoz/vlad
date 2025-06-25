@@ -26,7 +26,8 @@
       "Bash(timeout 10s npm run dev)",
       "Bash(cp:*)",
       "Bash(sips:*)",
-      "Bash(cwebp:*)"
+      "Bash(cwebp:*)",
+      "Bash(node:*)"
     ],
     "deny": []
   }

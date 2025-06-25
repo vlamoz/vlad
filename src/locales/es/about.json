@@ -1,15 +1,15 @@
 {
-  "title": "Acerca de mí",
-  "subtitle": "Apasionado por construir soluciones robustas y escalables",
-  "imageAlt": "Vladislavs Mozgovojs - Ingeniero Senior de Java",
+  "title": "Sobre mí",
+  "subtitle": "Apasionado por crear soluciones robustas y escalables",
+  "imageAlt": "Vladislavs Mozgovojs - Líder Técnico",
   "content": {
-    "paragraph1": "Mi viaje en la programación comenzó en la Universidad Tecnológica de Tallin, pero la verdadera educación empezó cuando descubrí que construir gran software es tanto sobre personas como sobre algoritmos. Durante más de 18 años, he tenido el privilegio de trabajar en múltiples países e industrias — desde Estonia hasta mercados internacionales.",
-    "paragraph2": "¿Qué me motiva? Creo que las mejores soluciones emergen cuando todos en el equipo se sienten cómodos compartiendo sus ideas más locas, cuando los desarrolladores junior no tienen miedo de cuestionar las decisiones de los senior, y cuando mantenemos límites saludables que permiten a todos traer lo mejor de sí mismos al trabajo. Mi enfoque técnico está en aplicaciones Java empresariales, integraciones B2B y arquitecturas escalables, pero mi verdadera pasión es crear entornos donde las personas brillantes puedan hacer su mejor trabajo.",
-    "paragraph3": "Cada día puedo combinar desafíos técnicos de vanguardia con mentoría de desarrolladores increíbles. He aprendido que entregar a tiempo y mantener alta calidad de código no es solo sobre proceso — es sobre construir confianza, fomentar la curiosidad, y asegurar que todos se sientan escuchados. Últimamente, estoy emocionado por cómo las herramientas de IA pueden amplificar lo que ya hacemos bien, dando superpoderes a nuestro equipo en lugar de reemplazar la creatividad humana y colaboración que hace que el desarrollo de software sea verdaderamente gratificante."
+    "paragraph1": "Mi viaje en la programación comenzó en la Universidad Tecnológica de Tallin, pero la verdadera educación empezó cuando descubrí que crear gran software es tanto sobre personas como sobre algoritmos. Durante más de 18 años, he tenido el privilegio de trabajar en múltiples países e industrias — desde Estonia hasta mercados internacionales.",
+    "paragraph2": "¿Qué me motiva? Creo que las mejores soluciones surgen cuando todos en el equipo se sienten cómodos compartiendo sus ideas más locas, cuando los desarrolladores junior no temen cuestionar las decisiones de los senior, y cuando mantenemos límites saludables que permiten a todos aportar lo mejor de sí mismos al trabajo. Mi enfoque técnico está en aplicaciones Java empresariales, integraciones B2B y arquitecturas escalables, pero mi verdadera pasión es crear entornos donde las personas brillantes puedan hacer su mejor trabajo.",
+    "paragraph3": "Cada día puedo combinar desafíos técnicos de vanguardia con mentoría de desarrolladores increíbles. He aprendido que entregar a tiempo y mantener alta calidad de código no es solo sobre procesos — es sobre construir confianza, fomentar la curiosidad, y asegurar que todos se sientan escuchados. Últimamente, me emociona cómo las herramientas de IA pueden amplificar lo que ya hacemos bien, dando superpoderes a nuestro equipo en lugar de reemplazar la creatividad humana y colaboración que hace que el desarrollo de software sea verdaderamente gratificante."
   },
   "highlights": {
     "experience": {
-      "title": "18+ Años de Experiencia",
+      "title": "+18 Años de Experiencia",
       "description": "Experiencia profunda en el ecosistema Java y desarrollo empresarial"
     },
     "international": {
@@ -17,16 +17,16 @@
       "description": "Implementaciones de sistemas transfronterizos e integraciones B2B"
     },
     "goalFocused": {
-      "title": "Enfocado en Objetivos",
-      "description": "Historial comprobado de cumplir plazos y objetivos de proyecto"
+      "title": "Orientado a Resultados",
+      "description": "Historial demostrado de cumplimiento de plazos y objetivos de proyecto"
     },
     "multilingual": {
-      "title": "Multilingüe",
+      "title": "Políglota",
       "description": "Inglés/Ruso nativo, Estonio profesional, Español intermedio"
     }
   },
   "education": {
-    "title": "Educación",
+    "title": "Formación",
     "university": "Universidad Tecnológica de Tallin",
     "years": "2004 - 2007"
   }

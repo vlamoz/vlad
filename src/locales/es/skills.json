@@ -1,18 +1,18 @@
 {
-  "title": "Habilidades Técnicas",
+  "title": "Competencias Técnicas",
   "subtitle": "Experiencia integral en el ecosistema Java y más allá",
   "categories": {
-    "coreJava": "Tecnologías Java Principales",
+    "coreJava": "Tecnologías Java Fundamentales",
     "enterprise": "Empresarial y Arquitectura",
     "databases": "Bases de Datos",
     "devops": "DevOps y Herramientas",
     "webTech": "Tecnologías Web",
-    "domain": "Experiencia de Dominio"
+    "domain": "Experiencia Sectorial"
   },
   "alwaysLearning": {
-    "title": "Siempre Aprendiendo",
+    "title": "En Constante Aprendizaje",
     "content": {
-      "paragraph1": "Aquí hay algo que amo de esta industria: ¡siempre hay algo nuevo que aprender! Me mantengo al día con las versiones de Java y actualizaciones de frameworks, pero me emociona igualmente cuando un colega desarrollador me muestra un enfoque inteligente que no había considerado.",
+      "paragraph1": "Esto es lo que me encanta de esta industria: ¡siempre hay algo nuevo que aprender! Me mantengo al día con las versiones de Java y actualizaciones de frameworks, pero me emociona igualmente cuando un compañero desarrollador me muestra un enfoque inteligente que no había considerado.",
       "paragraph2": "En estos días, estoy explorando cómo las herramientas de IA pueden convertirse en multiplicadores de fuerza para nuestro equipo — no reemplazando nuestra experiencia, sino liberándonos para abordar los desafíos realmente interesantes que requieren perspicacia humana y creatividad."
     }
   }

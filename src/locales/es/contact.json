@@ -1,33 +1,33 @@
 {
   "title": "Conectemos",
-  "subtitle": "Ya sea que tengas un proyecto en mente o simplemente quieras discutir tecnología, siempre estoy abierto a nuevas oportunidades y conversaciones.",
+  "subtitle": "Ya sea que tengas un proyecto en mente o simplemente quieras hablar de tecnología, siempre estoy abierto a nuevas oportunidades y conversaciones.",
   "getInTouch": {
-    "title": "Ponte en contacto",
-    "description": "Estoy genuinamente emocionado por conectar con compañeros constructores, solucionadores de problemas, y líderes de equipo. Ya sea que estés abordando un desafío técnico complicado, construyendo equipos distribuidos internacionales, o simplemente quieras charlar sobre crear entornos donde los desarrolladores prosperen, me encantaría escucharte. Las mejores conversaciones suceden cuando las mentes curiosas se unen — ¡así que empecemos una!"
+    "title": "Hablemos",
+    "description": "Estoy genuinamente emocionado por conectar con compañeros creadores, solucionadores de problemas, y líderes de equipo. Ya sea que estés abordando un desafío técnico complicado, construyendo equipos distribuidos internacionales, o simplemente quieras charlar sobre crear entornos donde los desarrolladores prosperen, me encantaría escucharte. Las mejores conversaciones suceden cuando las mentes curiosas se unen — ¡así que empecemos una!"
   },
   "details": {
-    "email": "Correo electrónico",
+    "email": "Email",
     "location": "Ubicación",
     "connectWith": "Conéctate conmigo",
     "linkedInProfile": "Perfil de LinkedIn"
   },
   "form": {
-    "title": "Enviar un Mensaje",
+    "title": "Envía un Mensaje",
     "labels": {
       "name": "Nombre",
-      "email": "Correo electrónico",
+      "email": "Email",
       "message": "Mensaje"
     },
     "placeholders": {
       "name": "Tu nombre",
-      "email": "tu.correo@ejemplo.com",
+      "email": "tu.email@ejemplo.com",
       "message": "Tu mensaje..."
     },
     "button": {
       "send": "Enviar Mensaje",
       "sending": "Enviando..."
     },
-    "successMessage": "¡Gracias! Tu mensaje ha sido enviado exitosamente.",
-    "directEmail": "O envía un correo directo a"
+    "successMessage": "¡Gracias! Tu mensaje se ha enviado correctamente.",
+    "directEmail": "O escribe directamente a"
   }
 }

@@ -6,24 +6,24 @@
     "projects": "Projektid",
     "experience": "Kogemus",
     "contact": "Kontakt",
-    "toggleMenu": "Lülita menüü",
+    "toggleMenu": "Ava/sulge menüü",
     "logo": "Vlad Mozgovojs"
   },
   "accessibility": {
-    "toggleTheme": "Lülita teema",
-    "toggleMenu": "Lülita menüü",
-    "scrollToAbout": "Keri minust sektsiooni",
-    "linkedInProfile": "LinkedIni profiil"
+    "toggleTheme": "Muuda teemat",
+    "toggleMenu": "Ava/sulge menüü",
+    "scrollToAbout": "Mine lõiku \"Minust\"",
+    "linkedInProfile": "LinkedIn'i profiil"
   },
   "footer": {
-    "copyright": "© {{year}} Vlad Mozgovojs. Ehitatud",
-    "builtWith": "kasutades React ja TypeScript",
-    "tagline": "Tehniline meeskonnajuht • Tarkvaraarenduse ekspert"
+    "copyright": "© {{year}} Vlad Mozgovojs. Loodud",
+    "builtWith": "React'i ja TypeScript'iga",
+    "tagline": "Tehnilise meeskonna juht • Tarkvaraarenduse ekspert"
   },
   "errors": {
     "errorBoundary": {
       "title": "Ups! Midagi läks valesti",
-      "description": "Ilmnes ootamatu viga. Palun proovi lehte värskendada või võta ühendust toega, kui probleem püsib.",
+      "description": "Ilmnes ootamatu viga. Palun värskenda lehte või võta ühendust toega, kui probleem püsib.",
       "tryAgain": "Proovi uuesti",
       "refreshPage": "Värskenda lehte",
       "errorDetails": "Vea üksikasjad (Arendus)"
@@ -32,29 +32,29 @@
       "nameRequired": "Nimi on kohustuslik",
       "nameMinLength": "Nimi peab olema vähemalt 2 tähemärki",
       "emailRequired": "E-mail on kohustuslik",
-      "emailInvalid": "Palun sisesta kehtiv e-maili aadress",
+      "emailInvalid": "Sisesta kehtiv e-maili aadress",
       "messageRequired": "Sõnum on kohustuslik",
       "messageMinLength": "Sõnum peab olema vähemalt 10 tähemärki",
-      "sendFailed": "Sõnumi saatmine ebaõnnestus. Palun proovi uuesti."
+      "sendFailed": "Sõnumi saatmine ebaõnnestus. Proovi uuesti."
     }
   },
   "languages": {
-    "en": "Inglise",
-    "es": "Hispaania",
-    "et": "Eesti",
-    "ru": "Vene"
+    "en": "Inglise keel",
+    "es": "Hispaania keel",
+    "et": "Eesti keel",
+    "ru": "Vene keel"
   },
   "seo": {
-    "title": "Vlad Mozgovojs - Tehniline meeskonnajuht, Java arendaja",
-    "description": "Tehniline meeskonnajuht üle 18 aasta kogemusega ettevõtte arenduses, B2B integratsioonides ja rahvusvahelistes projektides. Ekspert Java, mikroteenuste ja meeskonna juhtimise alal."
+    "title": "Vlad Mozgovojs - Tehnilise meeskonna juht, Java arendaja",
+    "description": "Tehnilise meeskonna juht üle 18-aastase kogemusega ettevõtterakenduste arenduses, B2B integratsioonides ja rahvusvahelistes projektides. Ekspert Java, mikroteenuste ja meeskonnajuhtimise alal."
   },
   "common": {
-    "present": "Praegu",
+    "present": "Täna",
     "fullyRemote": "Täielikult kaugtöö",
     "remote": "Kaugtöö",
     "estonia": "Eesti",
     "positions": {
-      "technicalTeamLead": "Tehniline meeskonnajuht",
+      "technicalTeamLead": "Tehnilise meeskonna juht",
       "leadDeveloper": "Peaarendaja",
       "leadDeveloperB2B": "Peaarendaja - B2B osakond",
       "leadDeveloperMHUB": "Peaarendaja - MHUB platvorm",

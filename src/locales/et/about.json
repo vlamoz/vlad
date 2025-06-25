@@ -1,7 +1,7 @@
 {
   "title": "Minust",
   "subtitle": "Kirglik tugevate, skaleeritavate lahenduste loomise vastu",
-  "imageAlt": "Vladislavs Mozgovojs - Vanem Java arendaja",
+  "imageAlt": "Vladislavs Mozgovojs - Tehnilise meeskonna juht",
   "content": {
     "paragraph1": "Minu programmeerimise teekond algas Tallinna Tehnikaülikoolis, kuid tõeline haridus algas siis, kui avastasin, et suurepärase tarkvara loomine on sama palju inimestest kui algoritmidest. Üle 18 aasta jooksul olen saanud privileegi töötada mitmes riigis ja tööstusharus — Eestist rahvusvahelistele turgudele.",
     "paragraph2": "Mis mind motiveerib? Usun, et parimad lahendused tekivad siis, kui kõik meeskonnas tunnevad end mugavalt oma hullumeelsemaid ideid jagades, kui juunior arendajad ei karda vanemaid otsuseid küsitada ja kui me säilitame tervislikud piirid, mis võimaldavad kõigil tuua tööle oma parimat osa. Minu tehniline fookus on ettevõtte Java rakendustel, B2B integratsioonidel ja skaleeritavatel arhitektuuridel, kuid minu tõeline kirg on luua keskkonda, kus säravad inimesed saavad teha oma parimat tööd.",
@@ -17,11 +17,11 @@
       "description": "Piiriüleste süsteemide juurutamine ja B2B integratsioonid"
     },
     "goalFocused": {
-      "title": "Eesmärgile suunatud",
+      "title": "Eesmärgikesksus",
       "description": "Tõestatud edukus tähtaegade ja projekti eesmärkide täitmisel"
     },
     "multilingual": {
-      "title": "Mitmekeelne",
+      "title": "Mitmekeelsus",
       "description": "Inglise/vene emakeel, professionaalne eesti keel, keskmine hispaania keel"
     }
   },
