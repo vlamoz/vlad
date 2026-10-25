@@ -1,11 +1,8 @@
 {
-  "title": "Experiencia Profesional",
-  "subtitle": "Más de 19 años creando soluciones empresariales en diversas industrias",
-  "continuousGrowth": {
-    "title": "Crecimiento Continuo e Innovación",
-    "content": {
-      "paragraph1": "Cada proyecto me ha enseñado algo nuevo — no solo sobre tecnología, sino sobre crear equipos que puedan abordar cualquier cosa juntos. Desde sistemas financieros manejando millones de transacciones hasta plataformas de IA sirviendo conferencias globales, he aprendido que las soluciones más innovadoras vienen de perspectivas diversas y seguridad psicológica.",
-      "paragraph2": "Mi objetivo no es solo entregar sistemas escalables y confiables, sino dejar atrás equipos que sean más fuertes, más seguros, y genuinamente emocionados por lo que están construyendo."
-    }
+  "title": "Experiencia",
+  "subtitle": "Desarrollador, líder de equipo, gerente de ingeniería",
+  "overlap": {
+    "title": "Por qué algunos puestos se solapan",
+    "text": "Como contratista, normalmente he combinado un puesto principal con proyectos de clientes a largo plazo. YouRoam es el más largo: lo apoyo desde 2007, en paralelo con todo lo demás de esta página."
   }
 }

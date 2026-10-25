@@ -35,7 +35,7 @@ export const useSEO = () => {
     upsertMeta('name', 'description', description);
     upsertMeta('name', 'author', PROFILE.name);
     upsertMeta('name', 'robots', 'index, follow');
-    upsertMeta('name', 'keywords', 'Engineering Manager, Technical Team Lead, Java Developer, Software Engineer, Full Stack Developer, B2B Integration, Microservices, React, TypeScript, Enterprise Development');
+    upsertMeta('name', 'keywords', 'Engineering Manager, Head of Engineering, Agentic Software Development, AI Coding Agents, Engineering Leadership, Java, Microservices, Remote');
 
     upsertHeadTag('link', 'link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
 
@@ -71,15 +71,13 @@ export const useSEO = () => {
       "url": origin,
       "sameAs": [PROFILE.linkedIn],
       "knowsAbout": [
+        "Engineering Management",
+        "Agentic Software Development",
+        "AI Coding Agents",
+        "Software Delivery",
+        "Software Architecture",
         "Java",
-        "Spring Boot",
-        "React",
-        "TypeScript",
-        "Microservices",
-        "B2B Integration",
-        "Enterprise Development",
-        "Technical Leadership",
-        "Software Architecture"
+        "Microservices"
       ],
       "alumniOf": {
         "@type": "Organization",
@@ -96,7 +94,7 @@ export const useSEO = () => {
           "@type": "Place",
           "name": "Remote"
         },
-        "skills": "Java, Spring Boot, React, TypeScript, Microservices, B2B Integration"
+        "skills": "Engineering leadership, agentic software development, delivery process, Java, microservices"
       }
     };
 

@@ -29,7 +29,7 @@ export const WORK_EXPERIENCE: WorkItem[] = [
   },
   {
     id: 'audatex',
-    company: 'Audatex GmbH',
+    company: 'Audatex (Solera)',
     position: 'technicalTeamLead',
     startYear: 2008,
     endYear: 2020,
@@ -53,17 +53,17 @@ export const WORK_EXPERIENCE: WorkItem[] = [
     position: 'seniorDeveloperYouRoam',
     startYear: 2007,
     locations: ['estonia', 'fullyRemote'],
-    projectTitle: 'YouRoam - Roaming Partner Management System',
+    projectTitle: 'YouRoam: Roaming Partner Management System',
     technologies: [TECHNOLOGIES.JAVA, TECHNOLOGIES.SPRING_FRAMEWORK, TECHNOLOGIES.DATA_PROCESSING, TECHNOLOGIES.REST_APIS, TECHNOLOGIES.ORACLE, TECHNOLOGIES.XML_JSON],
   },
   {
     id: 'government',
     company: 'Estonian Government',
     position: 'seniorDeveloperSTAR',
-    startYear: 2007,
-    endYear: 2020,
+    startYear: 2012,
+    endYear: 2014,
     locations: ['estonia'],
-    projectTitle: 'STAR - Estonian Government Welfare System',
+    projectTitle: 'STAR: Estonian Government Welfare System',
     technologies: [TECHNOLOGIES.JAVA, TECHNOLOGIES.SPRING, TECHNOLOGIES.ORACLE, TECHNOLOGIES.SOAP_REST, TECHNOLOGIES.ENTERPRISE_SECURITY, TECHNOLOGIES.GOVERNMENT_STANDARDS],
   }
 ];

@@ -1,19 +1,77 @@
 {
-  "title": "Technical Skills",
-  "subtitle": "Comprehensive expertise across the Java ecosystem and beyond",
+  "title": "Skills",
+  "subtitle": "Leadership first, with the technical depth to back it up",
   "categories": {
-    "coreJava": "Core Java Technologies",
-    "enterprise": "Enterprise & Architecture",
-    "databases": "Databases",
-    "devops": "DevOps & Tools",
-    "webTech": "Web Technologies",
-    "domain": "Domain Expertise"
-  },
-  "alwaysLearning": {
-    "title": "Always Learning",
-    "content": {
-      "paragraph1": "Here's something I love about this industry: there's always something new to learn! I stay up to date with Java releases and framework updates, but I'm equally excited when a fellow developer shows me a clever approach I hadn't considered.",
-      "paragraph2": "These days, I'm exploring how AI tools can become force multipliers for our team — not replacing our expertise, but freeing us up to tackle the really interesting challenges that require human insight and creativity."
+    "leadership": {
+      "title": "Engineering Leadership",
+      "items": [
+        "Leading multiple teams",
+        "Remote team leadership",
+        "Mentoring and growing engineers",
+        "Psychological safety",
+        "Partnering with product",
+        "Coaching and feedback"
+      ]
+    },
+    "delivery": {
+      "title": "Delivery & Process",
+      "items": [
+        "Unified release process",
+        "Continuous delivery",
+        "Spec-first planning",
+        "Proactive technical debt work",
+        "Incident reduction",
+        "Removing bottlenecks"
+      ]
+    },
+    "agentic": {
+      "title": "Agentic Development",
+      "items": [
+        "AI coding agents",
+        "Spec-driven development",
+        "Agent-assisted test automation",
+        "Human review in the loop",
+        "Team enablement and workshops",
+        "Workflow automation"
+      ]
+    },
+    "architecture": {
+      "title": "Architecture",
+      "items": [
+        "Microservices",
+        "Event-driven architecture",
+        "B2B integrations",
+        "Real-time systems",
+        "Cloud architecture (AWS)",
+        "System design"
+      ]
+    },
+    "technology": {
+      "title": "Technology",
+      "items": [
+        "Java and Spring Boot",
+        "React and TypeScript",
+        "PostgreSQL, Oracle, Redis",
+        "RabbitMQ and messaging",
+        "Kubernetes and Docker",
+        "CI/CD"
+      ]
+    },
+    "domains": {
+      "title": "Domains",
+      "items": [
+        "AI and language technology",
+        "Insurance",
+        "Financial services",
+        "Telecom",
+        "Government systems",
+        "International B2B platforms"
+      ]
     }
+  },
+  "agenticShift": {
+    "title": "Leading the shift to agentic development",
+    "paragraph1": "Since 2025 my teams have worked with AI coding agents as part of everyday development, from writing code to automated testing. I ran workshops to help everyone get the most out of agentic workflows, and it shows: we now open two to three times as many pull requests, and QA went from almost no test automation to covering more than half of our testing.",
+    "paragraph2": "As agents take on more of the writing, the bottlenecks move to planning, review and testing, so that is what I focus on. The important part is that people stay in charge of the decisions, and the team still understands and owns everything it ships."
   }
 }

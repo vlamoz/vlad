@@ -1,4 +1,4 @@
-import { Code, Globe, Target, Users } from 'lucide-react';
+import { Bot, Code, Gauge, Languages } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import SectionHeader from './SectionHeader';
 import { m } from 'framer-motion';
@@ -19,17 +19,17 @@ const About = () => {
       description: t('highlights.experience.description')
     },
     {
-      icon: <Globe className="h-8 w-8 text-primary-600" />,
-      title: t('highlights.international.title'),
-      description: t('highlights.international.description')
+      icon: <Bot className="h-8 w-8 text-primary-600" />,
+      title: t('highlights.agentic.title'),
+      description: t('highlights.agentic.description')
     },
     {
-      icon: <Target className="h-8 w-8 text-primary-600" />,
-      title: t('highlights.goalFocused.title'),
-      description: t('highlights.goalFocused.description')
+      icon: <Gauge className="h-8 w-8 text-primary-600" />,
+      title: t('highlights.delivery.title'),
+      description: t('highlights.delivery.description')
     },
     {
-      icon: <Users className="h-8 w-8 text-primary-600" />,
+      icon: <Languages className="h-8 w-8 text-primary-600" />,
       title: t('highlights.multilingual.title'),
       description: t('highlights.multilingual.description')
     }
@@ -123,6 +123,7 @@ const About = () => {
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('education.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 font-medium">{t('education.university')}</p>
+              <p className="text-gray-700 dark:text-gray-300">{t('education.degree')}</p>
               <p className="text-gray-600 dark:text-gray-400">{t('education.years')}</p>
             </div>
           </div>

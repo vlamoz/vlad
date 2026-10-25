@@ -1,11 +1,8 @@
 {
-  "title": "Professional Experience",
-  "subtitle": "Over 19 years of building enterprise solutions across industries",
-  "continuousGrowth": {
-    "title": "Continuous Growth & Innovation",
-    "content": {
-      "paragraph1": "Every project has taught me something new — not just about technology, but about building teams that can tackle anything together. From financial systems handling millions of transactions to AI platforms serving global conferences, I've learned that the most innovative solutions come from diverse perspectives and psychological safety.",
-      "paragraph2": "My goal isn't just to deliver scalable, reliable systems, but to leave behind teams that are stronger, more confident, and genuinely excited about what they're building."
-    }
+  "title": "Experience",
+  "subtitle": "Developer, team lead, engineering manager",
+  "overlap": {
+    "title": "Why some roles overlap",
+    "text": "As a contractor I've usually combined a main role with long-running client projects. YouRoam is the longest of them: I've supported it since 2007, alongside everything else on this page."
   }
 }

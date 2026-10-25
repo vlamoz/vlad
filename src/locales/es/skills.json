@@ -1,19 +1,77 @@
 {
-  "title": "Competencias Técnicas",
-  "subtitle": "Experiencia integral en el ecosistema Java y más allá",
+  "title": "Habilidades",
+  "subtitle": "Primero el liderazgo, con la profundidad técnica que lo respalda",
   "categories": {
-    "coreJava": "Tecnologías Java Fundamentales",
-    "enterprise": "Empresarial y Arquitectura",
-    "databases": "Bases de Datos",
-    "devops": "DevOps y Herramientas",
-    "webTech": "Tecnologías Web",
-    "domain": "Experiencia Sectorial"
-  },
-  "alwaysLearning": {
-    "title": "En Constante Aprendizaje",
-    "content": {
-      "paragraph1": "Esto es lo que me encanta de esta industria: ¡siempre hay algo nuevo que aprender! Me mantengo al día con las versiones de Java y actualizaciones de frameworks, pero me emociona igualmente cuando un compañero desarrollador me muestra un enfoque inteligente que no había considerado.",
-      "paragraph2": "En estos días, estoy explorando cómo las herramientas de IA pueden convertirse en multiplicadores de fuerza para nuestro equipo — no reemplazando nuestra experiencia, sino liberándonos para abordar los desafíos realmente interesantes que requieren perspicacia humana y creatividad."
+    "leadership": {
+      "title": "Liderazgo de ingeniería",
+      "items": [
+        "Liderar varios equipos",
+        "Liderazgo de equipos remotos",
+        "Mentoría y desarrollo de ingenieros",
+        "Seguridad psicológica",
+        "Colaboración con producto",
+        "Coaching y feedback"
+      ]
+    },
+    "delivery": {
+      "title": "Entrega y procesos",
+      "items": [
+        "Proceso de publicación unificado",
+        "Entrega continua",
+        "Planificación basada en especificaciones",
+        "Gestión proactiva de la deuda técnica",
+        "Reducción de incidencias",
+        "Eliminar cuellos de botella"
+      ]
+    },
+    "agentic": {
+      "title": "Desarrollo agéntico",
+      "items": [
+        "Agentes de programación con IA",
+        "Desarrollo guiado por especificaciones",
+        "Automatización de pruebas asistida por agentes",
+        "Revisión humana en el proceso",
+        "Formación y talleres para el equipo",
+        "Automatización de flujos de trabajo"
+      ]
+    },
+    "architecture": {
+      "title": "Arquitectura",
+      "items": [
+        "Microservicios",
+        "Arquitectura orientada a eventos",
+        "Integraciones B2B",
+        "Sistemas en tiempo real",
+        "Arquitectura en la nube (AWS)",
+        "Diseño de sistemas"
+      ]
+    },
+    "technology": {
+      "title": "Tecnología",
+      "items": [
+        "Java y Spring Boot",
+        "React y TypeScript",
+        "PostgreSQL, Oracle, Redis",
+        "RabbitMQ y mensajería",
+        "Kubernetes y Docker",
+        "CI/CD"
+      ]
+    },
+    "domains": {
+      "title": "Sectores",
+      "items": [
+        "IA y tecnología lingüística",
+        "Seguros",
+        "Servicios financieros",
+        "Telecomunicaciones",
+        "Sistemas gubernamentales",
+        "Plataformas B2B internacionales"
+      ]
     }
+  },
+  "agenticShift": {
+    "title": "Liderando la transición al desarrollo agéntico",
+    "paragraph1": "Desde 2025 mis equipos trabajan con agentes de programación con IA en el día a día, desde escribir código hasta las pruebas automatizadas. Impartí talleres para que todos sacaran el máximo partido a los flujos de trabajo agénticos, y se nota: ahora abrimos entre dos y tres veces más pull requests, y QA ha pasado de casi no tener pruebas automatizadas a automatizar más de la mitad de nuestras pruebas.",
+    "paragraph2": "A medida que los agentes asumen más parte de la escritura, los cuellos de botella se trasladan a la planificación, la revisión y las pruebas, y en eso me centro. Lo importante es que las personas siguen al mando de las decisiones, y el equipo sigue entendiendo todo lo que entrega y siendo responsable de ello."
   }
 }

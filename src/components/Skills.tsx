@@ -16,7 +16,7 @@ const Skills = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SKILL_CATEGORIES.map((category, index) => (
               <m.div
-                key={category.key}
+                key={category}
                 className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -25,10 +25,10 @@ const Skills = () => {
                 whileHover={{ scale: 1.02, y: -5 }}
               >
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-600 pb-2">
-                  {t(`categories.${category.key}`)}
+                  {t(`categories.${category}.title`)}
                 </h3>
                 <div className="space-y-2">
-                  {category.items.map((skill, skillIndex) => (
+                  {(t(`categories.${category}.items`, { returnObjects: true }) as string[]).map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
                       className="flex items-center p-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200"
@@ -42,18 +42,18 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Additional Info */}
+          {/* Agentic development */}
           <div className="mt-16 bg-white dark:bg-gray-700 rounded-lg shadow-md p-8">
             <div className="text-center">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t('alwaysLearning.title')}
+                {t('agenticShift.title')}
               </h3>
               <div className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed space-y-4">
                 <p>
-                  {t('alwaysLearning.content.paragraph1')}
+                  {t('agenticShift.paragraph1')}
                 </p>
                 <p>
-                  {t('alwaysLearning.content.paragraph2')}
+                  {t('agenticShift.paragraph2')}
                 </p>
               </div>
             </div>

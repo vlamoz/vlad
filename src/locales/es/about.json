@@ -1,33 +1,34 @@
 {
   "title": "Sobre mí",
-  "subtitle": "Apasionado por crear soluciones robustas y escalables",
+  "subtitle": "Cómo lidero y qué me importa",
   "imageAlt": "Vladislavs Mozgovojs - Gerente de Ingeniería",
   "content": {
-    "paragraph1": "Mi viaje en la programación comenzó en la Universidad Tecnológica de Tallin, pero la verdadera educación empezó cuando descubrí que crear gran software es tanto sobre personas como sobre algoritmos. Durante más de 19 años, he tenido el privilegio de trabajar en múltiples países e industrias — desde Estonia hasta mercados internacionales.",
-    "paragraph2": "¿Qué me motiva? Creo que las mejores soluciones surgen cuando todos en el equipo se sienten cómodos compartiendo sus ideas, cuando los desarrolladores no temen cuestionar las decisiones de los senior, y cuando mantenemos límites saludables que permiten a todos ser ellos mismos en el trabajo. Mi enfoque técnico está en aplicaciones Java empresariales, integraciones B2B y arquitecturas escalables, pero mi verdadera pasión es crear entornos donde las personas brillantes puedan hacer su mejor trabajo.",
-    "paragraph3": "Cada día puedo combinar desafíos técnicos de vanguardia con mentoría de desarrolladores increíbles. He aprendido que entregar a tiempo y mantener alta calidad de código no es solo sobre procesos — es sobre construir confianza, fomentar la curiosidad, y asegurar que todos se sientan escuchados. Últimamente, me emociona cómo las herramientas de IA pueden amplificar lo que ya hacemos bien, dando superpoderes a nuestro equipo en lugar de reemplazar la creatividad humana y colaboración que hace que el desarrollo de software sea verdaderamente gratificante."
+    "paragraph1": "Estudié en la Universidad Tecnológica de Tallin y desde entonces no he dejado de crear software: primero como desarrollador, después como líder de equipo en Audatex (Solera) y ahora como Gerente de Ingeniería en Interprefy. Por el camino he trabajado en mensajería financiera, telecomunicaciones, seguros y sistemas gubernamentales para clientes de toda Europa.",
+    "paragraph2": "Actualmente lidero tres equipos, unos 15 desarrolladores e ingenieros de QA, que trabajan en una plataforma de traducción en tiempo real basada en IA. En los últimos años la plataforma ha pasado de depender de intérpretes humanos a un sistema de IA que hoy se encarga de la mayor parte de la traducción para clientes, y nuestra forma de construirla ha cambiado en la misma medida.",
+    "paragraph3": "Lo que más me importa es cómo trabaja el equipo en conjunto. Quiero que la gente se sienta segura para cuestionar una decisión, incluidas las mías, y prefiero eliminar un cuello de botella antes que añadir una regla. Un buen proceso debería facilitar el trabajo: cuando unificamos la forma en que nuestros tres equipos publican versiones, cada equipo ganó más control sobre sus propios despliegues, y empezamos a resolver la deuda técnica antes de que se convirtiera en incidencias."
   },
   "highlights": {
     "experience": {
-      "title": "+19 Años de Experiencia",
-      "description": "Experiencia profunda en el ecosistema Java y desarrollo empresarial"
+      "title": "Más de 19 años en software",
+      "description": "Ingeniería práctica antes de la gestión, así que conozco el trabajo que lidero"
     },
-    "international": {
-      "title": "Proyectos Internacionales",
-      "description": "Implementaciones de sistemas transfronterizos e integraciones B2B"
+    "agentic": {
+      "title": "Desarrollo agéntico",
+      "description": "Llevo a los equipos a trabajar con agentes de programación con IA, con personas al mando de la planificación y la revisión"
     },
-    "goalFocused": {
-      "title": "Orientado a Resultados",
-      "description": "Historial demostrado de cumplimiento de plazos y objetivos de proyecto"
+    "delivery": {
+      "title": "Entregas predecibles",
+      "description": "Un único proceso de publicación para tres equipos: publicaciones 2-3 veces más frecuentes y menos incidencias"
     },
     "multilingual": {
-      "title": "Políglota",
-      "description": "Inglés/Ruso nativo, Estonio profesional, Español intermedio"
+      "title": "Multilingüe",
+      "description": "Inglés y ruso nativos, estonio profesional, español intermedio"
     }
   },
   "education": {
     "title": "Formación",
     "university": "Universidad Tecnológica de Tallin",
+    "degree": "Licenciatura en Tecnología de la Información Empresarial, cum laude",
     "years": "2004 - 2007"
   }
 }

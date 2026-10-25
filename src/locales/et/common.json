@@ -14,7 +14,7 @@
   },
   "footer": {
     "copyright": "© {{year}} Vlad Mozgovojs. Loodud",
-    "tagline": "Arendusjuht • Tarkvaraarenduse ekspert"
+    "tagline": "Arendusjuht • Agentpõhine tarkvaraarendus"
   },
   "errors": {
     "errorBoundary": {
@@ -35,8 +35,8 @@
     }
   },
   "seo": {
-    "title": "Vlad Mozgovojs - Arendusjuht, Java arendaja",
-    "description": "Arendusjuht üle 19-aastase kogemusega ettevõtterakenduste arenduses, B2B integratsioonides ja rahvusvahelistes projektides. Ekspert Java, mikroteenuste ja meeskonnajuhtimise alal."
+    "title": "Vlad Mozgovojs - arendusjuht, agentpõhine tarkvaraarendus",
+    "description": "Arendusjuht, kellel on üle 19 aasta kogemust tarkvaraarenduses ja kes juhib arendus- ja QA meeskondi üleminekul agentpõhisele arendusele tehisintellekti kodeerimisagentidega, kusjuures planeerimine ja ülevaatus jäävad inimeste kätte. Java taust, täielikult kaugtöö, avatud juhirollidele."
   },
   "common": {
     "present": "Täna",
@@ -45,9 +45,9 @@
     "positions": {
       "engineeringManager": "Arendusjuht",
       "technicalTeamLead": "Tehnilise meeskonna juht",
-      "leadDeveloperMHUB": "Peaarendaja - MHUB platvorm",
-      "seniorDeveloperYouRoam": "Vanem arendaja - YouRoam",
-      "seniorDeveloperSTAR": "Vanem arendaja - STAR süsteem"
+      "leadDeveloperMHUB": "Juhtiv arendaja, MHUB platvorm",
+      "seniorDeveloperYouRoam": "Vanemarendaja, YouRoam",
+      "seniorDeveloperSTAR": "Vanemarendaja, STAR süsteem"
     }
   }
 }

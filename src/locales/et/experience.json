@@ -1,11 +1,8 @@
 {
-  "title": "Töökogemus",
-  "subtitle": "Üle 19 aasta ettevõtte lahenduste loomist erinevates tööstusharudes",
-  "continuousGrowth": {
-    "title": "Pidev kasv ja innovatsioon",
-    "content": {
-      "paragraph1": "Iga projekt on õpetanud mulle midagi uut — mitte ainult tehnoloogia kohta, vaid meeskondade loomise kohta, kes suudavad koos kõigega hakkama saada. Finantsüsteemidest, mis töötlevad miljoneid tehinguid, kuni AI platvormideni, mis teenindavad ülemaailmseid konverentse, olen õppinud, et kõige innovaatilisemad lahendused tulevad mitmekesistest vaatenurkkadest ja psühholoogilisest turvalisusest.",
-      "paragraph2": "Minu eesmärk ei ole lihtsalt skaleeritavate, usaldusväärsete süsteemide kohaletoimetamine, vaid järele jätta meeskondi, kes on tugevamad, enesekindlamad ja tõeliselt põnevil selle üle, mida nad ehitavad."
-    }
+  "title": "Kogemus",
+  "subtitle": "Arendaja, meeskonnajuht, arendusjuht",
+  "overlap": {
+    "title": "Miks mõned ametid kattuvad",
+    "text": "Lepingulise spetsialistina olen tavaliselt ühendanud põhitöö pikaajaliste kliendiprojektidega. Neist pikim on YouRoam: olen seda toetanud alates 2007. aastast, paralleelselt kõige muuga sellel lehel."
   }
 }

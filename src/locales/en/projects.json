@@ -1,12 +1,8 @@
 {
   "title": "Featured Projects",
-  "subtitle": "Key projects showcasing my expertise in enterprise development",
+  "subtitle": "Selected systems I've built and led",
   "labels": {
     "technologiesUsed": "Technologies Used:",
     "keyAchievements": "Key Achievements:"
-  },
-  "moreProjects": {
-    "title": "More Projects Available",
-    "description": "These represent some of my key projects. I've worked on numerous other enterprise applications, internal tools, and client solutions throughout my career. Feel free to ask about specific technologies or project types you're interested in."
   }
 }

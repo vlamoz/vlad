@@ -1,43 +1,43 @@
 {
   "projects": {
     "interprefy": {
-      "description": "Juhin globaalse keeleplatvormi tehnilist transformatsiooni, integreerides tipptasemel AI tehnoloogiaid reaalajas tõlkimiseks, transkriptsiooniks ja tekst-kõne võimalusteks. Haldan üleminekut traditsiooniliselt tõlkimiselt AI/hübriidlahendustele.",
+      "description": "Reaalajas tõlkeplatvorm rahvusvahelistele konverentsidele ja üritustele. Juhin kolme arendajate ja QA inseneride meeskonda, kes viivad platvormi inimtõlkidelt tehisintellekti tõlke, transkriptsiooni ja kõnesünteesini ning meie enda inseneritöö traditsioonilisest arendusest agentpõhiseni.",
       "highlights": [
-        "Viisin platvormi horisontaalsele skaleerimisele, käsitledes tuhandeid samaaegseid kasutajaid nullkatkestusajaga",
-        "Juhtsin meeskonna üleminekut tõlgi-keskuselt AI-juhitud platvormile",
-        "Integreerisin mitmeid AI teenuseid reaalajas keeletöötluseks",
-        "Rakendatasin proprietaarseid algoritme reaalajas AI tõlkimiseks ja helitöötluseks"
+        "Tehisintellekti osakaal klientide tõlkes kasvas 0%-lt enamuseni",
+        "Üks väljalaskeprotsess kolmele meeskonnale: 2-3 korda sagedasemad väljalasked ja vähem tootmisintsidente",
+        "Võtsin 2025. aastal kõigil kasutusele tehisintellekti kodeerimisagendid, tõstes kõigi kolme meeskonna tootlikkust",
+        "Viisin platvormi horisontaalsele skaleerimisele, teenindades tuhandeid samaaegseid kasutajaid katkestusteta"
       ]
     },
     "audatex": {
-      "description": "Juhtsin AudaNeti arhitektuurilist transformatsiooni monoliitilist mikroteenuste arhitektuurile, teenindades kindlustusettevõtteid üle 15 riigi. Juhtsin B2B integratsioone ja React frontend üleminekut.",
+      "description": "AudaNet ühendab kindlustusseltse remonditöökodade ja kahjukäsitlejatega enam kui 15 riigis. Meeskonnajuhina juhtisin selle üleminekut monoliidilt mikroteenustele, B2B integratsioone ja üleminekut Reacti kasutajaliidesele.",
       "highlights": [
-        "Juhtsin migratsiooni monoliidist mikroteenuste arhitektuurile",
-        "Haldasin B2B integratsioone üle 50 kindlustuse tagakontorisüsteemiga",
-        "Modernizeerisin kasutaja frontend kogemust Reactiga"
+        "Juhtisin üleminekut monoliidilt mikroteenustele",
+        "Integratsioonid enam kui 50 kindlustuse taustsüsteemiga",
+        "Ehitasin kasutajaliidese Reactis uuesti üles"
       ]
     },
     "nasdaq": {
-      "description": "MHUB-i juhtarendaja, keskne sõnumivahetuse infrastruktuur fondi- ja deposiitkommunikatsiooniks Balti finantskeskkonnas. Kavandatasin turvalisi, kõrge jõudlusega sõnumivoogusid, mis käsitlevad miljoneid päevaseid tehinguid.",
+      "description": "MHUB on Balti riikide fondide ja väärtpaberikeskuste sõnumivahetuse keskne sõlm. Juhtiva arendajana kavandasin selle sõnumivood, mis pidid olema turvalised, kiired ja alati kättesaadavad.",
       "highlights": [
-        "Kavandatasin sõnumimarsruutimissüsteemi, mis töötleb üle 1M tehingu päevas",
-        "Integreerisin üle 20 panga ja deposiitkeskussüsteemiga 3 riigis",
-        "Rakendatasin nullkatkestusajaga paigaldusstrateegiaid"
+        "Sõnumite marsruutimine üle 1 miljoni tehingu päevas",
+        "Integratsioonid enam kui 20 panga ja väärtpaberikeskusega kolmes riigis",
+        "Katkestusteta juurutused"
       ]
     },
     "elisa": {
-      "description": "Peamine panustaja YouRoam-i, keeruka telekommunikatsiooniplatvormi, mis haldab rändluspartnerlust Balti telekommunikatsioonioperaatorite jaoks. Rakendatasin keerukat andmete import/eksport funktsionaalsust, mis toetab mitut rahvusvahelist vormingut ja modernizeerides UI-d parema kasutajakogemuse jaoks.",
+      "description": "YouRoam haldab Balti telekomioperaatorite vahelisi rändluslepinguid. Olen sellega töötanud alates 2007. aastast: ehitanud partnerandmete impordi ja ekspordi paljudes rahvusvahelistes vormingutes ning uuendanud kasutajaliidest.",
       "highlights": [
-        "Kavandatasin vastupidava import/eksport süsteemi, mis käsitleb üle 10 erineva telekom andmevormingu",
-        "Optimeeerisin andmebaasi käsitlust suurema skaleeritavuse jaoks",
-        "Rakendatasin keerukaid hinnastamisalgoritme erinevate rändlusstsenaariumite jaoks"
+        "Import ja eksport enam kui 10 telekomi andmevormingus",
+        "Andmebaasi optimeerimine kasvavate andmemahtude jaoks",
+        "Hinnastusloogika keerukate rändlusstsenaariumide jaoks"
       ]
     },
     "government": {
-      "description": "Arendasin kriitilise valitsuse infrastruktuuri, mis haldab heaoluteenuseid ja sotsiaalkindlustust Eesti kodanikele.",
+      "description": "STAR haldab Eesti kodanike sotsiaaltoetusi ja sotsiaalkindlustust. Töötasin taotluste menetlemise ja teiste riigisüsteemidega liidestamise kallal.",
       "highlights": [
-        "Töötlesin heaolutaotlusi üle 500K Eesti kodaniku jaoks",
-        "Integreerisin valitsusasutuste ja pärandsüsteemidega"
+        "Taotluste menetlemine enam kui 500 000 kodaniku jaoks",
+        "Integratsioonid riigiasutuste ja pärandsüsteemidega"
       ]
     }
   }

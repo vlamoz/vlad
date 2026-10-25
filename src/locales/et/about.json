@@ -1,33 +1,34 @@
 {
   "title": "Minust",
-  "subtitle": "Kirglik tugevate, skaleeritavate lahenduste loomise vastu",
+  "subtitle": "Kuidas ma juhin ja mis on mulle oluline",
   "imageAlt": "Vladislavs Mozgovojs - Arendusjuht",
   "content": {
-    "paragraph1": "Minu programmeerimise teekond algas Tallinna Tehnikaülikoolis, kuid tõeline haridus algas siis, kui avastasin, et suurepärase tarkvara loomine on sama palju inimestest kui algoritmidest. Üle 19 aasta jooksul olen saanud privileegi töötada mitmes riigis ja tööstusharus — Eestist rahvusvahelistele turgudele.",
-    "paragraph2": "Mis mind motiveerib? Usun, et parimad lahendused tekivad siis, kui kõik meeskonnas tunnevad end mugavalt oma ideid jagades, kui arendajad ei karda vanemaid otsuseid küsitada ja kui me säilitame tervislikud piirid, mis võimaldavad kõigil olla tööl iseendad. Minu tehniline fookus on ettevõtte Java rakendustel, B2B integratsioonidel ja skaleeritavatel arhitektuuridel, kuid minu tõeline kirg on luua keskkonda, kus säravad inimesed saavad teha oma parimat tööd.",
-    "paragraph3": "Iga päev saan kombineerida tipptasemel tehnilisi väljakutseid vapustavate arendajate juhendamisega. Olen õppinud, et õigeaegselt kohaletoimetamine ja kõrge koodikvaliteedi säilitamine ei ole ainult protsessist — see on usalduse ülesehitamisest, uudishimu julgustamisest ja sellest, et kõik tunneksid end kuulduna. Viimasel ajal on mind põnevil see, kuidas AI tööriistad saavad võimendada seda, milles me juba head oleme, andes meie meeskonnale superväed selle asemel, et asendada inimlikku loovust ja koostööd, mis teeb tarkvaraarenduse tõeliselt rahuldavaks."
+    "paragraph1": "Õppisin Tallinna Tehnikaülikoolis ja olen sellest ajast peale tarkvara loonud: algul arendajana, seejärel meeskonnajuhina ettevõttes Audatex (Solera) ja nüüd arendusjuhina ettevõttes Interprefy. Selle aja jooksul olen töötanud finantssõnumside, telekommunikatsiooni, kindlustuse ja riigisüsteemidega klientidele üle Euroopa.",
+    "paragraph2": "Praegu juhin kolme meeskonda, kokku umbes 15 arendajat ja QA inseneri, kes töötavad reaalajas tehisintellektil põhineva tõlkeplatvormi kallal. Viimastel aastatel on platvorm liikunud inimtõlkidelt tehisintellekti lahendusele, mis teeb nüüd suurema osa klientide tõlkest, ning sama palju on muutunud ka see, kuidas me seda ehitame.",
+    "paragraph3": "Kõige olulisem on minu jaoks see, kuidas meeskond koos töötab. Tahan, et inimesed julgeksid otsuseid kahtluse alla seada, ka minu omi, ja eemaldan pigem pudelikaela, kui lisan uue reegli. Hea protsess peaks tööd lihtsamaks tegema: kui ühtlustasime oma kolme meeskonna väljalaskeprotsessi, sai iga meeskond oma juurutuste üle rohkem kontrolli ning hakkasime tehnilist võlga parandama enne, kui sellest said intsidendid."
   },
   "highlights": {
     "experience": {
-      "title": "19+ aastat kogemust",
-      "description": "Sügav ekspertiis Java ökosüsteemis ja ettevõtte arenduses"
+      "title": "19+ aastat tarkvaraarenduses",
+      "description": "Praktiline insenerikogemus enne juhtimist, nii et tunnen tööd, mida juhin"
     },
-    "international": {
-      "title": "Rahvusvahelised projektid",
-      "description": "Piiriüleste süsteemide juurutamine ja B2B integratsioonid"
+    "agentic": {
+      "title": "Agentpõhine arendus",
+      "description": "Viin meeskondi üle tehisintellekti kodeerimisagentidele, kusjuures planeerimine ja ülevaatus jäävad inimeste kätte"
     },
-    "goalFocused": {
-      "title": "Eesmärgikesksus",
-      "description": "Tõestatud edukus tähtaegade ja projekti eesmärkide täitmisel"
+    "delivery": {
+      "title": "Ettearvatav tarne",
+      "description": "Üks väljalaskeprotsess kolmele meeskonnale: 2-3 korda sagedasemad väljalasked ja vähem intsidente"
     },
     "multilingual": {
-      "title": "Mitmekeelsus",
-      "description": "Inglise/vene emakeel, professionaalne eesti keel, keskmine hispaania keel"
+      "title": "Mitmekeelne",
+      "description": "Emakeel inglise ja vene, eesti keel professionaalsel tasemel, hispaania keel kesktasemel"
     }
   },
   "education": {
     "title": "Haridus",
     "university": "Tallinna Tehnikaülikool",
+    "degree": "Bakalaureusekraad äriinfotehnoloogias, cum laude",
     "years": "2004 - 2007"
   }
 }

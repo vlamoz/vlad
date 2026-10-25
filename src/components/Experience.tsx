@@ -73,20 +73,15 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Summary */}
+          {/* Why roles overlap */}
           <div className="mt-16 text-center">
             <div className="bg-linear-to-r from-primary-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-lg p-8">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t('continuousGrowth.title')}
+                {t('overlap.title')}
               </h3>
-              <div className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed space-y-4">
-                <p>
-                  {t('continuousGrowth.content.paragraph1')}
-                </p>
-                <p>
-                  {t('continuousGrowth.content.paragraph2')}
-                </p>
-              </div>
+              <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                {t('overlap.text')}
+              </p>
             </div>
           </div>
         </div>

@@ -1,12 +1,8 @@
 {
   "title": "Proyectos Destacados",
-  "subtitle": "Proyectos clave que muestran mi experiencia en desarrollo empresarial",
+  "subtitle": "Una selección de sistemas que he construido y liderado",
   "labels": {
     "technologiesUsed": "Tecnologías utilizadas:",
     "keyAchievements": "Logros principales:"
-  },
-  "moreProjects": {
-    "title": "Más Proyectos Disponibles",
-    "description": "Estos representan algunos de mis proyectos clave. He trabajado en numerosas otras aplicaciones empresariales, herramientas internas y soluciones para clientes a lo largo de mi carrera. No dudes en preguntar sobre tecnologías específicas o tipos de proyectos que te interesen."
   }
 }

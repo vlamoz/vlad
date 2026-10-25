@@ -81,18 +81,6 @@ const Projects = () => {
               </div>
             ))}
           </div>
-
-          {/* Additional Projects Note */}
-          <div className="mt-16 text-center">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t('moreProjects.title')}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                {t('moreProjects.description')}
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

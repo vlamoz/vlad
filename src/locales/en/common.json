@@ -14,7 +14,7 @@
   },
   "footer": {
     "copyright": "© {{year}} Vlad Mozgovojs. Built with",
-    "tagline": "Engineering Manager • Software Engineering Expert"
+    "tagline": "Engineering Manager • Agentic software development"
   },
   "errors": {
     "errorBoundary": {
@@ -35,8 +35,8 @@
     }
   },
   "seo": {
-    "title": "Vlad Mozgovojs - Engineering Manager, Java Engineer",
-    "description": "Engineering Manager with 19+ years of experience in enterprise development, B2B integrations, and international projects. Expert in Java, microservices, and team leadership."
+    "title": "Vlad Mozgovojs - Engineering Manager, Agentic Software Development",
+    "description": "Engineering Manager with 19+ years in software, leading development and QA teams through the shift to agentic development with AI coding agents, with people in charge of planning and review. Java background, fully remote, open to leadership roles."
   },
   "common": {
     "present": "Present",
@@ -45,9 +45,9 @@
     "positions": {
       "engineeringManager": "Engineering Manager",
       "technicalTeamLead": "Technical Team Lead",
-      "leadDeveloperMHUB": "Lead Developer - MHUB Platform",
-      "seniorDeveloperYouRoam": "Senior Developer - YouRoam",
-      "seniorDeveloperSTAR": "Senior Developer - STAR System"
+      "leadDeveloperMHUB": "Lead Developer, MHUB Platform",
+      "seniorDeveloperYouRoam": "Senior Developer, YouRoam",
+      "seniorDeveloperSTAR": "Senior Developer, STAR System"
     }
   }
 }

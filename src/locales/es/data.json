@@ -1,43 +1,43 @@
 {
   "projects": {
     "interprefy": {
-      "description": "Liderando la transformación técnica de una plataforma global de idiomas, integrando tecnologías de IA de vanguardia para traducción en tiempo real, transcripción y capacidades de texto a voz. Gestionando la transición de interpretación tradicional a soluciones de IA/híbridas.",
+      "description": "Plataforma de interpretación en tiempo real para conferencias y eventos internacionales. Lidero tres equipos de desarrolladores e ingenieros de QA que llevan la plataforma de los intérpretes humanos a la traducción, transcripción y voz con IA, y nuestra propia ingeniería del desarrollo tradicional al agéntico.",
       "highlights": [
-        "Migré la plataforma a escalado horizontal, manejando miles de usuarios concurrentes sin tiempo de inactividad",
-        "Lideré la transición del equipo de enfoque en intérpretes a plataforma impulsada por IA",
-        "Integré múltiples servicios de IA para procesamiento de idiomas en tiempo real",
-        "Implementé algoritmos propietarios para traducción de IA en tiempo real y procesamiento de audio"
+        "El sistema de IA pasó del 0% a la mayor parte de la traducción para clientes",
+        "Un único proceso de publicación para tres equipos: publicaciones 2-3 veces más frecuentes y menos incidencias en producción",
+        "Implanté agentes de programación con IA para todos en 2025, aumentando la productividad de los tres equipos",
+        "Llevé la plataforma al escalado horizontal, atendiendo a miles de usuarios simultáneos sin interrupciones"
       ]
     },
     "audatex": {
-      "description": "Encabecé la transformación arquitectónica de AudaNet de arquitectura monolítica a microservicios, sirviendo a compañías de seguros en más de 15 países. Lideré integraciones B2B y transición del frontend a React.",
+      "description": "AudaNet conecta a compañías de seguros con talleres y peritos en más de 15 países. Como líder de equipo dirigí su paso de un monolito a microservicios, sus integraciones B2B y el cambio a un frontend en React.",
       "highlights": [
-        "Lideré la migración de monolito a arquitectura de microservicios",
-        "Gestioné integraciones B2B con más de 50 sistemas de back-office de seguros",
-        "Modernizé la experiencia del frontend de usuario con React"
+        "Dirigí la migración de monolito a microservicios",
+        "Integraciones con más de 50 sistemas de back office de aseguradoras",
+        "Reconstruí el frontend de usuario en React"
       ]
     },
     "nasdaq": {
-      "description": "Desarrollador líder de MHUB, la infraestructura central de mensajería para comunicaciones de fondos y depósitos en el ecosistema financiero báltico. Diseñé flujos de mensajes seguros y de alto rendimiento manejando millones en transacciones diarias.",
+      "description": "MHUB es el centro de mensajería para la comunicación de fondos y depositarios de valores en los países bálticos. Como desarrollador principal diseñé sus flujos de mensajes, que tenían que ser seguros, rápidos y estar siempre disponibles.",
       "highlights": [
-        "Diseñé sistema de enrutamiento de mensajes procesando más de 1M de transacciones diarias",
-        "Integré con más de 20 bancos y sistemas de depósito en 3 países",
-        "Implementé estrategias de despliegue con cero tiempo de inactividad"
+        "Enrutamiento de mensajes con más de 1 millón de transacciones diarias",
+        "Integraciones con más de 20 bancos y depositarios en 3 países",
+        "Despliegues sin tiempo de inactividad"
       ]
     },
     "elisa": {
-      "description": "Contribuidor clave a YouRoam, una plataforma sofisticada de telecomunicaciones que gestiona asociaciones de roaming para operadores de telecomunicaciones bálticos. Implementé funcionalidad compleja de importación/exportación de datos compatible con múltiples formatos internacionales y modernizé la UI para una experiencia de usuario mejorada.",
+      "description": "YouRoam gestiona los acuerdos de roaming entre operadores de telecomunicaciones bálticos. Trabajo en él desde 2007: he construido la importación y exportación de datos de socios en múltiples formatos internacionales y he modernizado su interfaz.",
       "highlights": [
-        "Diseñé sistema robusto de importación/exportación manejando más de 10 formatos diferentes de datos de telecomunicaciones",
-        "Optimicé el manejo de bases de datos para mayor escalabilidad",
-        "Implementé algoritmos complejos de precios para varios escenarios de roaming"
+        "Importación y exportación para más de 10 formatos de datos de telecomunicaciones",
+        "Optimización de bases de datos para volúmenes crecientes",
+        "Lógica de precios para escenarios de roaming complejos"
       ]
     },
     "government": {
-      "description": "Desarrollé infraestructura gubernamental crítica gestionando beneficios de bienestar y seguridad social para ciudadanos estonios.",
+      "description": "STAR gestiona las prestaciones sociales y la seguridad social de los ciudadanos estonios. Trabajé en la tramitación de solicitudes y en las integraciones con otros sistemas gubernamentales.",
       "highlights": [
-        "Procesé solicitudes de bienestar para más de 500K ciudadanos estonios",
-        "Integré con departamentos gubernamentales y sistemas legacy"
+        "Tramitación de solicitudes para más de 500.000 ciudadanos",
+        "Integraciones con departamentos gubernamentales y sistemas heredados"
       ]
     }
   }

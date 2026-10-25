@@ -14,7 +14,7 @@
   },
   "footer": {
     "copyright": "© {{year}} Vlad Mozgovojs. Desarrollado con",
-    "tagline": "Gerente de Ingeniería • Experto en Ingeniería de Software"
+    "tagline": "Gerente de Ingeniería • Desarrollo de software agéntico"
   },
   "errors": {
     "errorBoundary": {
@@ -35,8 +35,8 @@
     }
   },
   "seo": {
-    "title": "Vlad Mozgovojs - Gerente de Ingeniería, Ingeniero Java",
-    "description": "Gerente de ingeniería con más de 19 años de experiencia en desarrollo empresarial, integraciones B2B y proyectos internacionales. Experto en Java, microservicios y liderazgo de equipos."
+    "title": "Vlad Mozgovojs - Gerente de Ingeniería, desarrollo de software agéntico",
+    "description": "Gerente de Ingeniería con más de 19 años en software, que lidera equipos de desarrollo y QA en la transición al desarrollo agéntico con agentes de programación con IA, con personas al mando de la planificación y la revisión. Experiencia en Java, 100% remoto, abierto a puestos de liderazgo."
   },
   "common": {
     "present": "Actualidad",
@@ -45,9 +45,9 @@
     "positions": {
       "engineeringManager": "Gerente de Ingeniería",
       "technicalTeamLead": "Líder Técnico",
-      "leadDeveloperMHUB": "Desarrollador Principal - Plataforma MHUB",
-      "seniorDeveloperYouRoam": "Desarrollador Senior - YouRoam",
-      "seniorDeveloperSTAR": "Desarrollador Senior - Sistema STAR"
+      "leadDeveloperMHUB": "Desarrollador principal, plataforma MHUB",
+      "seniorDeveloperYouRoam": "Desarrollador sénior, YouRoam",
+      "seniorDeveloperSTAR": "Desarrollador sénior, sistema STAR"
     }
   }
 }

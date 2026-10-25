@@ -1,43 +1,43 @@
 {
   "projects": {
     "interprefy": {
-      "description": "Leading the technical transformation of a global language platform, integrating cutting-edge AI technologies for real-time translation, transcription, and text-to-speech capabilities. Managing the transition from traditional interpretation to AI/hybrid solutions.",
+      "description": "Real-time interpretation platform for international conferences and events. I lead three teams of developers and QA engineers taking the platform from human interpreters to AI translation, transcription and speech, and taking our own engineering from traditional to agentic development.",
       "highlights": [
-        "Transitioned the platform to horizontal scaling, handling thousands of concurrent users with zero downtime",
-        "Led team transition from interpreter-focused to AI-powered platform",
-        "Integrated multiple AI services for real-time language processing",
-        "Implemented proprietary algorithms for real-time AI translation and audio processing"
+        "AI stack grew from 0% to the majority of customer translation",
+        "One release process across three teams: 2-3x more frequent releases and fewer production incidents",
+        "Rolled out AI coding agents to everyone in 2025, raising output across all three teams",
+        "Moved the platform to horizontal scaling, serving thousands of concurrent users without downtime"
       ]
     },
     "audatex": {
-      "description": "Spearheaded the architectural transformation of AudaNet from monolithic to microservices architecture, serving insurance companies across 15+ countries. Led B2B integrations and React frontend transition.",
+      "description": "AudaNet connects insurance companies with repair shops and claims experts across 15+ countries. As team lead I led its move from a monolith to microservices, its B2B integrations, and the switch to a React frontend.",
       "highlights": [
-        "Led migration from monolith to microservices architecture",
-        "Managed B2B integrations with 50+ insurance backoffice systems",
-        "Modernized the user frontend experience with React"
+        "Led the migration from monolith to microservices",
+        "Integrations with 50+ insurance back-office systems",
+        "Rebuilt the user frontend in React"
       ]
     },
     "nasdaq": {
-      "description": "Lead Developer of MHUB, the central messaging infrastructure for fund and depository communications across the Baltic financial ecosystem. Designed secure, high-performance message flows handling millions in daily transactions.",
+      "description": "MHUB is the central messaging hub for fund and securities depository communication in the Baltics. As lead developer I designed its message flows, which had to be secure, fast and always available.",
       "highlights": [
-        "Designed message routing system processing 1M+ transactions daily",
-        "Integrated with 20+ banks and depository systems across 3 countries",
-        "Implemented zero-downtime deployment strategies"
+        "Message routing processing 1M+ transactions daily",
+        "Integrations with 20+ banks and depositories in 3 countries",
+        "Zero-downtime deployments"
       ]
     },
     "elisa": {
-      "description": "Key contributor to YouRoam, a sophisticated telecommunications platform managing roaming partnerships for Baltic telecom operators. Implemented complex data import/export functionality supporting multiple international formats and modernized the UI for enhanced user experience.",
+      "description": "YouRoam manages roaming agreements between Baltic telecom operators. I've worked on it since 2007, building its import and export of partner data in many international formats and modernizing its interface.",
       "highlights": [
-        "Designed robust import/export system handling 10+ different telecom data formats",
-        "Optimized database handling for increased scalability",
-        "Implemented complex pricing algorithms for various roaming scenarios"
+        "Import and export for 10+ telecom data formats",
+        "Database optimizations for growing data volumes",
+        "Pricing logic for complex roaming scenarios"
       ]
     },
     "government": {
-      "description": "Developed critical government infrastructure managing welfare benefits and social security for Estonian citizens.",
+      "description": "STAR manages welfare benefits and social security for Estonian citizens. I worked on application processing and on integrations with other government systems.",
       "highlights": [
-        "Processed welfare applications for 500K+ Estonian citizens",
-        "Integrated with government departments and legacy systems"
+        "Application processing for 500K+ citizens",
+        "Integrations with government departments and legacy systems"
       ]
     }
   }

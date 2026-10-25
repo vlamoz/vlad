@@ -1,19 +1,77 @@
 {
-  "title": "Tehnilised oskused",
-  "subtitle": "Põhjalik ekspertiis Java ökosüsteemis ja kaugemal",
+  "title": "Oskused",
+  "subtitle": "Esmalt juhtimine, mida toetab tehniline sügavus",
   "categories": {
-    "coreJava": "Java põhitehnoloogiad",
-    "enterprise": "Ettevõte ja arhitektuur",
-    "databases": "Andmebaasid",
-    "devops": "DevOps ja tööriistad",
-    "webTech": "Veebitehnoloogiad",
-    "domain": "Domeeni ekspertiis"
-  },
-  "alwaysLearning": {
-    "title": "Alati õppimas",
-    "content": {
-      "paragraph1": "Siin on midagi, mida ma armastan selles tööstuses: alati on midagi uut õppida! Ma püsin kursis Java versioonide ja raamistiku uuendustega, kuid olen sama palju põnevil, kui kaasarendaja näitab mulle nutikat lähenemist, mida ma polnud kaalunud.",
-      "paragraph2": "Nendel päevadel uurin, kuidas AI tööriistad saavad meie meeskonna jõu kordseks suurendajaks — mitte asendades meie ekspertiisi, vaid vabastades meid tegelemast tõeliselt huvitavate väljakutsetega, mis nõuavad inimlikku mõistmist ja loovust."
+    "leadership": {
+      "title": "Arenduse juhtimine",
+      "items": [
+        "Mitme meeskonna juhtimine",
+        "Kaugmeeskondade juhtimine",
+        "Inseneride mentorlus ja arendamine",
+        "Psühholoogiline turvalisus",
+        "Koostöö tootejuhtimisega",
+        "Coaching ja tagasiside"
+      ]
+    },
+    "delivery": {
+      "title": "Tarne ja protsessid",
+      "items": [
+        "Ühtne väljalaskeprotsess",
+        "Pidev tarne",
+        "Spetsifikatsioonipõhine planeerimine",
+        "Tehnilise võla ennetav vähendamine",
+        "Intsidentide vähendamine",
+        "Pudelikaelte eemaldamine"
+      ]
+    },
+    "agentic": {
+      "title": "Agentpõhine arendus",
+      "items": [
+        "Tehisintellekti kodeerimisagendid",
+        "Spetsifikatsioonipõhine arendus",
+        "Agentide abil testide automatiseerimine",
+        "Inimese ülevaatus protsessis",
+        "Meeskonna koolitused ja töötoad",
+        "Töövoogude automatiseerimine"
+      ]
+    },
+    "architecture": {
+      "title": "Arhitektuur",
+      "items": [
+        "Mikroteenused",
+        "Sündmuspõhine arhitektuur",
+        "B2B integratsioonid",
+        "Reaalajasüsteemid",
+        "Pilvearhitektuur (AWS)",
+        "Süsteemidisain"
+      ]
+    },
+    "technology": {
+      "title": "Tehnoloogia",
+      "items": [
+        "Java ja Spring Boot",
+        "React ja TypeScript",
+        "PostgreSQL, Oracle, Redis",
+        "RabbitMQ ja sõnumivahetus",
+        "Kubernetes ja Docker",
+        "CI/CD"
+      ]
+    },
+    "domains": {
+      "title": "Valdkonnad",
+      "items": [
+        "Tehisintellekt ja keeletehnoloogia",
+        "Kindlustus",
+        "Finantsteenused",
+        "Telekommunikatsioon",
+        "Riigisüsteemid",
+        "Rahvusvahelised B2B platvormid"
+      ]
     }
+  },
+  "agenticShift": {
+    "title": "Üleminek agentpõhisele arendusele",
+    "paragraph1": "Alates 2025. aastast kasutavad minu meeskonnad tehisintellekti kodeerimisagente igapäevases arenduses, koodi kirjutamisest automaattestideni. Korraldasin töötubasid, et kõik saaksid agentpõhistest töövoogudest maksimumi, ja tulemus on näha: avame nüüd kaks kuni kolm korda rohkem pull request'e ning QA on jõudnud peaaegu olematust testiautomaatikast selleni, et üle poole testimisest on automatiseeritud.",
+    "paragraph2": "Kui agendid võtavad üle suurema osa kirjutamisest, liiguvad pudelikaelad planeerimisse, ülevaatusse ja testimisse, ning just neile ma keskendun. Oluline on see, et otsused jäävad inimeste teha ning meeskond mõistab endiselt kõike, mida ta tarnib, ja vastutab selle eest."
   }
 }

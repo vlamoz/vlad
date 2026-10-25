@@ -1,33 +1,34 @@
 {
   "title": "About Me",
-  "subtitle": "Passionate about building robust, scalable solutions",
+  "subtitle": "How I lead, and what I care about",
   "imageAlt": "Vladislavs Mozgovojs - Engineering Manager",
   "content": {
-    "paragraph1": "My coding journey started at Tallinn University of Technology, but the real education began when I discovered that building great software is as much about people as it is about algorithms. Over 19+ years, I've had the privilege of working across multiple countries and industries — from Estonia to international markets.",
-    "paragraph2": "What drives me? I believe the best solutions emerge when everyone on the team feels comfortable sharing their ideas, when developers aren't afraid to question senior decisions, and when we maintain healthy boundaries that let everyone bring their whole selves to work. My technical focus is on enterprise Java applications, B2B integrations, and scalable architectures, but my real passion is creating environments where brilliant people can do their best work.",
-    "paragraph3": "Every day I get to combine cutting-edge technical challenges with mentoring amazing developers. I've learned that delivering on time and maintaining high code quality isn't just about process — it's about building trust, encouraging curiosity, and making sure everyone feels heard. Lately, I'm excited about how AI tools can amplify what we're already great at, giving our team superpowers rather than replacing the human creativity and collaboration that makes software development truly rewarding."
+    "paragraph1": "I studied at Tallinn University of Technology and have been building software ever since: first as a developer, then as a team lead at Audatex (Solera), and now as Engineering Manager at Interprefy. Along the way I've worked on financial messaging, telecom, insurance and government systems for clients across Europe.",
+    "paragraph2": "I currently lead three teams, about 15 developers and QA engineers, working on a real-time AI translation platform. Over the past few years the platform has moved from relying on human interpreters to an AI stack that now handles the majority of customer translation, and the way we build it has changed just as much.",
+    "paragraph3": "What I care about most is how the team works together. I want people to feel safe questioning a decision, including mine, and I'd rather remove a bottleneck than add a rule. Good process should make work easier: when we unified how our three teams release, each team got more control over its own deployments, and we started fixing technical debt before it turned into incidents."
   },
   "highlights": {
     "experience": {
-      "title": "19+ Years Experience",
-      "description": "Deep expertise in Java ecosystem and enterprise development"
+      "title": "19+ Years in Software",
+      "description": "Hands-on engineering before management, so I know the work I'm leading"
     },
-    "international": {
-      "title": "International Projects",
-      "description": "Cross-border system implementations and B2B integrations"
+    "agentic": {
+      "title": "Agentic Development",
+      "description": "Moving teams to AI coding agents, with people in charge of planning and review"
     },
-    "goalFocused": {
-      "title": "Goal-Focused",
-      "description": "Proven track record of meeting deadlines and project objectives"
+    "delivery": {
+      "title": "Predictable Delivery",
+      "description": "One release process across three teams: 2-3x more frequent releases and fewer incidents"
     },
     "multilingual": {
       "title": "Multilingual",
-      "description": "Native English/Russian, Professional Estonian, Intermediate Spanish"
+      "description": "Native English and Russian, professional Estonian, intermediate Spanish"
     }
   },
   "education": {
     "title": "Education",
     "university": "Tallinn University of Technology",
+    "degree": "Bachelor's degree in Business Information Technology, cum laude",
     "years": "2004 - 2007"
   }
 }
