@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
+import { scrollToSection } from '../utils/scrollToSection';
 
 const Header = () => {
   const { t } = useTranslation('common');
@@ -18,12 +19,9 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+  const goToSection = (sectionId: string) => {
+    scrollToSection(sectionId);
+    setIsMenuOpen(false);
   };
 
   const navItems = [
@@ -39,7 +37,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' 
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xs shadow-lg' 
           : 'bg-transparent'
       }`}
     >
@@ -47,50 +45,29 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 gap-4">
           {/* Logo */}
           <div
-            className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white cursor-pointer truncate flex-shrink-0"
-            onClick={() => scrollToSection('home')}
+            className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white cursor-pointer truncate shrink-0"
+            onClick={() => goToSection('home')}
           >
             {t('navigation.logo')}
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium whitespace-nowrap"
-              >
-                {item.label}
-              </button>
-            ))}
-            <LanguageSwitcher />
-            <ThemeToggle />
-          </nav>
-
-          {/* Tablet Navigation (md-lg) - Simplified */}
-          <nav className="hidden md:flex lg:hidden items-center space-x-3">
+          {/* Section links from lg up; one language switcher, theme toggle and (below lg) menu button for all sizes */}
+          <div className="flex items-center gap-1 md:gap-3 lg:gap-6">
+            <nav className="hidden lg:flex items-center space-x-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => goToSection(item.id)}
+                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium whitespace-nowrap"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
             <LanguageSwitcher />
             <ThemeToggle />
             <button
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={t('accessibility.toggleMenu')}
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6 text-gray-600 dark:text-gray-400" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-600 dark:text-gray-400" />
-              )}
-            </button>
-          </nav>
-
-          {/* Mobile Controls */}
-          <div className="md:hidden flex items-center gap-1">
-            <LanguageSwitcher />
-            <ThemeToggle />
-            <button
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={t('accessibility.toggleMenu')}
             >
@@ -110,7 +87,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => goToSection(item.id)}
                   className="block w-full text-left px-3 py-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 font-medium"
                 >
                   {item.label}

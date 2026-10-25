@@ -13,7 +13,6 @@ const Footer = memo(() => {
           <p className="flex items-center justify-center gap-2 text-sm">
             {t('footer.copyright', { year: currentYear })}
             <Heart className="h-4 w-4 text-red-500 fill-red-500" />
-            {t('footer.builtWith')}
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-600 mt-2">
             {t('footer.tagline')}

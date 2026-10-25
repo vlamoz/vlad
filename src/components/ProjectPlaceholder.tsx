@@ -1,21 +1,16 @@
-import { motion } from 'framer-motion';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { memo } from 'react';
+import { m } from 'framer-motion';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import java from 'react-syntax-highlighter/dist/esm/languages/prism/java';
+import { vscDarkPlus, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useTheme } from '../contexts/ThemeContext';
 
-interface ProjectPlaceholderProps {
-  title: string;
-  index: number;
-}
+// Only Java is shown, so register just that grammar instead of bundling all of Prism
+SyntaxHighlighter.registerLanguage('java', java);
 
-const ProjectPlaceholder = ({ title, index }: ProjectPlaceholderProps) => {
-  const { theme } = useTheme();
-
-  // Create a code snippet based on project
-  const getCodeSnippet = (projectTitle: string) => {
-    if (projectTitle.includes('Interprefy')) {
-      return `@RequiredArgsConstructor
+// Code snippet shown for each project, keyed by work item id
+const CODE_SNIPPETS: Record<string, string> = {
+  interprefy: `@RequiredArgsConstructor
 public class AITranslationService {
   private final SpeechToTextEngine sttEngine;
   private final TranslationEngine translationEngine;
@@ -27,18 +22,16 @@ public class AITranslationService {
         translationEngine.translate(
             sttEngine.transcribe(input)));
   }
-}`;
-    } else if (projectTitle.includes('NASDAQ')) {
-      return `@MessageEndpoint
+}`,
+  nasdaq: `@MessageEndpoint
 public class FinancialMessageHub {
   @ServiceActivator(inputChannel = "trades")
   public Message<Trade> routeMessage(Message<Trade> msg) {
     // Route to Baltic financial institutions
     return messageRouter.route(msg);
   }
-}`;
-    } else if (projectTitle.includes('AudaNet')) {
-      return `@RequiredArgsConstructor
+}`,
+  audatex: `@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/vehicle")
 public class InsuranceClaimService {
@@ -48,9 +41,8 @@ public class InsuranceClaimService {
     // B2B integration logic
     return ResponseEntity.ok(claimProcessor.process(request));
   }
-}`;
-    } else if (projectTitle.includes('YouRoam')) {
-      return `@RequiredArgsConstructor
+}`,
+  elisa: `@RequiredArgsConstructor
 public class RoamingDataProcessor {
   private final RateParser parser;
   private final RateService rateService;
@@ -60,9 +52,8 @@ public class RoamingDataProcessor {
     List<RoamingRate> rates = parser.parse(file, format);
     rateService.processVersionedRates(rates);
   }
-}`;
-    } else {
-      return `@RequiredArgsConstructor
+}`,
+  government: `@RequiredArgsConstructor
 @Service
 public class WelfareApplicationService {
   private final ApplicationService applicationService;
@@ -72,37 +63,52 @@ public class WelfareApplicationService {
     validateCitizen(request.getPersonalCode());
     return applicationService.process(application);
   }
-}`;
-    }
-  };
+}`
+};
 
-  const codeString = getCodeSnippet(title);
+// Theme styles with a transparent background, built once per theme
+const withTransparentBackground = (syntaxTheme: typeof oneLight) => ({
+  ...syntaxTheme,
+  'pre[class*="language-"]': {
+    ...syntaxTheme['pre[class*="language-"]'],
+    background: 'transparent',
+    margin: 0,
+    padding: 0,
+    fontSize: '0.875rem',
+  },
+  'code[class*="language-"]': {
+    ...syntaxTheme['code[class*="language-"]'],
+    background: 'transparent',
+    fontSize: '0.875rem',
+  }
+});
 
-  // Choose theme based on current mode
-  const syntaxTheme = theme === 'dark' ? vscDarkPlus : oneLight;
+const SYNTAX_STYLES = {
+  light: withTransparentBackground(oneLight),
+  dark: withTransparentBackground(vscDarkPlus),
+};
 
-  // Custom style based on chosen theme
-  const customStyle = {
-    ...syntaxTheme,
-    'pre[class*="language-"]': {
-      ...syntaxTheme['pre[class*="language-"]'],
-      background: 'transparent',
-      margin: 0,
-      padding: 0,
-      fontSize: '0.875rem',
-    },
-    'code[class*="language-"]': {
-      ...syntaxTheme['code[class*="language-"]'],
-      background: 'transparent',
-      fontSize: '0.875rem',
-    }
-  };
+const LINE_NUMBER_STYLES = {
+  light: { color: '#9ca3af', marginRight: '1rem', minWidth: '2em' },
+  dark: { color: '#4a5568', marginRight: '1rem', minWidth: '2em' },
+};
+
+const CUSTOM_STYLE = { background: 'transparent', padding: 0 };
+
+interface ProjectPlaceholderProps {
+  id: string;
+  title: string;
+  index: number;
+}
+
+const ProjectPlaceholder = memo(({ id, title, index }: ProjectPlaceholderProps) => {
+  const { theme } = useTheme();
 
   return (
     <div className="aspect-video bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl relative group border border-gray-200 dark:border-gray-700">
       {/* Code Editor Header */}
       <div className="bg-gray-200 dark:bg-gray-800 px-4 py-2 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <div className="w-3 h-3 rounded-full bg-red-500"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
@@ -112,16 +118,8 @@ public class WelfareApplicationService {
 
       {/* Code Content */}
       <div className="p-4 relative overflow-auto">
-        {/* Background Pattern */}
-        <svg className="absolute inset-0 w-full h-full opacity-5" viewBox="0 0 400 300">
-          <pattern id={`code-pattern-${index}`} x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-
-          </pattern>
-          <rect width="100%" height="100%" fill={`url(#code-pattern-${index})`} />
-        </svg>
-
         {/* Syntax Highlighted Code */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.1 }}
@@ -129,18 +127,20 @@ public class WelfareApplicationService {
         >
           <SyntaxHighlighter
             language="java"
-            style={customStyle}
+            style={SYNTAX_STYLES[theme]}
             showLineNumbers
-            lineNumberStyle={{ color: theme === 'dark' ? '#4a5568' : '#9ca3af', marginRight: '1rem', minWidth: '2em' }}
+            lineNumberStyle={LINE_NUMBER_STYLES[theme]}
             wrapLines={true}
-            customStyle={{ background: 'transparent', padding: 0 }}
+            customStyle={CUSTOM_STYLE}
           >
-            {codeString}
+            {CODE_SNIPPETS[id]}
           </SyntaxHighlighter>
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );
-};
+});
+
+ProjectPlaceholder.displayName = 'ProjectPlaceholder';
 
 export default ProjectPlaceholder;

@@ -1,6 +1,53 @@
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SectionHeader from './SectionHeader';
 import { useContactForm } from '../hooks/useContactForm';
+import { PROFILE } from '../data/profile';
+
+type FieldName = 'name' | 'email' | 'message';
+
+interface FieldProps {
+  name: FieldName;
+  label: string;
+  placeholder: string;
+  value: string;
+  error?: string;
+  onChange: (name: FieldName, value: string) => void;
+}
+
+const Field = ({ name, label, placeholder, value, error, onChange }: FieldProps) => {
+  const className = `w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${
+    error
+      ? 'border-red-300 dark:border-red-600 focus:ring-red-500'
+      : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
+  } dark:bg-gray-700 dark:text-white`;
+  const inputProps = {
+    id: name,
+    name,
+    value,
+    placeholder,
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => onChange(name, e.target.value),
+  };
+
+  return (
+    <div>
+      <label htmlFor={name} className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        {label}
+      </label>
+      {name === 'message' ? (
+        <textarea {...inputProps} rows={4} className={`${className} resize-none`} />
+      ) : (
+        <input {...inputProps} type={name === 'email' ? 'email' : 'text'} className={className} />
+      )}
+      {error && (
+        <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
+          <AlertCircle className="h-4 w-4" />
+          {error}
+        </p>
+      )}
+    </div>
+  );
+};
 
 const Contact = () => {
   const { t } = useTranslation('contact');
@@ -12,25 +59,12 @@ const Contact = () => {
     updateField, 
     handleSubmit 
   } = useContactForm();
-  const contactInfo = {
-    email: 'vlamoz@pm.me',
-    location: 'Spain / Estonia',
-    linkedin: 'https://www.linkedin.com/in/vlad-mozgovoi-b8452838/'
-  };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900">
+    <section id="contact" className="py-20 bg-linear-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('title')}
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              {t('subtitle')}
-            </p>
-          </div>
+          <SectionHeader title={t('title')} subtitle={t('subtitle')} subtitleClassName="max-w-2xl mx-auto" />
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -47,7 +81,7 @@ const Contact = () => {
               {/* Contact Details */}
               <div className="space-y-4">
                 <a
-                  href={`mailto:${contactInfo.email}`}
+                  href={`mailto:${PROFILE.email}`}
                   className="flex items-center gap-4 p-4 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-shadow duration-200 group"
                 >
                   <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
@@ -55,7 +89,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{t('details.email')}</p>
-                    <p className="text-gray-900 dark:text-white font-medium">{contactInfo.email}</p>
+                    <p className="text-gray-900 dark:text-white font-medium">{PROFILE.email}</p>
                   </div>
                 </a>
 
@@ -65,7 +99,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{t('details.location')}</p>
-                    <p className="text-gray-900 dark:text-white font-medium">{contactInfo.location}</p>
+                    <p className="text-gray-900 dark:text-white font-medium">{PROFILE.location}</p>
                   </div>
                 </div>
               </div>
@@ -75,7 +109,7 @@ const Contact = () => {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{t('details.connectWith')}</p>
                 <div className="flex gap-4">
                   <a
-                    href={contactInfo.linkedin}
+                    href={PROFILE.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white dark:bg-gray-700 rounded-full hover:bg-primary-100 dark:hover:bg-primary-900 hover:shadow-md transition-all duration-200"
@@ -104,80 +138,30 @@ const Contact = () => {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    {t('form.labels.name')}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={data.name}
-                    onChange={(e) => updateField('name', e.target.value)}
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${
-                      errors.name 
-                        ? 'border-red-300 dark:border-red-600 focus:ring-red-500' 
-                        : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
-                    } dark:bg-gray-700 dark:text-white`}
-                    placeholder={t('form.placeholders.name')}
-                  />
-                  {errors.name && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
-                      <AlertCircle className="h-4 w-4" />
-                      {errors.name}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    {t('form.labels.email')}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={data.email}
-                    onChange={(e) => updateField('email', e.target.value)}
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${
-                      errors.email
-                        ? 'border-red-300 dark:border-red-600 focus:ring-red-500'
-                        : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
-                    } dark:bg-gray-700 dark:text-white`}
-                    placeholder={t('form.placeholders.email')}
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
-                      <AlertCircle className="h-4 w-4" />
-                      {errors.email}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    {t('form.labels.message')}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={data.message}
-                    onChange={(e) => updateField('message', e.target.value)}
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent transition-colors resize-none ${
-                      errors.message
-                        ? 'border-red-300 dark:border-red-600 focus:ring-red-500'
-                        : 'border-gray-300 dark:border-gray-600 focus:ring-primary-500'
-                    } dark:bg-gray-700 dark:text-white`}
-                    placeholder={t('form.placeholders.message')}
-                  />
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
-                      <AlertCircle className="h-4 w-4" />
-                      {errors.message}
-                    </p>
-                  )}
-                </div>
+                <Field
+                  name="name"
+                  label={t('form.labels.name')}
+                  placeholder={t('form.placeholders.name')}
+                  value={data.name}
+                  error={errors.name}
+                  onChange={updateField}
+                />
+                <Field
+                  name="email"
+                  label={t('form.labels.email')}
+                  placeholder={t('form.placeholders.email')}
+                  value={data.email}
+                  error={errors.email}
+                  onChange={updateField}
+                />
+                <Field
+                  name="message"
+                  label={t('form.labels.message')}
+                  placeholder={t('form.placeholders.message')}
+                  value={data.message}
+                  error={errors.message}
+                  onChange={updateField}
+                />
 
                 <button
                   type="submit"
@@ -202,7 +186,7 @@ const Contact = () => {
                 </button>
               </form>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
-                {t('form.directEmail')} <a href={`mailto:${contactInfo.email}`} className="text-primary-600 hover:underline">{contactInfo.email}</a>
+                {t('form.directEmail')} <a href={`mailto:${PROFILE.email}`} className="text-primary-600 hover:underline">{PROFILE.email}</a>
               </p>
             </div>
           </div>

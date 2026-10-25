@@ -2,67 +2,39 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Structure
+## Project
 
-This is a personal portfolio website built with React, TypeScript, and Vite.
+Personal portfolio and printable CV for vlamoz.me: a single-page React 19 + TypeScript 6 app built with Vite 8 (Rolldown), styled with Tailwind CSS 4, in four languages (en, es, et, ru). Deployed on Vercel. See README.md for setup and where content lives.
 
-### Core Architecture
+## Commands
 
-- **Frontend Framework**: React 19+ with TypeScript
-- **Build Tool**: Vite with Hot Module Replacement (HMR)
-- **Styling**: Tailwind CSS with custom color palette and dark mode support
-- **Theme Management**: React Context API for light/dark theme switching with localStorage persistence
-- **Icons**: Lucide React for consistent iconography
-- **Animation**: Framer Motion for smooth animations and transitions
-
-### Key Directories
-
-- `src/components/`: React components organized by functionality (Header, Hero, About, Skills, Projects, Experience, Contact, Footer)
-- `src/contexts/`: React Context providers (ThemeContext for theme management)
-- `src/data/`: Static data definitions (technologies.ts with standardized tech stack constants)
-- `src/types/`: TypeScript type definitions for Project, Experience, and Skill interfaces
-
-## Common Commands
-
-### Development
 ```bash
-npm run dev        # Start development server on port 3000
-npm run build      # Build for production (runs TypeScript check + Vite build)
-npm run preview    # Preview production build
-npm run lint       # Run ESLint
+npm run dev        # Dev server on port 3000
+npm run build      # tsc -b, then vite build (keep the main chunk under Vite's 500 kB warning)
+npm run lint       # ESLint 10 (flat config in eslint.config.js)
+npm run preview    # Serve the production build
 ```
 
-### Key Configuration Files
+Node 20.19+ or 22.12+ is required by Vite 8.
 
-- **Vite Config**: Custom server port (3000), React plugin, global polyfill
-- **TypeScript**: Uses project references with separate app and node configs
-- **Tailwind**: Custom color palette with primary green theme, dark mode class strategy
-- **ESLint**: TypeScript ESLint with React hooks and refresh plugins
+## Architecture
 
-## Development Patterns
+- **Entry**: `src/main.tsx` waits for `i18nReady` before the first render so non-English visitors never see English text.
+- **i18n** (`src/i18n.ts`): `LANGUAGES` is the single list of supported languages (switcher labels, hreflang, Open Graph locale all derive from it). English namespaces are bundled eagerly with `import.meta.glob`; other languages load lazily, grouped into one chunk per language by `codeSplitting` in `vite.config.ts`. Detection order: `?lang=` → localStorage `preferredLanguage` → browser languages, with regions stripped. `i18n.on('languageChanged')` is the one place that sets `<html lang>`. Components read the current language from `i18n.resolvedLanguage`; there is no language context.
+- **Content data**: `src/data/workExperience.ts` holds language-independent facts (id, company, years, position key, location keys, technologies) plus `formatPeriod` / `formatPosition` / `formatLocations`. Descriptions and highlights live only in `src/locales/<lng>/data.json` under `projects.<id>`. `src/data/skills.ts` stores category keys and names from `src/data/technologies.ts`. `src/data/profile.ts` holds name, email, location and LinkedIn URL.
+- **SEO**: `useSEO` (called in `App`) updates title, meta, canonical (keeps `?lang=`), hreflang and JSON-LD per language. `index.html` carries static Open Graph tags for crawlers that don't run JavaScript; keep both in sync.
+- **Theme**: `ThemeContext` toggles the `dark` class on `<html>`, initialised from localStorage or the system preference.
+- **Animation**: the app is wrapped in `<LazyMotion features={domAnimation} strict>`. Use `m.*` elements from framer-motion, never `motion.*` (strict mode throws).
+- **Code cards**: `ProjectPlaceholder` uses `PrismLight` with only the Java grammar registered; snippets are in `CODE_SNIPPETS` keyed by project id.
 
-### Component Structure
-- Components use functional React with hooks
-- Theme-aware styling using Tailwind's dark: prefix
-- Consistent use of TypeScript interfaces from `src/types/`
-- Icons from Lucide React library
+## Conventions
 
-### Theme System
-- ThemeContext provides theme state and toggle function
-- Automatic detection of system preference on first load
-- Persistent storage in localStorage
-- CSS class-based dark mode implementation
-
-### Technology Standards
-- Use constants from `src/data/technologies.ts` for consistent technology naming
-- Type-safe technology references using the `Technology` type
-
-### Styling Conventions
-- Tailwind utility classes with responsive prefixes (sm:, md:, lg:)
-- Custom color palette defined in tailwind.config.js
-- Smooth transitions and animations using Tailwind and Framer Motion
-- Mobile-first responsive design patterns
-
+- Functional components with hooks; shared pieces in `src/components` (`SectionHeader`, `TechTag`, `AnimatedSection`, `ErrorBoundary`).
+- Store translation keys in data, not display text. Any user-visible string goes in all four `src/locales/<lng>/` files.
+- Tailwind 4: theme tokens (primary green palette, fonts) are in the `@theme` block of `src/index.css`; there is no `tailwind.config.js`. Use `dark:` for dark mode, responsive prefixes mobile-first. Unlayered CSS in `index.css` beats utilities, so keep it to `html`/`body` and the print stylesheet.
+- The print stylesheet in `src/index.css` produces the "Download CV" output; check the print preview after layout changes.
+- `typescript` is held at 6.0.x because `typescript-eslint` doesn't support 7 yet.
+- Environment: `VITE_FORMSPREE_ENDPOINT` (see `.env.example`); `.env` is not committed.
 
 ## Using Gemini CLI for Large Codebase Analysis
 When analyzing large codebases or multiple files that might exceed context limits, use the Gemini CLI with its massive context window. Use gemini -p to leverage Google Gemini's large context capacity.

@@ -6,19 +6,15 @@
     "projects": "Proyectos",
     "experience": "Experiencia",
     "contact": "Contacto",
-    "toggleMenu": "Abrir/cerrar menú",
     "logo": "Vlad Mozgovojs"
   },
   "accessibility": {
     "toggleTheme": "Cambiar tema",
-    "toggleMenu": "Abrir/cerrar menú",
-    "scrollToAbout": "Ir a la sección sobre mí",
-    "linkedInProfile": "Perfil de LinkedIn"
+    "toggleMenu": "Abrir/cerrar menú"
   },
   "footer": {
     "copyright": "© {{year}} Vlad Mozgovojs. Desarrollado con",
-    "builtWith": "React y TypeScript",
-    "tagline": "Líder Técnico • Experto en Ingeniería de Software"
+    "tagline": "Gerente de Ingeniería • Experto en Ingeniería de Software"
   },
   "errors": {
     "errorBoundary": {
@@ -38,27 +34,18 @@
       "sendFailed": "No se pudo enviar el mensaje. Inténtalo de nuevo."
     }
   },
-  "languages": {
-    "en": "Inglés",
-    "es": "Español",
-    "et": "Estonio",
-    "ru": "Ruso"
-  },
   "seo": {
-    "title": "Vlad Mozgovojs - Líder Técnico, Ingeniero Java",
-    "description": "Líder técnico con más de 18 años de experiencia en desarrollo empresarial, integraciones B2B y proyectos internacionales. Experto en Java, microservicios y liderazgo de equipos."
+    "title": "Vlad Mozgovojs - Gerente de Ingeniería, Ingeniero Java",
+    "description": "Gerente de ingeniería con más de 19 años de experiencia en desarrollo empresarial, integraciones B2B y proyectos internacionales. Experto en Java, microservicios y liderazgo de equipos."
   },
   "common": {
     "present": "Actualidad",
     "fullyRemote": "100% Remoto",
-    "remote": "Remoto",
     "estonia": "Estonia",
     "positions": {
+      "engineeringManager": "Gerente de Ingeniería",
       "technicalTeamLead": "Líder Técnico",
-      "leadDeveloper": "Desarrollador Principal",
-      "leadDeveloperB2B": "Desarrollador Principal - Departamento B2B",
       "leadDeveloperMHUB": "Desarrollador Principal - Plataforma MHUB",
-      "seniorDeveloper": "Desarrollador Senior",
       "seniorDeveloperYouRoam": "Desarrollador Senior - YouRoam",
       "seniorDeveloperSTAR": "Desarrollador Senior - Sistema STAR"
     }

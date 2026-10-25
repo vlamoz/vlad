@@ -2,7 +2,7 @@
 export const TECHNOLOGIES = {
   // Core Java
   JAVA: 'Java',
-  JAVA_8_11_17_21: 'Java (8, 11, 17, 21+)',
+  JAVA_21_25: 'Java (21, 25+)',
   SPRING_BOOT: 'Spring Boot',
   SPRING_FRAMEWORK: 'Spring Framework',
   SPRING: 'Spring',
@@ -22,7 +22,6 @@ export const TECHNOLOGIES = {
   ENTERPRISE_INTEGRATION: 'Enterprise Integration',
   ENTERPRISE_SECURITY: 'Enterprise Security',
   GOVERNMENT_STANDARDS: 'Government Standards',
-  GOVERNMENT_SYSTEMS: 'Government Systems',
 
   // Databases
   POSTGRESQL: 'PostgreSQL',
@@ -49,17 +48,14 @@ export const TECHNOLOGIES = {
   BOOTSTRAP: 'Bootstrap',
 
   // Specialized
-  AI_ML_INTEGRATION: 'AI/ML Integration',
   AI_ML_APIS: 'AI/ML APIs',
   CLOUD_ARCHITECTURE: 'Cloud Architecture',
-  REAL_TIME_AUDIO_VIDEO: 'Real time audio/video',
   WEBRTC: 'WebRTC',
   RABBITMQ: 'RabbitMQ',
   IBM_MQ: 'IBM MQ',
   MESSAGE_QUEUING: 'Message Queuing',
   FINANCIAL_APIS: 'Financial APIs',
   DATA_PROCESSING: 'Data Processing',
-  UI_MODERNIZATION: 'UI Modernization',
   XML_JSON: 'XML/JSON',
 
   // Domain Expertise
@@ -70,6 +66,3 @@ export const TECHNOLOGIES = {
   B2B_PLATFORMS: 'B2B Platforms',
   ENTERPRISE_SOLUTIONS: 'Enterprise Solutions'
 } as const;
-
-// Type for technology values
-export type Technology = typeof TECHNOLOGIES[keyof typeof TECHNOLOGIES];

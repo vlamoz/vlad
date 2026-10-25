@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, type ReactNode } from 'react';
 
@@ -13,7 +13,7 @@ const AnimatedSection = ({ children, className = '', delay = 0 }: AnimatedSectio
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -21,7 +21,7 @@ const AnimatedSection = ({ children, className = '', delay = 0 }: AnimatedSectio
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 };
 

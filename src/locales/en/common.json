@@ -6,19 +6,15 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
-    "toggleMenu": "Toggle menu",
     "logo": "Vlad Mozgovojs"
   },
   "accessibility": {
     "toggleTheme": "Toggle theme",
-    "toggleMenu": "Toggle menu",
-    "scrollToAbout": "Scroll to about section",
-    "linkedInProfile": "LinkedIn Profile"
+    "toggleMenu": "Toggle menu"
   },
   "footer": {
     "copyright": "© {{year}} Vlad Mozgovojs. Built with",
-    "builtWith": "using React & TypeScript",
-    "tagline": "Technical Team Lead • Software Engineering Expert"
+    "tagline": "Engineering Manager • Software Engineering Expert"
   },
   "errors": {
     "errorBoundary": {
@@ -38,27 +34,18 @@
       "sendFailed": "Failed to send message. Please try again."
     }
   },
-  "languages": {
-    "en": "English",
-    "es": "Spanish",
-    "et": "Estonian",
-    "ru": "Russian"
-  },
   "seo": {
-    "title": "Vlad Mozgovojs - Technical Team Lead, Java Engineer",
-    "description": "Technical Team Lead with 18+ years of experience in enterprise development, B2B integrations, and international projects. Expert in Java, microservices, and team leadership."
+    "title": "Vlad Mozgovojs - Engineering Manager, Java Engineer",
+    "description": "Engineering Manager with 19+ years of experience in enterprise development, B2B integrations, and international projects. Expert in Java, microservices, and team leadership."
   },
   "common": {
     "present": "Present",
     "fullyRemote": "Fully Remote",
-    "remote": "Remote",
     "estonia": "Estonia",
     "positions": {
+      "engineeringManager": "Engineering Manager",
       "technicalTeamLead": "Technical Team Lead",
-      "leadDeveloper": "Lead Developer",
-      "leadDeveloperB2B": "Lead Developer - B2B Department",
       "leadDeveloperMHUB": "Lead Developer - MHUB Platform",
-      "seniorDeveloper": "Senior Developer",
       "seniorDeveloperYouRoam": "Senior Developer - YouRoam",
       "seniorDeveloperSTAR": "Senior Developer - STAR System"
     }

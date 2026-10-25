@@ -6,19 +6,15 @@
     "projects": "Projektid",
     "experience": "Kogemus",
     "contact": "Kontakt",
-    "toggleMenu": "Ava/sulge menüü",
     "logo": "Vlad Mozgovojs"
   },
   "accessibility": {
     "toggleTheme": "Muuda teemat",
-    "toggleMenu": "Ava/sulge menüü",
-    "scrollToAbout": "Mine lõiku \"Minust\"",
-    "linkedInProfile": "LinkedIn'i profiil"
+    "toggleMenu": "Ava/sulge menüü"
   },
   "footer": {
     "copyright": "© {{year}} Vlad Mozgovojs. Loodud",
-    "builtWith": "React'i ja TypeScript'iga",
-    "tagline": "Tehnilise meeskonna juht • Tarkvaraarenduse ekspert"
+    "tagline": "Arendusjuht • Tarkvaraarenduse ekspert"
   },
   "errors": {
     "errorBoundary": {
@@ -38,27 +34,18 @@
       "sendFailed": "Sõnumi saatmine ebaõnnestus. Proovi uuesti."
     }
   },
-  "languages": {
-    "en": "Inglise keel",
-    "es": "Hispaania keel",
-    "et": "Eesti keel",
-    "ru": "Vene keel"
-  },
   "seo": {
-    "title": "Vlad Mozgovojs - Tehnilise meeskonna juht, Java arendaja",
-    "description": "Tehnilise meeskonna juht üle 18-aastase kogemusega ettevõtterakenduste arenduses, B2B integratsioonides ja rahvusvahelistes projektides. Ekspert Java, mikroteenuste ja meeskonnajuhtimise alal."
+    "title": "Vlad Mozgovojs - Arendusjuht, Java arendaja",
+    "description": "Arendusjuht üle 19-aastase kogemusega ettevõtterakenduste arenduses, B2B integratsioonides ja rahvusvahelistes projektides. Ekspert Java, mikroteenuste ja meeskonnajuhtimise alal."
   },
   "common": {
     "present": "Täna",
     "fullyRemote": "Täielikult kaugtöö",
-    "remote": "Kaugtöö",
     "estonia": "Eesti",
     "positions": {
+      "engineeringManager": "Arendusjuht",
       "technicalTeamLead": "Tehnilise meeskonna juht",
-      "leadDeveloper": "Peaarendaja",
-      "leadDeveloperB2B": "Peaarendaja - B2B osakond",
       "leadDeveloperMHUB": "Peaarendaja - MHUB platvorm",
-      "seniorDeveloper": "Vanem arendaja",
       "seniorDeveloperYouRoam": "Vanem arendaja - YouRoam",
       "seniorDeveloperSTAR": "Vanem arendaja - STAR süsteem"
     }

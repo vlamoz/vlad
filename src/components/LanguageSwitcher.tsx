@@ -1,22 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
-import { useLanguage, type Language } from '../contexts/LanguageContext';
-
-const LANGUAGES = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'et', name: 'Eesti', flag: '🇪🇪' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-] as const;
+import { useTranslation } from 'react-i18next';
+import { LANGUAGES, changeLanguage, type Language } from '../i18n';
 
 const LanguageSwitcher: React.FC = () => {
-  const { currentLanguage, changeLanguage, isLoading } = useLanguage();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.resolvedLanguage;
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const currentLangData = LANGUAGES.find(lang => lang.code === currentLanguage);
 
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -27,11 +25,17 @@ const LanguageSwitcher: React.FC = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [isOpen]);
 
   const handleLanguageSelect = async (languageCode: Language) => {
     setIsOpen(false);
-    await changeLanguage(languageCode);
+    if (languageCode === currentLanguage) return;
+    setIsLoading(true);
+    try {
+      await changeLanguage(languageCode);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -45,7 +49,7 @@ const LanguageSwitcher: React.FC = () => {
           border-gray-200 dark:border-gray-700
           text-gray-700 dark:text-gray-300
           hover:bg-gray-50 dark:hover:bg-gray-700
-          focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+          focus:outline-hidden focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
           transition-all duration-200
           ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
         `}
@@ -74,7 +78,6 @@ const LanguageSwitcher: React.FC = () => {
             bg-white dark:bg-gray-800 
             border border-gray-200 dark:border-gray-700
             rounded-lg shadow-lg z-50
-            animate-in fade-in duration-200
           `}
           role="listbox"
           aria-label="Language selection"
@@ -82,7 +85,7 @@ const LanguageSwitcher: React.FC = () => {
           {LANGUAGES.map((language) => (
             <button
               key={language.code}
-              onClick={() => handleLanguageSelect(language.code as Language)}
+              onClick={() => handleLanguageSelect(language.code)}
               className={`
                 w-full flex items-center gap-3 px-4 py-2 text-left
                 text-gray-700 dark:text-gray-300

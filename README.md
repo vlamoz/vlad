@@ -1,62 +1,77 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with React, TypeScript, and Vite. Features a clean design with dark/light theme support and smooth animations.
+Source of [vlamoz.me](https://vlamoz.me): a single-page portfolio and printable CV built with React, TypeScript and Vite, in four languages, with light and dark themes.
 
 ## Tech Stack
 
-- **Frontend**: React 19+ with TypeScript
-- **Build Tool**: Vite with Hot Module Replacement (HMR)
-- **Styling**: Tailwind CSS with custom color palette
-- **Theme**: Dark/Light mode with system preference detection
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Internationalization**: React i18next
+- **React 19** with **TypeScript 6**
+- **Vite 8** (Rolldown) for dev server and builds
+- **Tailwind CSS 4**, configured in `src/index.css` (`@theme`), dark mode via the `dark` class
+- **i18next / react-i18next**: English, Spanish, Estonian, Russian
+- **Framer Motion** through `LazyMotion` + `m.*` elements, to keep the bundle small
+- **Lucide React** icons, **react-syntax-highlighter** (Prism Light, Java only) for the project code cards
+- **Formspree** for the contact form, **Vercel** Analytics and Speed Insights
 
 ## Features
 
-- 🌙 Dark/Light theme toggle with localStorage persistence
-- 📱 Fully responsive design (mobile-first approach)
-- ⚡ Fast development with Vite HMR
-- 🎨 Custom Tailwind CSS configuration
-- 🔄 Smooth animations and transitions
-- 🌍 Multi-language support ready
-- 🎯 Type-safe with TypeScript
+- Light/dark theme, following the system preference until the visitor picks one
+- Language from `?lang=`, the visitor's last choice, or the browser language. Only English is in the main bundle; each other language loads as one small chunk before the first render, so there's no flash of English
+- SEO: per-language title, description, canonical URL, hreflang links, Open Graph/Twitter tags with a social preview image, JSON-LD
+- "Download CV" prints the page with a dedicated print stylesheet
+- Responsive, mobile-first layout
+
+## Getting Started
+
+Requires Node.js 20.19+ or 22.12+ (Vite 8).
+
+```bash
+npm install
+cp .env.example .env   # then set your Formspree endpoint
+npm run dev            # http://localhost:3000
+```
+
+### Scripts
+
+```bash
+npm run dev        # Development server on port 3000
+npm run build      # Type-check (tsc -b) and production build into dist/
+npm run preview    # Serve the production build
+npm run lint       # ESLint
+```
+
+### Environment
+
+| Variable | Purpose |
+|---|---|
+| `VITE_FORMSPREE_ENDPOINT` | Formspree form URL the contact form posts to (`https://formspree.io/f/<id>`) |
+
+`.env` is not committed. On Vercel, set the variable in the project's environment settings.
 
 ## Project Structure
 
 ```
 src/
-├── components/     # React components (Header, Hero, About, Skills, etc.)
-├── contexts/       # React Context providers (ThemeContext)
-├── data/          # Static data (technologies.ts)
-└── types/         # TypeScript type definitions
+├── components/   # Page sections (Hero, About, Skills, Projects, Experience, Contact, ...) and shared pieces
+├── contexts/     # ThemeContext
+├── data/         # Work history, skills, technology names, personal profile (email, LinkedIn)
+├── hooks/        # useContactForm, useSEO
+├── locales/      # <lng>/<namespace>.json translations
+├── utils/        # Small helpers
+└── i18n.ts       # Language list, i18next setup and lazy language loading
+public/           # Favicons, og-image.jpg, robots.txt, sitemap.xml
 ```
 
-## Development
+## Editing Content
 
-### Getting Started
+- **Texts** are in `src/locales/<lng>/*.json`, one file per page section. Change all four languages together.
+- **Jobs and projects**: structure (company, years, position key, technologies) is in `src/data/workExperience.ts`; descriptions and highlights are in `src/locales/<lng>/data.json` under `projects.<id>`; position names are under `common.positions` in `common.json`.
+- **Skills**: `src/data/skills.ts`, using names from `src/data/technologies.ts`.
+- **Contact details**: `src/data/profile.ts`.
+- **Project code cards**: `CODE_SNIPPETS` in `src/components/ProjectPlaceholder.tsx`, keyed by project id.
+- **Social preview image**: `public/og-image.jpg` (1200×630). The static tags in `index.html` serve link previewers that don't run JavaScript.
 
-```bash
-# Install dependencies
-npm install
+### Adding a Language
 
-# Start development server
-npm run dev
-```
-
-### Available Scripts
-
-```bash
-npm run dev        # Start development server on port 3000
-npm run build      # Build for production (TypeScript check + Vite build)
-npm run preview    # Preview production build
-npm run lint       # Run ESLint
-```
-
-## Development Patterns
-
-- **Components**: Functional React with hooks
-- **Styling**: Tailwind utilities with dark: prefix for theme support
-- **Type Safety**: TypeScript interfaces from `src/types/`
-- **Icons**: Lucide React library for consistent iconography
-- **Theme**: Context-based theme management with automatic system detection
+1. Add it to `LANGUAGES` in `src/i18n.ts` (code, name, flag, Open Graph locale).
+2. Copy `src/locales/en/` to `src/locales/<code>/` and translate.
+3. Add the `?lang=<code>` URL to `public/sitemap.xml`.

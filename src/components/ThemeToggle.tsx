@@ -1,12 +1,14 @@
 import { Sun, Moon } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation('common');
 
   return (
-    <motion.button
+    <m.button
       onClick={toggleTheme}
       className={`
         relative p-2 rounded-lg transition-all duration-200
@@ -17,9 +19,9 @@ const ThemeToggle = () => {
       `}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      aria-label="Toggle theme"
+      aria-label={t('accessibility.toggleTheme')}
     >
-      <motion.div
+      <m.div
         initial={false}
         animate={{ 
           rotate: theme === 'dark' ? 180 : 0,
@@ -32,8 +34,8 @@ const ThemeToggle = () => {
         ) : (
           <Moon className="h-5 w-5" />
         )}
-      </motion.div>
-    </motion.button>
+      </m.div>
+    </m.button>
   );
 };
 

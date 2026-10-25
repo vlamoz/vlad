@@ -1,12 +1,13 @@
 {
   "firstName": "Vlad",
   "lastName": "Mozgovojs",
-  "title": "Líder Técnico",
-  "subtitle": "Experto en Ingeniería de Software • 100% Remoto • +18 Años de Experiencia",
-  "tagline": "He dedicado más de 18 años a convertir problemas técnicos complejos en soluciones elegantes. Esto es lo que he aprendido: el mejor código surge de equipos que realmente disfrutan trabajando juntos — donde las ideas brillantes pueden venir de cualquiera, los fallos se convierten en oportunidades de aprendizaje, y celebramos los éxitos en grupo.",
+  "title": "Gerente de Ingeniería",
+  "subtitle": "Experto en Ingeniería de Software • 100% Remoto • +19 Años de Experiencia",
+  "tagline": "He dedicado más de 19 años a convertir problemas técnicos complejos en soluciones elegantes. Esto es lo que he aprendido: el mejor código surge de equipos que realmente disfrutan trabajando juntos — donde las ideas brillantes pueden venir de cualquiera, los fallos se convierten en oportunidades de aprendizaje, y celebramos los éxitos en grupo.",
   "cta": {
     "getInTouch": "Hablemos",
-    "linkedIn": "LinkedIn"
+    "linkedIn": "LinkedIn",
+    "downloadCV": "Descargar CV"
   },
   "scrollToAbout": "Ir a la sección sobre mí"
 }

@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 *.iml
+
+# Environment variables (set VITE_FORMSPREE_ENDPOINT in the hosting provider)
+.env
+.env.*
+!.env.example

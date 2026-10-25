@@ -1,15 +1,15 @@
 {
   "title": "Sobre mí",
   "subtitle": "Apasionado por crear soluciones robustas y escalables",
-  "imageAlt": "Vladislavs Mozgovojs - Líder Técnico",
+  "imageAlt": "Vladislavs Mozgovojs - Gerente de Ingeniería",
   "content": {
-    "paragraph1": "Mi viaje en la programación comenzó en la Universidad Tecnológica de Tallin, pero la verdadera educación empezó cuando descubrí que crear gran software es tanto sobre personas como sobre algoritmos. Durante más de 18 años, he tenido el privilegio de trabajar en múltiples países e industrias — desde Estonia hasta mercados internacionales.",
-    "paragraph2": "¿Qué me motiva? Creo que las mejores soluciones surgen cuando todos en el equipo se sienten cómodos compartiendo sus ideas más locas, cuando los desarrolladores junior no temen cuestionar las decisiones de los senior, y cuando mantenemos límites saludables que permiten a todos aportar lo mejor de sí mismos al trabajo. Mi enfoque técnico está en aplicaciones Java empresariales, integraciones B2B y arquitecturas escalables, pero mi verdadera pasión es crear entornos donde las personas brillantes puedan hacer su mejor trabajo.",
+    "paragraph1": "Mi viaje en la programación comenzó en la Universidad Tecnológica de Tallin, pero la verdadera educación empezó cuando descubrí que crear gran software es tanto sobre personas como sobre algoritmos. Durante más de 19 años, he tenido el privilegio de trabajar en múltiples países e industrias — desde Estonia hasta mercados internacionales.",
+    "paragraph2": "¿Qué me motiva? Creo que las mejores soluciones surgen cuando todos en el equipo se sienten cómodos compartiendo sus ideas, cuando los desarrolladores no temen cuestionar las decisiones de los senior, y cuando mantenemos límites saludables que permiten a todos ser ellos mismos en el trabajo. Mi enfoque técnico está en aplicaciones Java empresariales, integraciones B2B y arquitecturas escalables, pero mi verdadera pasión es crear entornos donde las personas brillantes puedan hacer su mejor trabajo.",
     "paragraph3": "Cada día puedo combinar desafíos técnicos de vanguardia con mentoría de desarrolladores increíbles. He aprendido que entregar a tiempo y mantener alta calidad de código no es solo sobre procesos — es sobre construir confianza, fomentar la curiosidad, y asegurar que todos se sientan escuchados. Últimamente, me emociona cómo las herramientas de IA pueden amplificar lo que ya hacemos bien, dando superpoderes a nuestro equipo en lugar de reemplazar la creatividad humana y colaboración que hace que el desarrollo de software sea verdaderamente gratificante."
   },
   "highlights": {
     "experience": {
-      "title": "+18 Años de Experiencia",
+      "title": "+19 Años de Experiencia",
       "description": "Experiencia profunda en el ecosistema Java y desarrollo empresarial"
     },
     "international": {

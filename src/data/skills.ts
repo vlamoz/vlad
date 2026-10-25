@@ -1,70 +1,34 @@
-import type { Skill } from '../types';
+import { TECHNOLOGIES as T } from './technologies';
 
-export const SKILL_CATEGORIES: Skill[] = [
+// key: translation key under skills:categories
+export interface SkillCategory {
+  key: 'coreJava' | 'enterprise' | 'databases' | 'devops' | 'webTech' | 'domain';
+  items: string[];
+}
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    category: "Core Java Technologies",
-    items: [
-      "Java (8, 11, 17, 21+)",
-      "Spring Framework",
-      "Spring Boot",
-      "Hibernate/JPA",
-      "Maven/Gradle",
-      "JUnit/TestNG"
-    ]
+    key: 'coreJava',
+    items: [T.JAVA_21_25, T.SPRING_FRAMEWORK, T.SPRING_BOOT, T.HIBERNATE_JPA, T.MAVEN_GRADLE, T.JUNIT_TESTNG]
   },
   {
-    category: "Enterprise & Architecture",
-    items: [
-      "Microservices",
-      "RESTful APIs",
-      "Design Patterns",
-      "System Architecture",
-      "B2B Integrations",
-      "Event-Driven Architecture"
-    ]
+    key: 'enterprise',
+    items: [T.MICROSERVICES, T.REST_APIS, T.DESIGN_PATTERNS, T.SYSTEM_ARCHITECTURE, T.B2B_INTEGRATIONS, T.EVENT_DRIVEN_ARCHITECTURE]
   },
   {
-    category: "Databases",
-    items: [
-      "PostgreSQL",
-      "MySQL",
-      "Oracle",
-      "MongoDB",
-      "Redis",
-      "Database Design"
-    ]
+    key: 'databases',
+    items: [T.POSTGRESQL, T.MYSQL, T.ORACLE, T.MONGODB, T.REDIS, T.DATABASE_DESIGN]
   },
   {
-    category: "DevOps & Tools",
-    items: [
-      "Git",
-      "AWS",
-      "Kubernetes",
-      "Jenkins/CI/CD",
-      "Docker",
-      "IntelliJ IDEA/Eclipse"
-    ]
+    key: 'devops',
+    items: [T.GIT, T.AWS, T.KUBERNETES, T.JENKINS_CI_CD, T.DOCKER, T.INTELLIJ_ECLIPSE]
   },
   {
-    category: "Web Technologies",
-    items: [
-      "HTML5/CSS3",
-      "JavaScript",
-      "Angular/React",
-      "TypeScript",
-      "Bootstrap",
-      "REST/SOAP"
-    ]
+    key: 'webTech',
+    items: [T.HTML5_CSS3, T.JAVASCRIPT, T.ANGULAR_REACT, T.TYPESCRIPT, T.BOOTSTRAP, T.REST_SOAP]
   },
   {
-    category: "Domain Expertise",
-    items: [
-      "Insurance Systems",
-      "Travel Platforms",
-      "Financial Services",
-      "International Projects",
-      "B2B Platforms",
-      "Enterprise Solutions"
-    ]
+    key: 'domain',
+    items: [T.INSURANCE_SYSTEMS, T.TRAVEL_PLATFORMS, T.FINANCIAL_SERVICES, T.INTERNATIONAL_PROJECTS, T.B2B_PLATFORMS, T.ENTERPRISE_SOLUTIONS]
   }
 ];

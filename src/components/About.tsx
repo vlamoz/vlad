@@ -1,6 +1,7 @@
 import { Code, Globe, Target, Users } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { motion } from 'framer-motion';
+import SectionHeader from './SectionHeader';
+import { m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 // Optimized profile images
 import profileImage320 from '../assets/profile-320.jpg';
@@ -38,14 +39,8 @@ const About = () => {
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('title')}
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
-              {t('subtitle')}
-            </p>
+          <AnimatedSection>
+            <SectionHeader title={t('title')} subtitle={t('subtitle')} />
           </AnimatedSection>
 
           {/* Hero Photo Section */}
@@ -101,7 +96,7 @@ const About = () => {
           {/* Highlights Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 className="text-center p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-100"
                 initial={{ opacity: 0, y: 30 }}
@@ -119,7 +114,7 @@ const About = () => {
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                   {highlight.description}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 

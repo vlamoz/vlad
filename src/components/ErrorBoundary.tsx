@@ -1,9 +1,9 @@
 import React, { type ErrorInfo, type ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
+import i18n from '../i18n';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -31,9 +31,7 @@ class ErrorBoundary extends React.Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+      const t = (key: string) => i18n.t(`errors.errorBoundary.${key}`, { ns: 'common' });
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
@@ -41,10 +39,10 @@ class ErrorBoundary extends React.Component<Props, State> {
             <div className="mb-6">
               <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                Oops! Something went wrong
+                {t('title')}
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                We encountered an unexpected error. Please try refreshing the page or contact support if the problem persists.
+                {t('description')}
               </p>
             </div>
 
@@ -54,21 +52,21 @@ class ErrorBoundary extends React.Component<Props, State> {
                 className="w-full flex items-center justify-center gap-2 bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200"
               >
                 <RefreshCw className="h-5 w-5" />
-                Try Again
+                {t('tryAgain')}
               </button>
               
               <button
                 onClick={() => window.location.reload()}
                 className="w-full flex items-center justify-center gap-2 bg-gray-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-600 transition-colors duration-200"
               >
-                Refresh Page
+                {t('refreshPage')}
               </button>
             </div>
 
             {import.meta.env.DEV && this.state.error && (
               <details className="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-left">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Error Details (Development)
+                  {t('errorDetails')}
                 </summary>
                 <pre className="text-xs text-red-600 dark:text-red-400 overflow-auto">
                   {this.state.error.toString()}
