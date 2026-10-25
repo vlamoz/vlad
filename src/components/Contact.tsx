@@ -138,6 +138,8 @@ const Contact = () => {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Formspree honeypot: hidden from people, filled in by bots */}
+                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
                 <Field
                   name="name"
                   label={t('form.labels.name')}

@@ -67,9 +67,11 @@ export const useContactForm = () => {
     }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+    // Hidden honeypot field: real visitors leave it empty, bots fill it and Formspree drops those
+    const honeypot = new FormData(e.currentTarget).get('_gotcha') ?? '';
+
     const errors = validateForm(state.data);
     
     if (Object.keys(errors).length > 0) {
@@ -80,23 +82,33 @@ export const useContactForm = () => {
     setState(prev => ({ ...prev, isSubmitting: true, errors: {} }));
 
     try {
-      // Send email using Formspree
-      const response = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT, {
+      const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+      if (!endpoint) {
+        throw new Error('VITE_FORMSPREE_ENDPOINT is not set');
+      }
+
+      // Formspree emails the submission to the form owner. The Accept header makes it treat this
+      // as an AJAX submission and answer with JSON instead of a redirect or CAPTCHA page
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           name: state.data.name,
           email: state.data.email,
           message: state.data.message,
+          _gotcha: honeypot,
         }),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      // Only report success when Formspree confirms it: { ok: true } on success, { errors: [...] } otherwise
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.ok) {
+        throw new Error(`Formspree rejected the submission (status ${response.status}): ${JSON.stringify(result?.errors ?? result)}`);
       }
-      
+
       setState(prev => ({ 
         ...prev, 
         isSubmitting: false, 
