@@ -44,7 +44,7 @@ const LanguageSwitcher: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
         disabled={isLoading}
         className={`
-          flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 rounded-lg border
+          flex shrink-0 items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 rounded-lg border whitespace-nowrap
           bg-white dark:bg-gray-800 
           border-gray-200 dark:border-gray-700
           text-gray-700 dark:text-gray-300
@@ -58,10 +58,11 @@ const LanguageSwitcher: React.FC = () => {
         aria-haspopup="listbox"
       >
         <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
-        <span className="hidden md:inline text-sm font-medium">
+        {/* Name only where it fits: md (no nav links yet) and xl+; lg shows the nav links, so flag only */}
+        <span className="hidden md:inline lg:hidden xl:inline text-sm font-medium">
           {currentLangData?.flag} {currentLangData?.name}
         </span>
-        <span className="md:hidden text-base">
+        <span className="md:hidden lg:inline xl:hidden text-base leading-5">
           {currentLangData?.flag}
         </span>
         <ChevronDown 
