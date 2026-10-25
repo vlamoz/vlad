@@ -4,5 +4,5 @@ export const PROFILE = {
   alternateNames: ['Vladislavs Mozgovojs', 'Vlad Mozgovoi'],
   email: 'vlamoz@pm.me',
   location: 'Spain / Estonia',
-  linkedIn: 'https://www.linkedin.com/in/vlad-mozgovoi-b8452838/',
+  linkedIn: 'https://www.linkedin.com/in/vlad-mozgovojs-b8452838/',
 } as const;

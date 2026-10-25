@@ -54,7 +54,7 @@ export const buildHead = (code: string | undefined, t: TFunction) => {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: PROFILE.name,
-    // Other spellings people search for: full first name, and the LinkedIn spelling
+    // Other spellings people search for: full first name, and the spelling LinkedIn used until 2026
     alternateName: PROFILE.alternateNames,
     jobTitle: 'Engineering Manager',
     description,
