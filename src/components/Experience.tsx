@@ -1,7 +1,7 @@
 import { Calendar, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './SectionHeader';
-import TechTag from './TechTag';
+import Tag from './Tag';
 import { WORK_EXPERIENCE, formatLocations, formatPeriod, formatPosition } from '../data/workExperience';
 
 const Experience = () => {
@@ -68,10 +68,10 @@ const Experience = () => {
                       ))}
                     </ul>
 
-                    {/* Technologies */}
+                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 print:gap-1">
-                      {exp.technologies.map((tech, techIndex) => (
-                        <TechTag key={techIndex} technology={tech} />
+                      {(tData(`projects.${exp.id}.tags`, { returnObjects: true }) as string[]).map((tag, tagIndex) => (
+                        <Tag key={tagIndex} label={tag} />
                       ))}
                     </div>
                   </div>

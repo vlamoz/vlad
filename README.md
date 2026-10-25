@@ -53,7 +53,7 @@ npm run lint       # ESLint
 src/
 ├── components/   # Page sections (Hero, About, Skills, Projects, Experience, Contact, ...) and shared pieces
 ├── contexts/     # ThemeContext
-├── data/         # Work history, skills, technology names, personal profile (email, LinkedIn)
+├── data/         # Work history, skill categories, personal profile (email, LinkedIn)
 ├── hooks/        # useContactForm, useSEO
 ├── locales/      # <lng>/<namespace>.json translations
 ├── utils/        # Small helpers
@@ -64,8 +64,8 @@ public/           # Favicons, og-image.jpg, robots.txt, sitemap.xml
 ## Editing Content
 
 - **Texts** are in `src/locales/<lng>/*.json`, one file per page section. Change all three languages together.
-- **Jobs and projects**: structure (company, years, position key, technologies) is in `src/data/workExperience.ts`; descriptions and highlights are in `src/locales/<lng>/data.json` under `projects.<id>`; position names are under `common.positions` in `common.json`.
-- **Skills**: `src/data/skills.ts`, using names from `src/data/technologies.ts`.
+- **Jobs and projects**: structure (years, position key, locations) is in `src/data/workExperience.ts`; company names, descriptions, highlights and tags are in `src/locales/<lng>/data.json` under `projects.<id>`; position names are under `common.positions` in `common.json`.
+- **Skills**: category order in `src/data/skills.ts`; titles and items in `src/locales/<lng>/skills.json`.
 - **Contact details**: `src/data/profile.ts`.
 - **Project code cards**: `CODE_SNIPPETS` in `src/components/ProjectPlaceholder.tsx`, keyed by project id.
 - **Social preview image**: `public/og-image.jpg` (1200×630). The static tags in `index.html` serve link previewers that don't run JavaScript.

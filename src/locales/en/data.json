@@ -8,6 +8,14 @@
         "One release process across three teams: 2-3x more frequent releases and fewer production incidents",
         "Rolled out AI coding agents to everyone in 2025, raising output across all three teams",
         "Moved the platform to horizontal scaling, serving thousands of concurrent users without downtime"
+      ],
+      "tags": [
+        "Engineering management",
+        "Multi-team leadership",
+        "Agentic development",
+        "Release management",
+        "Stakeholder management",
+        "AI platform"
       ]
     },
     "audatex": {
@@ -17,6 +25,14 @@
         "Led the migration from monolith to microservices",
         "Integrations with 50+ insurance back-office systems",
         "Rebuilt the user frontend in React"
+      ],
+      "tags": [
+        "Team leadership",
+        "Remote team",
+        "Microservices migration",
+        "B2B integrations",
+        "Java",
+        "React"
       ]
     },
     "nasdaq": {
@@ -26,6 +42,15 @@
         "Message routing processing 1M+ transactions daily",
         "Integrations with 20+ banks and depositories in 3 countries",
         "Zero-downtime deployments"
+      ],
+      "tags": [
+        "Java",
+        "Enterprise integration",
+        "Financial APIs",
+        "Message queuing",
+        "Spring",
+        "Oracle",
+        "IBM MQ"
       ]
     },
     "elisa": {
@@ -35,6 +60,14 @@
         "Import and export for 10+ telecom data formats",
         "Database optimizations for growing data volumes",
         "Pricing logic for complex roaming scenarios"
+      ],
+      "tags": [
+        "Java",
+        "Spring Framework",
+        "Data processing",
+        "RESTful APIs",
+        "Oracle",
+        "XML/JSON"
       ]
     },
     "government": {
@@ -43,6 +76,14 @@
       "highlights": [
         "Application processing for 500K+ citizens",
         "Integrations with government departments and legacy systems"
+      ],
+      "tags": [
+        "Java",
+        "Spring",
+        "Oracle",
+        "SOAP/REST APIs",
+        "Enterprise security",
+        "Government standards"
       ]
     }
   }

@@ -8,6 +8,14 @@
         "Un único proceso de publicación para tres equipos: publicaciones 2-3 veces más frecuentes y menos incidencias en producción",
         "Implanté agentes de programación con IA para todos en 2025, aumentando la productividad de los tres equipos",
         "Llevé la plataforma al escalado horizontal, atendiendo a miles de usuarios simultáneos sin interrupciones"
+      ],
+      "tags": [
+        "Gestión de ingeniería",
+        "Liderar varios equipos",
+        "Desarrollo agéntico",
+        "Gestión de versiones",
+        "Gestión de stakeholders",
+        "Plataforma de IA"
       ]
     },
     "audatex": {
@@ -17,6 +25,14 @@
         "Dirigí la migración de monolito a microservicios",
         "Integraciones con más de 50 sistemas de back office de aseguradoras",
         "Reconstruí el frontend de usuario en React"
+      ],
+      "tags": [
+        "Liderazgo de equipo",
+        "Equipo remoto",
+        "Migración a microservicios",
+        "Integraciones B2B",
+        "Java",
+        "React"
       ]
     },
     "nasdaq": {
@@ -26,6 +42,15 @@
         "Enrutamiento de mensajes con más de 1 millón de transacciones diarias",
         "Integraciones con más de 20 bancos y depositarios en 3 países",
         "Despliegues sin tiempo de inactividad"
+      ],
+      "tags": [
+        "Java",
+        "Integración empresarial",
+        "APIs financieras",
+        "Colas de mensajes",
+        "Spring",
+        "Oracle",
+        "IBM MQ"
       ]
     },
     "elisa": {
@@ -35,6 +60,14 @@
         "Importación y exportación para más de 10 formatos de datos de telecomunicaciones",
         "Optimización de bases de datos para volúmenes crecientes",
         "Lógica de precios para escenarios de roaming complejos"
+      ],
+      "tags": [
+        "Java",
+        "Spring Framework",
+        "Procesamiento de datos",
+        "APIs RESTful",
+        "Oracle",
+        "XML/JSON"
       ]
     },
     "government": {
@@ -43,6 +76,14 @@
       "highlights": [
         "Tramitación de solicitudes para más de 500.000 ciudadanos",
         "Integraciones con departamentos gubernamentales y sistemas heredados"
+      ],
+      "tags": [
+        "Java",
+        "Spring",
+        "Oracle",
+        "APIs SOAP/REST",
+        "Seguridad empresarial",
+        "Estándares gubernamentales"
       ]
     }
   }

@@ -8,6 +8,14 @@
         "Üks väljalaskeprotsess kolmele meeskonnale: 2-3 korda sagedasemad väljalasked ja vähem tootmisintsidente",
         "Võtsin 2025. aastal kõigil kasutusele tehisintellekti kodeerimisagendid, tõstes kõigi kolme meeskonna tootlikkust",
         "Viisin platvormi horisontaalsele skaleerimisele, teenindades tuhandeid samaaegseid kasutajaid katkestusteta"
+      ],
+      "tags": [
+        "Arenduse juhtimine",
+        "Mitme meeskonna juhtimine",
+        "Agentpõhine arendus",
+        "Väljalasete haldus",
+        "Huvirühmade juhtimine",
+        "Tehisintellekti platvorm"
       ]
     },
     "audatex": {
@@ -17,6 +25,14 @@
         "Juhtisin üleminekut monoliidilt mikroteenustele",
         "Integratsioonid enam kui 50 kindlustuse taustsüsteemiga",
         "Ehitasin kasutajaliidese Reactis uuesti üles"
+      ],
+      "tags": [
+        "Meeskonna juhtimine",
+        "Kaugmeeskond",
+        "Üleminek mikroteenustele",
+        "B2B integratsioonid",
+        "Java",
+        "React"
       ]
     },
     "nasdaq": {
@@ -26,6 +42,15 @@
         "Sõnumite marsruutimine üle 1 miljoni tehingu päevas",
         "Integratsioonid enam kui 20 panga ja väärtpaberikeskusega kolmes riigis",
         "Katkestusteta juurutused"
+      ],
+      "tags": [
+        "Java",
+        "Ettevõtte integratsioon",
+        "Finants-API-d",
+        "Sõnumijärjekorrad",
+        "Spring",
+        "Oracle",
+        "IBM MQ"
       ]
     },
     "elisa": {
@@ -35,6 +60,14 @@
         "Import ja eksport enam kui 10 telekomi andmevormingus",
         "Andmebaasi optimeerimine kasvavate andmemahtude jaoks",
         "Hinnastusloogika keerukate rändlusstsenaariumide jaoks"
+      ],
+      "tags": [
+        "Java",
+        "Spring Framework",
+        "Andmetöötlus",
+        "REST API-d",
+        "Oracle",
+        "XML/JSON"
       ]
     },
     "government": {
@@ -43,6 +76,14 @@
       "highlights": [
         "Taotluste menetlemine enam kui 500 000 kodaniku jaoks",
         "Integratsioonid riigiasutuste ja pärandsüsteemidega"
+      ],
+      "tags": [
+        "Java",
+        "Spring",
+        "Oracle",
+        "SOAP/REST API-d",
+        "Ettevõtte turvalisus",
+        "Riiklikud standardid"
       ]
     }
   }

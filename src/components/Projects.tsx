@@ -1,7 +1,7 @@
 import { Calendar, User } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './SectionHeader';
-import TechTag from './TechTag';
+import Tag from './Tag';
 import { WORK_EXPERIENCE, formatPeriod, formatPosition } from '../data/workExperience';
 import ProjectPlaceholder from './ProjectPlaceholder';
 
@@ -54,14 +54,11 @@ const Projects = () => {
                     </p>
                   </div>
 
-                  {/* Technologies */}
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">{t('labels.technologiesUsed')}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <TechTag key={techIndex} technology={tech} />
-                      ))}
-                    </div>
+                  {/* Tags: hands-on on older roles, leadership on recent ones */}
+                  <div className="flex flex-wrap gap-2">
+                    {(tData(`projects.${project.id}.tags`, { returnObjects: true }) as string[]).map((tag, tagIndex) => (
+                      <Tag key={tagIndex} label={tag} />
+                    ))}
                   </div>
 
                   {/* Highlights */}
