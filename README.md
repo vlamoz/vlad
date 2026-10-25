@@ -1,13 +1,13 @@
 # Personal Portfolio Website
 
-Source of [vlamoz.me](https://vlamoz.me): a single-page portfolio and printable CV built with React, TypeScript and Vite, in four languages, with light and dark themes.
+Source of [vlamoz.me](https://vlamoz.me): a single-page portfolio and printable CV built with React, TypeScript and Vite, in three languages, with light and dark themes.
 
 ## Tech Stack
 
 - **React 19** with **TypeScript 6**
 - **Vite 8** (Rolldown) for dev server and builds
 - **Tailwind CSS 4**, configured in `src/index.css` (`@theme`), dark mode via the `dark` class
-- **i18next / react-i18next**: English, Spanish, Estonian, Russian
+- **i18next / react-i18next**: English, Spanish, Estonian
 - **Framer Motion** through `LazyMotion` + `m.*` elements, to keep the bundle small
 - **Lucide React** icons, **react-syntax-highlighter** (Prism Light, Java only) for the project code cards
 - **Formspree** for the contact form, **Vercel** Analytics and Speed Insights
@@ -17,7 +17,7 @@ Source of [vlamoz.me](https://vlamoz.me): a single-page portfolio and printable 
 - Light/dark theme, following the system preference until the visitor picks one
 - Language from `?lang=`, the visitor's last choice, or the browser language. Only English is in the main bundle; each other language loads as one small chunk before the first render, so there's no flash of English
 - SEO: per-language title, description, canonical URL, hreflang links, Open Graph/Twitter tags with a social preview image, JSON-LD
-- "Download CV" prints the page with a dedicated print stylesheet
+- "Download CV" prints the page as a CV: `print:` utilities on the components hide the screen-only parts and tighten the layout
 - Responsive, mobile-first layout
 
 ## Getting Started
@@ -63,7 +63,7 @@ public/           # Favicons, og-image.jpg, robots.txt, sitemap.xml
 
 ## Editing Content
 
-- **Texts** are in `src/locales/<lng>/*.json`, one file per page section. Change all four languages together.
+- **Texts** are in `src/locales/<lng>/*.json`, one file per page section. Change all three languages together.
 - **Jobs and projects**: structure (company, years, position key, technologies) is in `src/data/workExperience.ts`; descriptions and highlights are in `src/locales/<lng>/data.json` under `projects.<id>`; position names are under `common.positions` in `common.json`.
 - **Skills**: `src/data/skills.ts`, using names from `src/data/technologies.ts`.
 - **Contact details**: `src/data/profile.ts`.

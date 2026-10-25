@@ -7,7 +7,6 @@ export const LANGUAGES = [
   { code: 'en', name: 'English', flag: '🇺🇸', ogLocale: 'en_US' },
   { code: 'es', name: 'Español', flag: '🇪🇸', ogLocale: 'es_ES' },
   { code: 'et', name: 'Eesti', flag: '🇪🇪', ogLocale: 'et_EE' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺', ogLocale: 'ru_RU' },
 ] as const;
 
 export type Language = typeof LANGUAGES[number]['code'];
@@ -29,7 +28,7 @@ i18n
     // Init synchronously so the detected language is known when i18nReady starts below
     initAsync: false,
     fallbackLng: 'en',
-    // Maps regional codes (en-US, ru-RU) to the base language and ignores unsupported ones
+    // Maps regional codes (en-US, es-ES) to the base language and ignores unsupported ones
     supportedLngs: LANGUAGES.map(language => language.code),
 
     interpolation: {
@@ -39,7 +38,7 @@ i18n
     detection: {
       order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
       lookupQuerystring: 'lang',
-      // Strip regions before matching, otherwise an exact "ru" outranks a preferred "en-GB"
+      // Strip regions before matching, otherwise an exact "es" outranks a preferred "en-GB"
       convertDetectedLanguage: (lng: string) => lng.split('-')[0],
       caches: ['localStorage'],
       lookupLocalStorage: 'preferredLanguage',
