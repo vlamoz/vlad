@@ -14,7 +14,7 @@ const Footer = memo(() => {
             {t('footer.copyright', { year: currentYear })}
             <Heart className="h-4 w-4 text-red-500 fill-red-500" />
           </p>
-          <p className="text-xs text-gray-500 dark:text-gray-600 mt-2">
+          <p className="text-xs text-gray-400 mt-2">
             {t('footer.tagline')}
           </p>
         </div>

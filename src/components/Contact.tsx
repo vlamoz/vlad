@@ -88,7 +88,7 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-primary-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('details.email')}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">{t('details.email')}</p>
                     <p className="text-gray-900 dark:text-white font-medium">{PROFILE.email}</p>
                   </div>
                 </a>
@@ -98,7 +98,7 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-primary-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('details.location')}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">{t('details.location')}</p>
                     <p className="text-gray-900 dark:text-white font-medium">{PROFILE.location}</p>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                 </button>
               </form>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
-                {t('form.directEmail')} <a href={`mailto:${PROFILE.email}`} className="text-primary-600 hover:underline">{PROFILE.email}</a>
+                {t('form.directEmail')} <a href={`mailto:${PROFILE.email}`} className="text-primary-600 dark:text-primary-400 underline underline-offset-2 hover:no-underline">{PROFILE.email}</a>
               </p>
             </div>
           </div>

@@ -23,12 +23,14 @@ function App() {
         <ErrorBoundary>
           <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
             <Header />
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Experience />
-            <Contact />
+            <main>
+              <Hero />
+              <About />
+              <Skills />
+              <Projects />
+              <Experience />
+              <Contact />
+            </main>
             <Footer />
           </div>
         </ErrorBoundary>

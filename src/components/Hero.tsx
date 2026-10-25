@@ -44,11 +44,11 @@ const Hero = () => {
             {t('subtitle')}
           </m.p>
 
-          {/* Tagline - LCP Element (no animation delay for performance) */}
+          {/* Tagline - LCP element: slide only, no fade, so it counts as painted on the first frame */}
           <m.p
             className="text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.3, delay: 0 }}
           >
             {t('tagline')}
@@ -85,7 +85,7 @@ const Hero = () => {
               href={PROFILE.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-primary-600 px-4 py-3 rounded-lg font-semibold transition-all duration-200 transform"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-4 py-3 rounded-lg font-semibold transition-all duration-200 transform"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

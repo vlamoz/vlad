@@ -39,7 +39,7 @@ const Experience = () => {
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                           {formatPosition(exp, tCommon)}
                         </h3>
-                        <div className="flex items-center gap-2 text-primary-600 font-medium mt-1">
+                        <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-medium mt-1">
                           <Building2 className="h-4 w-4" />
                           <span>{exp.company}</span>
                         </div>
