@@ -61,8 +61,8 @@ const Contact = () => {
   } = useContactForm();
 
   return (
-    <section id="contact" className="py-20 bg-linear-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="print:hidden py-20 bg-linear-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 print:px-0">
         <div className="max-w-6xl mx-auto">
           <SectionHeader title={t('title')} subtitle={t('subtitle')} subtitleClassName="max-w-2xl mx-auto" />
 

@@ -8,25 +8,25 @@ const Hero = () => {
   const { t } = useTranslation('hero');
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-28 lg:pt-24">
-        <div className="text-center">
+    <section id="home" className="min-h-screen print:min-h-0 flex items-center justify-center bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-28 lg:pt-24 print:p-0">
+        <div className="text-center print:text-left">
           {/* Main Heading - Enhanced Typography */}
           <m.div
-            className="mb-8"
+            className="mb-8 print:mb-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-              <span className="block">{t('firstName')}</span>
-              <span className="block text-primary-600 dark:text-primary-400">{t('lastName')}</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight print:text-4xl print:mb-0">
+              <span className="block print:inline">{t('firstName')}</span>{' '}
+              <span className="block print:inline text-primary-600 dark:text-primary-400">{t('lastName')}</span>
             </h1>
           </m.div>
 
           {/* Subtitle */}
           <m.h2
-            className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4 min-h-10 sm:min-h-12 lg:min-h-14 flex items-center justify-center"
+            className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4 min-h-10 sm:min-h-12 lg:min-h-14 flex items-center justify-center print:min-h-0 print:justify-start print:text-xl print:mb-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -36,7 +36,7 @@ const Hero = () => {
 
           {/* Location & Experience */}
           <m.p
-            className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-3xl mx-auto"
+            className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-3xl mx-auto print:max-w-none print:text-base print:mb-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -44,9 +44,18 @@ const Hero = () => {
             {t('subtitle')}
           </m.p>
 
+          {/* Contact line: the CV has no contact section, so it goes under the title */}
+          <p className="hidden print:block text-base text-gray-700 mb-3">
+            <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
+            {' • '}
+            <a href={PROFILE.linkedIn}>{PROFILE.linkedIn.replace(/^https:\/\/www\./, '').replace(/\/$/, '')}</a>
+            {' • '}
+            {PROFILE.location}
+          </p>
+
           {/* Tagline - LCP element: slide only, no fade, so it counts as painted on the first frame */}
           <m.p
-            className="text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed print:max-w-none print:text-base print:mb-0"
             initial={{ y: 20 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.3, delay: 0 }}
@@ -56,7 +65,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <m.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 print:hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -97,7 +106,7 @@ const Hero = () => {
           {/* Scroll Indicator */}
           <m.button
             onClick={() => scrollToSection('about')}
-            className="animate-bounce text-gray-400 hover:text-primary-600 transition-colors duration-200"
+            className="print:hidden animate-bounce text-gray-400 hover:text-primary-600 transition-colors duration-200"
             aria-label={t('scrollToAbout')}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

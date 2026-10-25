@@ -36,15 +36,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 print:py-0 print:mt-5 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 print:px-0">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <SectionHeader title={t('title')} subtitle={t('subtitle')} />
           </AnimatedSection>
 
           {/* Hero Photo Section */}
-          <AnimatedSection className="text-center mb-16">
+          <AnimatedSection className="text-center mb-16 print:hidden">
             <div className="flex justify-center mb-8">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <picture>
@@ -75,18 +75,18 @@ const About = () => {
           </AnimatedSection>
 
           {/* Main Content */}
-          <div className="max-w-4xl mx-auto mb-16">
+          <div className="max-w-4xl mx-auto mb-16 print:max-w-none print:mb-4">
             <AnimatedSection delay={0.1}>
-              <div className="space-y-6">
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-6 print:space-y-2">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed print:text-base">
                   {t('content.paragraph1')}
                 </p>
 
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed print:text-base">
                   {t('content.paragraph2')}
                 </p>
 
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed print:text-base">
                   {t('content.paragraph3')}
                 </p>
               </div>
@@ -94,21 +94,21 @@ const About = () => {
           </div>
 
           {/* Highlights Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 print:grid-cols-2 print:gap-x-8 print:gap-y-3">
             {highlights.map((highlight, index) => (
               <m.div
                 key={index}
-                className="text-center p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-100"
+                className="text-center p-6 print:p-0 print:text-left print:break-inside-avoid rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-100"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-4 print:hidden">
                   {highlight.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 print:text-base print:mb-0">
                   {highlight.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
@@ -119,9 +119,9 @@ const About = () => {
           </div>
 
           {/* Education */}
-          <div className="mt-16 text-center">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('education.title')}</h3>
+          <div className="mt-16 text-center print:mt-4 print:text-left print:break-inside-avoid">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 print:p-0">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 print:text-base print:mb-0">{t('education.title')}</h3>
               <p className="text-gray-700 dark:text-gray-300 font-medium">{t('education.university')}</p>
               <p className="text-gray-700 dark:text-gray-300">{t('education.degree')}</p>
               <p className="text-gray-600 dark:text-gray-400">{t('education.years')}</p>
