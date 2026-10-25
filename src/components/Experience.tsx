@@ -41,7 +41,7 @@ const Experience = () => {
                         </h3>
                         <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-medium mt-1">
                           <Building2 className="h-4 w-4" />
-                          <span>{exp.company}</span>
+                          <span>{tData(`projects.${exp.id}.company`)}</span>
                         </div>
                       </div>
                       <div className="flex flex-col sm:items-end mt-2 sm:mt-0">

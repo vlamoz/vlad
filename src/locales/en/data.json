@@ -1,6 +1,7 @@
 {
   "projects": {
     "interprefy": {
+      "company": "Interprefy",
       "description": "Real-time interpretation platform for international conferences and events. I lead three teams of developers and QA engineers taking the platform from human interpreters to AI translation, transcription and speech, and taking our own engineering from traditional to agentic development.",
       "highlights": [
         "AI stack grew from 0% to the majority of customer translation",
@@ -10,6 +11,7 @@
       ]
     },
     "audatex": {
+      "company": "Audatex (Solera)",
       "description": "AudaNet connects insurance companies with repair shops and claims experts across 15+ countries. As team lead I led its move from a monolith to microservices, its B2B integrations, and the switch to a React frontend.",
       "highlights": [
         "Led the migration from monolith to microservices",
@@ -18,6 +20,7 @@
       ]
     },
     "nasdaq": {
+      "company": "NASDAQ OMX",
       "description": "MHUB is the central messaging hub for fund and securities depository communication in the Baltics. As lead developer I designed its message flows, which had to be secure, fast and always available.",
       "highlights": [
         "Message routing processing 1M+ transactions daily",
@@ -26,6 +29,7 @@
       ]
     },
     "elisa": {
+      "company": "Elisa AS",
       "description": "YouRoam manages roaming agreements between Baltic telecom operators. I've worked on it since 2007, building its import and export of partner data in many international formats and modernizing its interface.",
       "highlights": [
         "Import and export for 10+ telecom data formats",
@@ -34,6 +38,7 @@
       ]
     },
     "government": {
+      "company": "Estonian Government",
       "description": "STAR manages welfare benefits and social security for Estonian citizens. I worked on application processing and on integrations with other government systems.",
       "highlights": [
         "Application processing for 500K+ citizens",

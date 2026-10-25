@@ -5,10 +5,9 @@ import { TECHNOLOGIES } from './technologies';
 type PositionKey = 'engineeringManager' | 'technicalTeamLead' | 'leadDeveloperMHUB' | 'seniorDeveloperYouRoam' | 'seniorDeveloperSTAR';
 type LocationKey = 'estonia' | 'fullyRemote';
 
-// Descriptions and highlights live in locales/*/data.json under projects.<id>
+// Company names, descriptions and highlights live in locales/*/data.json under projects.<id>
 export interface WorkItem {
   id: string;
-  company: string;
   position: PositionKey;
   startYear: number;
   endYear?: number; // undefined = present
@@ -20,7 +19,6 @@ export interface WorkItem {
 export const WORK_EXPERIENCE: WorkItem[] = [
   {
     id: 'interprefy',
-    company: 'Interprefy',
     position: 'engineeringManager',
     startYear: 2020,
     locations: ['fullyRemote'],
@@ -29,7 +27,6 @@ export const WORK_EXPERIENCE: WorkItem[] = [
   },
   {
     id: 'audatex',
-    company: 'Audatex (Solera)',
     position: 'technicalTeamLead',
     startYear: 2008,
     endYear: 2020,
@@ -39,7 +36,6 @@ export const WORK_EXPERIENCE: WorkItem[] = [
   },
   {
     id: 'nasdaq',
-    company: 'NASDAQ OMX',
     position: 'leadDeveloperMHUB',
     startYear: 2009,
     endYear: 2012,
@@ -49,7 +45,6 @@ export const WORK_EXPERIENCE: WorkItem[] = [
   },
   {
     id: 'elisa',
-    company: 'Elisa AS',
     position: 'seniorDeveloperYouRoam',
     startYear: 2007,
     locations: ['estonia', 'fullyRemote'],
@@ -58,7 +53,6 @@ export const WORK_EXPERIENCE: WorkItem[] = [
   },
   {
     id: 'government',
-    company: 'Estonian Government',
     position: 'seniorDeveloperSTAR',
     startYear: 2012,
     endYear: 2014,

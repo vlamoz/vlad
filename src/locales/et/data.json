@@ -1,6 +1,7 @@
 {
   "projects": {
     "interprefy": {
+      "company": "Interprefy",
       "description": "Reaalajas tõlkeplatvorm rahvusvahelistele konverentsidele ja üritustele. Juhin kolme arendajate ja QA inseneride meeskonda, kes viivad platvormi inimtõlkidelt tehisintellekti tõlke, transkriptsiooni ja kõnesünteesini ning meie enda inseneritöö traditsioonilisest arendusest agentpõhiseni.",
       "highlights": [
         "Tehisintellekti osakaal klientide tõlkes kasvas 0%-lt enamuseni",
@@ -10,6 +11,7 @@
       ]
     },
     "audatex": {
+      "company": "Audatex (Solera)",
       "description": "AudaNet ühendab kindlustusseltse remonditöökodade ja kahjukäsitlejatega enam kui 15 riigis. Meeskonnajuhina juhtisin selle üleminekut monoliidilt mikroteenustele, B2B integratsioone ja üleminekut Reacti kasutajaliidesele.",
       "highlights": [
         "Juhtisin üleminekut monoliidilt mikroteenustele",
@@ -18,6 +20,7 @@
       ]
     },
     "nasdaq": {
+      "company": "NASDAQ OMX",
       "description": "MHUB on Balti riikide fondide ja väärtpaberikeskuste sõnumivahetuse keskne sõlm. Juhtiva arendajana kavandasin selle sõnumivood, mis pidid olema turvalised, kiired ja alati kättesaadavad.",
       "highlights": [
         "Sõnumite marsruutimine üle 1 miljoni tehingu päevas",
@@ -26,6 +29,7 @@
       ]
     },
     "elisa": {
+      "company": "Elisa AS",
       "description": "YouRoam haldab Balti telekomioperaatorite vahelisi rändluslepinguid. Olen sellega töötanud alates 2007. aastast: ehitanud partnerandmete impordi ja ekspordi paljudes rahvusvahelistes vormingutes ning uuendanud kasutajaliidest.",
       "highlights": [
         "Import ja eksport enam kui 10 telekomi andmevormingus",
@@ -34,6 +38,7 @@
       ]
     },
     "government": {
+      "company": "Eesti valitsus",
       "description": "STAR haldab Eesti kodanike sotsiaaltoetusi ja sotsiaalkindlustust. Töötasin taotluste menetlemise ja teiste riigisüsteemidega liidestamise kallal.",
       "highlights": [
         "Taotluste menetlemine enam kui 500 000 kodaniku jaoks",
