@@ -11,6 +11,9 @@ export const LANGUAGES = [
 
 export type Language = typeof LANGUAGES[number]['code'];
 
+// Each language has its own pre-rendered page: English at /, the others at /<code>/
+export const languagePath = (code: string) => (code === 'en' ? '/' : `/${code}/`);
+
 // Namespaces are the file names in locales/<lng>/. English is bundled for the first render,
 // other languages load on demand (vite.config.ts groups each language into one chunk)
 const englishFiles = import.meta.glob<Record<string, unknown>>('./locales/en/*.json', { eager: true, import: 'default' });
@@ -36,8 +39,10 @@ i18n
     },
 
     detection: {
-      order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
+      // ?lang= is the old URL scheme, still honoured for existing links; the path is /es/, /et/
+      order: ['querystring', 'path', 'localStorage', 'navigator', 'htmlTag'],
       lookupQuerystring: 'lang',
+      lookupFromPathIndex: 0,
       // Strip regions before matching, otherwise an exact "es" outranks a preferred "en-GB"
       convertDetectedLanguage: (lng: string) => lng.split('-')[0],
       caches: ['localStorage'],
@@ -49,7 +54,18 @@ i18n
   });
 
 i18n.on('languageChanged', () => {
-  document.documentElement.lang = i18n.resolvedLanguage || 'en';
+  // No document during the build-time pre-render; scripts/prerender.mjs sets <html lang> itself
+  if (typeof document === 'undefined') {
+    return;
+  }
+  const code = i18n.resolvedLanguage || 'en';
+  document.documentElement.lang = code;
+  // Keep the address on the language's own page, so a reload or a shared link keeps the language
+  // (also turns old ?lang= links into /es/)
+  const path = languagePath(code);
+  if (window.location.pathname !== path || window.location.search) {
+    window.history.replaceState(null, '', path + window.location.hash);
+  }
 });
 
 // Loads the language's resources if needed, then switches to it

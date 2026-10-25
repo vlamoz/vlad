@@ -8,6 +8,10 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  // The pre-render (vite build --ssr) bundles its dependencies so Node doesn't have to resolve their ESM/CJS entry points
+  ssr: {
+    noExternal: true,
+  },
   build: {
     rolldownOptions: {
       output: {

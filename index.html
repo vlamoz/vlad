@@ -16,22 +16,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
-    <title>Vlad Mozgovojs - Engineering Manager, Agentic Software Development</title>
-    <meta name="description" content="Engineering Manager with 19+ years in software, leading development and QA teams through the shift to agentic development with AI coding agents, with people in charge of planning and review. Java background, fully remote, open to leadership roles.">
-    <!-- Static social preview tags for crawlers that don't run JS (useSEO updates them at runtime) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vlamoz.me/">
-    <meta property="og:title" content="Vlad Mozgovojs - Engineering Manager, Agentic Software Development">
-    <meta property="og:description" content="Engineering Manager with 19+ years in software, leading development and QA teams through the shift to agentic development with AI coding agents, with people in charge of planning and review. Java background, fully remote, open to leadership roles.">
-    <meta property="og:image" content="https://vlamoz.me/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Vlad Mozgovojs, Engineering Manager">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://vlamoz.me/og-image.jpg">
+    <!-- Dark mode before the first paint, so dark-theme visitors don't get a white flash -->
+    <script>
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    </script>
+    <!-- Filled by scripts/prerender.mjs: title, meta, canonical, hreflang, JSON-LD (useSEO keeps them in sync at runtime) -->
+    <!--app-head-->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

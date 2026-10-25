@@ -10,7 +10,7 @@ Personal portfolio and printable CV for vlamoz.me: a single-page React 19 + Type
 
 ```bash
 npm run dev        # Dev server on port 3000
-npm run build      # tsc -b, then vite build (keep the main chunk under Vite's 500 kB warning)
+npm run build      # tsc -b, vite build, SSR build, then pre-render (keep the main chunk under Vite's 500 kB warning)
 npm run lint       # ESLint 10 (flat config in eslint.config.js)
 npm run preview    # Serve the production build
 ```
@@ -19,10 +19,12 @@ Node 20.19+ or 22.12+ is required by Vite 8.
 
 ## Architecture
 
-- **Entry**: `src/main.tsx` waits for `i18nReady` before the first render so non-English visitors never see English text.
-- **i18n** (`src/i18n.ts`): `LANGUAGES` is the single list of supported languages (switcher labels, hreflang, Open Graph locale all derive from it). English namespaces are bundled eagerly with `import.meta.glob`; other languages load lazily, grouped into one chunk per language by `codeSplitting` in `vite.config.ts`. Detection order: `?lang=` → localStorage `preferredLanguage` → browser languages, with regions stripped. `i18n.on('languageChanged')` is the one place that sets `<html lang>`. Components read the current language from `i18n.resolvedLanguage`; there is no language context.
+- **Entry**: `src/main.tsx` waits for `i18nReady`, then renders over the pre-rendered HTML with `createRoot` (not hydration, since theme and language can differ from the build's).
+- **Language URLs**: English is at `/`, other languages at `/<lng>/` (`languagePath` in `i18n.ts`). Detection order: `?lang=` (old links) → path → localStorage → browser. On every language change `i18n.ts` replaces the address with the language's path, so old `?lang=` links end up on `/es/` and a switch survives a reload.
+- **Pre-render**: `npm run build` also builds `src/entry-server.tsx` for Node and runs `scripts/prerender.mjs`, which writes each language's page with its HTML and `<head>` tags (`dist/index.html`, `dist/es/index.html`, `dist/et/index.html`) plus `dist/sitemap.xml`. Plain static files, no rewrites (Vercel's remote builds ignored query-string rewrite conditions). An inline script in each page hides `#root` (`lang-pending`) until the app renders when the visitor's language differs from the page's. Code that runs at render time must not touch `window`/`document` unguarded.
+- **i18n** (`src/i18n.ts`): `LANGUAGES` is the single list of supported languages (switcher labels, hreflang, Open Graph locale all derive from it). English namespaces are bundled eagerly with `import.meta.glob`; other languages load lazily, grouped into one chunk per language by `codeSplitting` in `vite.config.ts`. Detection is described under Language URLs above; browser languages have their regions stripped. `i18n.on('languageChanged')` is the one place that sets `<html lang>`. Components read the current language from `i18n.resolvedLanguage`; there is no language context.
 - **Content data**: `src/data/workExperience.ts` holds language-independent facts (id, years, position key, location keys, project title) plus `formatPeriod` / `formatPosition` / `formatLocations`. Company names, descriptions, highlights and tags live only in `src/locales/<lng>/data.json` under `projects.<id>`. Tags run from hands-on skills on the older roles to leadership on the recent ones. `src/data/skills.ts` stores the skill category keys (titles and items are in `skills.json`). `src/data/profile.ts` holds name, email, location and LinkedIn URL.
-- **SEO**: `useSEO` (called in `App`) updates title, meta, canonical (keeps `?lang=`), hreflang and JSON-LD per language. `index.html` carries static Open Graph tags for crawlers that don't run JavaScript; keep both in sync.
+- **SEO**: `src/seo.ts` builds every language-dependent head tag (title, meta, canonical, hreflang, Open Graph, JSON-LD with alternate name spellings). The pre-render writes them into each page; `useSEO` applies the same set after a language switch. Each language's canonical URL is its own path; `vlamoz.me` is the primary domain (`www` redirects to it in Vercel).
 - **Theme**: `ThemeContext` toggles the `dark` class on `<html>`, initialised from localStorage or the system preference.
 - **Animation**: the app is wrapped in `<LazyMotion features={domAnimation} strict>`. Use `m.*` elements from framer-motion, never `motion.*` (strict mode throws).
 - **Code cards**: `ProjectPlaceholder` uses `PrismLight` with only the Java grammar registered; snippets are in `CODE_SNIPPETS` keyed by project id.

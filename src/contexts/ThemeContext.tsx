@@ -24,6 +24,10 @@ interface ThemeProviderProps {
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Theme>(() => {
+    // The build-time pre-render has no browser; it renders light and the client takes over
+    if (typeof window === 'undefined') {
+      return 'light';
+    }
     // Initialize theme from localStorage, then the system preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark' || savedTheme === 'light') {
